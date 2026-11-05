@@ -208,7 +208,7 @@ def render_html(
         )
         summary_html = (
             '<div class="summary"><div class="label">SUMMARY</div>'
-            f'<p>{_esc(item["summary"])}</p>'
+            f"<p>{_esc(item['summary'])}</p>"
             f"{_bullets(item.get('bullet_summary'))}</div>"
             if (item.get("summary") or "").strip() or item.get("bullet_summary")
             else ""

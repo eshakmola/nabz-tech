@@ -186,10 +186,10 @@ def test_render_hub_escapes_and_has_no_external_assets(data):
     payload = re.search(r"window\.__HUB__ = (\[.*?\]);</script>", html, re.S).group(1)
     assert "<" not in payload and ">" not in payload
     assert html.count("</script>") == 2
-    assert '<meta name="color-scheme" content="dark">' in html          # تم دارک
-    assert "class=\"dock\"" in html                                     # سوییچر وسط‌چین/چسبان
-    assert "class=\"pill\"" in html                                    # قرص متحرک سوییچر
-    assert "<h1>نبض فناوری</h1>" in html                                 # نام صفحه
+    assert '<meta name="color-scheme" content="dark">' in html  # تم دارک
+    assert 'class="dock"' in html  # سوییچر وسط‌چین/چسبان
+    assert 'class="pill"' in html  # قرص متحرک سوییچر
+    assert "<h1>نبض فناوری</h1>" in html  # نام صفحه
     assert 'src="http' not in html.split("<script>")[0]  # هیچ asset خارجی در head
     assert "cdn." not in html and "googleapis" not in html
 

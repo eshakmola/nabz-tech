@@ -180,7 +180,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.kv:
         token = os.environ.get("CLOUDFLARE_API_TOKEN", "")
         if not (token and args.account and args.namespace):
-            print("! --kv نیازمند CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID + --namespace", file=sys.stderr)
+            print(
+                "! --kv نیازمند CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID + --namespace",
+                file=sys.stderr,
+            )
             return 2
         pushed = push_kv(
             args.account,

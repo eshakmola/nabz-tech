@@ -423,7 +423,7 @@ def test_download_image_chain_tries_next_candidate(monkeypatch, tmp_path):
             raise RuntimeError("boom")
         return FakeResponse(b"\xff\xd8" + b"x" * 5000)
 
-    import scrapling.fetchers as sf
+    sf = pytest.importorskip("scrapling.fetchers")  # فقط در CI با نصب کامل
 
     monkeypatch.setattr(sf, "Fetcher", type("F", (), {"get": staticmethod(fake_get)}))
     path, used = render_mod.download_image_chain(

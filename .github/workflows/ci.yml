@@ -48,7 +48,7 @@ jobs:
           cache: pip
       - name: Install test deps only (no browser needed)
         run: |
-          pip install pytest pytest-cov
+          pip install pytest pytest-cov "scrapling[ai]>=0.5,<0.6"
           # pdx.parser / pdx.render are stdlib-only; scrapling is imported lazily.
           python -c "import pdx, pdx.hub, pdx.parser, pdx.render, gnews, gnews.feed, gnews.render"
       - name: Run unit tests
