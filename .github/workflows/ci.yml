@@ -55,7 +55,7 @@ jobs:
         run: pytest --cov=pdx --cov=gnews --cov-report=term-missing --cov-report=xml
       - name: Upload coverage
         if: matrix.python == '3.12'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage
           path: coverage.xml
@@ -125,7 +125,7 @@ jobs:
           print("gnews ok:", first["title"][:60], "| resolved:", bool(first["resolved_url"]))
           PY
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: smoke-output
           path: smoke/
