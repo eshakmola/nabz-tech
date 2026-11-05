@@ -266,6 +266,59 @@ python build_hub.py --perplexity output/perplexity_tech.json \
 
 ---
 
+## ☁️ اجرا روی GitHub و Cloudflare (API + وب)
+
+### ۱) GitHub
+
+| چیز | نشانی |
+|---|---|
+| ریپو | <https://github.com/eshakmola/nabz-tech> |
+| صفحه‌ی وب (GitHub Pages) | <https://eshakmola.github.io/nabz-tech/> |
+| اکشن انتشار | `.github/workflows/publish.yml` — cron هر ۳ ساعت + دستی |
+
+`publish.yml` در هر اجرا: هر دو منبع را اسکرپ می‌کند → `site/index.html` را می‌سازد →
+`data/*.json` را می‌نویسد → در Cloudflare KV می‌ریزد → روی Pages دیپلوی می‌کند و
+Worker را هم به‌روز می‌کند. تست‌ها در `ci.yml` جدا اجرا می‌شوند.
+
+### ۲) Cloudflare Workers (`cloudflare/`)
+
+یک Worker که هم API است هم وب‌اپ:
+
+```
+GET /                 وب‌اپ «نبض فناوری» (تم دارک، سوییچر All / Perplexity / G News)
+GET /api/news         فید ترکیبی مرتب بر اساس تاریخ  (source, q, limit, offset, since, lang)
+GET /api/perplexity   فقط پروکسپلکسیتی
+GET /api/gnews        فقط گوگل‌نیوز
+GET /api/hub          { items, counts, generated_at, sources }
+GET /api/item/:id     یک خبر
+GET /api/rss          RSS 2.0
+GET /health           سلامت
+```
+
+```bash
+curl "https://nabz-worker.<account>.workers.dev/api/news?limit=3"
+```
+
+داده از **KV** (`hub:*`، نوشته‌شده توسط اکشن) و اگر نبود از
+`raw.githubusercontent.com/.../data/*.json` خوانده می‌شود — یعنی Worker بدون KV هم بالا می‌آید.
+
+**دیپلوی خودکار:** Secretهای `CLOUDFLARE_API_TOKEN`، `CLOUDFLARE_ACCOUNT_ID` و `CF_KV_NAMESPACE`
+را در ریپو بگذارید؛ job `deploy-worker` بقیه را انجام می‌دهد.
+**دیپلوی دستی:** `cd cloudflare && npx wrangler deploy` (جزئیات در [`cloudflare/README.md`](cloudflare/README.md)).
+**تست بدون حساب:** `node cloudflare/test-local.mjs` → ۱۲ بررسی، همه لوکال.
+
+### جدایی داده‌ها (همیشه)
+
+```
+output/                   خروجی خام هر اسکرپر (جدا)
+data/perplexity_tech.json ← فقط Perplexity     → KV: hub:perplexity
+data/gnews.json           ← فقط Google News    → KV: hub:gnews
+data/hub.json             ← نمای ترکیبی برای API
+site/index.html           ← صفحه‌ی وب هاب
+```
+
+---
+
 ## 🤖 اتوماسیون با GitHub Actions
 
 | Workflow | تریگر | کار |

@@ -4,6 +4,20 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and
 [Semantic Versioning](https://semver.org/).
 
+## [1.5.0] - 2026-11-05
+
+### Added
+- **Cloudflare Worker** (`cloudflare/`): one deployment serving the dark hub page *and* a
+  read-only JSON API (`/api/news`, `/api/perplexity`, `/api/gnews`, `/api/hub`,
+  `/api/item/:id`, `/api/rss`), with `source/q/limit/offset/since/lang` filters, CORS,
+  edge caching, KV-first + `raw.githubusercontent.com` fallback.
+- `scripts/publish_data.py`: writes `data/perplexity_tech.json`, `data/gnews.json`
+  (still separate) plus `data/hub.json` (combined view), and can push to Cloudflare KV
+  (`--kv`).
+- `publish.yml`: scrape → build page → publish data → KV → GitHub Pages → Worker deploy
+  (every 3 hours, plus manual dispatch).
+- `cloudflare/test-local.mjs`: 12 offline checks for the worker (no Cloudflare account needed).
+
 ## [1.4.0] - 2026-11-04
 
 ### Changed
