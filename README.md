@@ -274,7 +274,7 @@ python build_hub.py --perplexity output/perplexity_tech.json \
 |---|---|
 | ریپو | <https://github.com/eshakmola/nabz-tech> |
 | صفحه‌ی وب (GitHub Pages) | <https://eshakmola.github.io/nabz-tech/> |
-| اکشن انتشار | `.github/workflows/publish.yml` — cron هر ۳ ساعت + دستی |
+| اکشن انتشار | `.github/workflows/publish.yml` — **هر ۱ ساعت** (`15 * * * *`) + دستی |
 
 `publish.yml` در هر اجرا: هر دو منبع را اسکرپ می‌کند → `site/index.html` را می‌سازد →
 `data/*.json` را می‌نویسد → در Cloudflare KV می‌ریزد → روی Pages دیپلوی می‌کند و
@@ -292,8 +292,12 @@ GET /api/gnews        فقط گوگل‌نیوز
 GET /api/hub          { items, counts, generated_at, sources }
 GET /api/item/:id     یک خبر
 GET /api/rss          RSS 2.0
+GET /api/meta         وضعیت کران ساعتی
 GET /health           سلامت
 ```
+
+⏰ **کران کلادفلر هر ساعت** (`crons = ["5 * * * *"]`) خبرهای تازه‌ی Google News را
+در KV ذخیره می‌کند: resolve لینک → تصویر base64 + متن → dedupe با آرشیو → `hub:gnews`/`hub:all`/`hub:meta`.
 
 ```bash
 curl "https://nabz-worker.<account>.workers.dev/api/news?limit=3"

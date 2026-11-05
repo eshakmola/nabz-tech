@@ -9,6 +9,13 @@ workers_dev = true
 [vars]
 GITHUB_REPO = "eshakmola/nabz-tech"
 GITHUB_BRANCH = "main"
+KEEP_DAYS = "14"
+MAX_ITEMS = "800"
+GNEWS_CRON_LIMIT = "12"
+
+# ⏰ کران کلادفلر: هر ساعت خبرهای تازه ذخیره می‌شوند
+[triggers]
+crons = ["5 * * * *"]
 
 # کش داده‌ها: اکشن گیت‌هاب هر ۳ ساعت JSON را در KV می‌نویسد
 # برای فعال‌سازی کش KV، شناسه‌ی واقعی را بگذارید:

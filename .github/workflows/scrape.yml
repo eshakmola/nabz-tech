@@ -3,7 +3,7 @@ name: Scrape Discover
 on:
   schedule:
     # هر ۶ ساعت (UTC): 00:15، 06:15، 12:15، 18:15
-    - cron: "15 */6 * * *"
+    - cron: "45 */6 * * *"
   workflow_dispatch:
     inputs:
       category:
@@ -123,20 +123,5 @@ jobs:
             || gh api -X PUT "repos/$REPO/pages" -f build_type=workflow 2>/dev/null \
             || echo "Pages already configured (or token lacks admin scope)"
 
-      - name: Package Pages artifact
-        if: ${{ github.event.inputs.publish_pages != 'false' }}
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
+      # خروجی Pages فقط از publish.yml نوشته می‌شود تا با هم قاطی نشوند
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: scrape
-    if: ${{ needs.scrape.result == 'success' && github.event.inputs.publish_pages != 'false' }}
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

@@ -152,6 +152,215 @@ function slug(s) {
   return 'i' + (h >>> 0).toString(36);
 }
 
+
+/* ------------------------------------------------- edge-side Google News ingest */
+const GN_FEED =
+  'https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en';
+const BATCH_URL = 'https://news.google.com/_/DotsSplashUi/data/batchexecute';
+
+const stripTags = (html = '') =>
+  String(html).replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+const unescapeHtml = (t = '') =>
+  String(t)
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&');
+
+function parseFeed(xml) {
+  const items = [];
+  const blocks = String(xml).match(/<item>([\s\S]*?)<\/item>/g) || [];
+  for (const block of blocks) {
+    const pick = (tag) => {
+      const m = block.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`));
+      return m ? m[1] : '';
+    };
+    const rawTitle = unescapeHtml(stripTags(pick('title')));
+    const link = stripTags(pick('link'));
+    const pubDate = stripTags(pick('pubDate'));
+    if (!rawTitle || !link) continue;
+    // "Headline - Publisher" → title + publisher
+    const cut = rawTitle.lastIndexOf(' - ');
+    const title = cut > 20 ? rawTitle.slice(0, cut) : rawTitle;
+    const publisher = cut > 20 ? rawTitle.slice(cut + 3) : '';
+    const stamp = Date.parse(pubDate);
+    items.push({
+      title,
+      publisher,
+      google_url: link,
+      ts: Number.isFinite(stamp) ? new Date(stamp).toISOString() : null,
+      description_html: unescapeHtml(pick('description')),
+    });
+  }
+  return items;
+}
+
+/** Google News CBM… → publisher URL (splash page tokens + batchexecute RPC). */
+async function resolveGoogleUrl(googleUrl, timeoutMs = 9000) {
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    const page = await fetch(googleUrl, {
+      signal: ctrl.signal,
+      headers: { 'user-agent': 'Mozilla/5.0 (compatible; nabz-worker/1.0)' },
+      redirect: 'follow',
+    }).then((r) => r.text());
+    clearTimeout(timer);
+    const aid = (page.match(/data-n-a-id="([^"]+)"/) || [])[1];
+    const ts = (page.match(/data-n-a-ts="([^"]+)"/) || [])[1];
+    const sig = (page.match(/data-n-a-sg="([^"]+)"/) || [])[1];
+    if (!aid || !ts || !sig) return null;
+    const inner = JSON.stringify([
+      'garturlreq',
+      [['X', 'X', ['X', 'X'], null, null, 1, 1, 'US:en', null, 1, null, null, null, null, null, 0, 1],
+        'X', 'X', 1, [1, 1, 1], 1, 1, null, 0, 0, null, 0],
+      aid, Number(ts), sig,
+    ]);
+    const body = new URLSearchParams({
+      'f.req': JSON.stringify([[[ 'Fbv4je', inner, null, 'generic']]]),
+    });
+    const out = await fetch(BATCH_URL, {
+      method: 'POST',
+      body,
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'user-agent': 'Mozilla/5.0 (compatible; nabz-worker/1.0)',
+      },
+    }).then((r) => r.text());
+    const found = out.match(/https?:\/\/[^"\\\s]+/);
+    if (!found) return null;
+    const url = found[0].replace(/\\u003d/g, '=').replace(/\\u0026/g, '&');
+    return url.includes('news.google.com') ? null : url;
+  } catch (e) {
+    return null;
+  }
+}
+
+/** publisher page → og:image + description (+ first paragraphs) */
+function toDataUrl(buf, contentType = 'image/jpeg') {
+  const bytes = new Uint8Array(buf);
+  let bin = '';
+  const CHUNK = 0x8000;
+  for (let i = 0; i < bytes.length; i += CHUNK) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+  }
+  return `data:${contentType.split(';')[0]};base64,${btoa(bin)}`;
+}
+
+async function inlineImage(url, maxBytes = 90000) {
+  if (!url) return null;
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 6000);
+    const res = await fetch(url, {
+      signal: ctrl.signal,
+      headers: { 'user-agent': 'Mozilla/5.0 (compatible; nabz-worker/1.0)', accept: 'image/*' },
+      cf: { cacheEverything: true, cacheTtl: 3600 },
+    });
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    const type = res.headers.get('content-type') || 'image/jpeg';
+    if (!type.startsWith('image/')) return null;
+    const len = Number(res.headers.get('content-length') || 0);
+    if (len && len > maxBytes) return url;          // خیلی بزرگ: همان لینک را بده
+    const buf = await res.arrayBuffer();
+    if (buf.byteLength > maxBytes) return url;
+    return toDataUrl(buf, type);
+  } catch (e) {
+    return null;
+  }
+}
+
+async function fetchPublisher(url, timeoutMs = 9000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, {
+      signal: ctrl.signal,
+      headers: { 'user-agent': 'Mozilla/5.0 (compatible; nabz-worker/1.0)', accept: 'text/html' },
+      redirect: 'follow',
+    });
+    if (!res.ok) return {};
+    const html = (await res.text()).slice(0, 400000);
+    const meta = (prop) =>
+      (html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${prop}["'][^>]+content=["']([^"']+)`, 'i')) ||
+        html.match(new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${prop}["']`, 'i')) ||
+        [])[1] || '';
+    const img = meta('og:image') || meta('twitter:image');
+    const desc = unescapeHtml(meta('og:description') || meta('description'));
+    const paras = [...html.matchAll(/<p[^>]*>([\s\S]{40,600}?)<\/p>/gi)]
+      .map((m) => unescapeHtml(stripTags(m[1])))
+      .filter((t) => t.length > 40)
+      .slice(0, 3);
+    return {
+      image: img && img.startsWith('http') ? await inlineImage(img) : null,
+      summary: desc.slice(0, 400),
+      text: paras.join('\n\n').slice(0, 1500),
+    };
+  } catch (e) {
+    return {};
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function ingestGoogleNews(limit = 12) {
+  const xml = await fetch(GN_FEED, {
+    headers: { 'user-agent': 'Mozilla/5.0 (compatible; nabz-worker/1.0)' },
+  }).then((r) => r.text());
+  const parsed = parseFeed(xml).slice(0, limit);
+  const out = [];
+  for (const item of parsed) {
+    const real = await resolveGoogleUrl(item.google_url);
+    if (!real) continue;
+    const page = await fetchPublisher(real);
+    const related = [...item.description_html.matchAll(/<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/gi)]
+      .slice(0, 6)
+      .map((m) => ({ domain: stripTags(m[2]), url: unescapeHtml(m[1]) }));
+    out.push({
+      source: 'gnews',
+      source_label: 'G News',
+      title: item.title,
+      url: real,
+      publisher: item.publisher,
+      ts: item.ts,
+      summary: page.summary || '',
+      bullets: '',
+      sections: [],
+      text: page.text || '',
+      sources_count: related.length,
+      sources: related,
+      image: page.image || null,
+      image_cdn: page.image || null,
+      read_time: null,
+      lang: 'en',
+    });
+  }
+  return out;
+}
+
+/** merge new items into the archive: dedupe + newest first + retention */
+function mergeArchive(existing = [], fresh = [], { keepDays = 14, maxItems = 800 } = {}) {
+  const seen = new Set();
+  const key = (i) => `${i.source}|${(i.title || '').toLowerCase().slice(0, 80)}|${(i.url || '').slice(0, 60)}`;
+  const merged = [];
+  for (const it of [...fresh, ...existing]) {
+    if (!it || !it.title) continue;
+    const k = key(it);
+    if (seen.has(k)) continue;
+    seen.add(k);
+    merged.push(it);
+  }
+  const cutoff = Date.now() - keepDays * 86400000;
+  const kept = merged
+    .filter((i) => !i.ts || Date.parse(i.ts) >= cutoff)
+    .sort((a, b) => (Date.parse(b.ts) || 0) - (Date.parse(a.ts) || 0))
+    .slice(0, maxItems);
+  kept.forEach((it, idx) => (it.order = idx + 1));
+  return kept;
+}
+
 /* -------------------------------------------------------------- filtering */
 function applyQuery(items, url) {
   const q = url.searchParams;
@@ -344,6 +553,66 @@ ${entries}
 </channel></rss>`;
 }
 
+
+/* --------------------------------------------------------------- cron entry */
+async function runScheduled(env, waitUntil) {
+  const started = new Date().toISOString();
+  const log = { started, steps: [] };
+  const kv = env.HUB;
+
+  if (!kv || typeof kv.put !== 'function') {
+    return { ok: false, error: 'KV binding HUB is missing', ...log };
+  }
+
+  let fresh = [];
+  try {
+    fresh = await ingestGoogleNews(env.GNEWS_CRON_LIMIT ? Number(env.GNEWS_CRON_LIMIT) : 12);
+    log.steps.push(`gnews fetched: ${fresh.length}`);
+  } catch (e) {
+    log.steps.push(`gnews fetch failed: ${e && e.message ? e.message : e}`);
+  }
+
+  const existingG = (await kv.get('hub:gnews', 'json')) || [];
+  const mergedG = mergeArchive(existingG, fresh, {
+    keepDays: Number(env.KEEP_DAYS || 14),
+    maxItems: Number(env.MAX_ITEMS || 800),
+  });
+  await kv.put('hub:gnews', JSON.stringify(mergedG));
+  log.steps.push(`gnews archive: ${existingG.length} → ${mergedG.length}`);
+
+  // Perplexity همچنان توسط اکشن گیت‌هاب ساخته می‌شود؛ همین‌جا از گیت‌هاب تازه‌سازی می‌شود
+  let pdx = (await kv.get('hub:perplexity', 'json')) || [];
+  try {
+    const repo = env.GITHUB_REPO || DEFAULTS.repo;
+    const branch = env.GITHUB_BRANCH || DEFAULTS.branch;
+    const res = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/data/perplexity_tech.json`, {
+      headers: { 'user-agent': 'nabz-worker' },
+      cf: { cacheEverything: true, cacheTtl: 300 },
+    });
+    if (res.ok) {
+      const doc = await res.json();
+      pdx = normalize(Array.isArray(doc) ? doc : doc.items || [], 'perplexity');
+      log.steps.push(`perplexity refreshed: ${pdx.length}`);
+    }
+  } catch (e) {
+    log.steps.push('perplexity refresh failed (kept KV copy)');
+  }
+  await kv.put('hub:perplexity', JSON.stringify(pdx));
+
+  const all = mergeArchive([], [...pdx, ...mergedG], {
+    keepDays: Number(env.KEEP_DAYS || 14),
+    maxItems: Number(env.MAX_ITEMS || 800),
+  });
+  await kv.put('hub:all', JSON.stringify(all));
+  await kv.put('hub:meta', JSON.stringify({ updated_at: new Date().toISOString(), counts: {
+    all: all.length,
+    perplexity: all.filter((i) => i.source === 'perplexity').length,
+    gnews: all.filter((i) => i.source === 'gnews').length,
+  }, steps: log.steps }));
+  log.finished = new Date().toISOString();
+  return { ok: true, ...log, counts: { all: all.length, gnews: mergedG.length, perplexity: pdx.length } };
+}
+
 /* ------------------------------------------------------------------- main */
 export default {
   async fetch(request, env, ctx) {
@@ -359,7 +628,7 @@ export default {
       return json({
         ok: true,
         service: 'nabz-worker',
-        endpoints: ['/api/news', '/api/perplexity', '/api/gnews', '/api/hub', '/api/item/:id', '/api/rss', '/health', '/'],
+        endpoints: ['/api/news', '/api/perplexity', '/api/gnews', '/api/hub', '/api/meta', '/api/item/:id', '/api/rss', '/health', '/'],
         params: ['source=all|perplexity|gnews', 'q=text', 'limit', 'offset', 'since=ISO', 'lang=en', 'format=json|rss'],
         example: `${url.origin}/api/news?source=gnews&limit=5`,
       });
@@ -383,6 +652,11 @@ export default {
       };
       const generatedAt = new Date().toISOString();
       const origin = url.origin;
+
+      if (path === '/api/meta') {
+        const meta = env.HUB ? (await env.HUB.get('hub:meta', 'json')) : null;
+        return json({ ok: true, cron: meta || null, counts });
+      }
 
       if (path === '/api/hub') {
         return json({
@@ -423,5 +697,17 @@ export default {
     }
 
     return bad('not found', 404);
+  },
+
+  /** Cloudflare Cron Trigger — هر ساعت خبرهای تازه را در KV ذخیره می‌کند */
+  async scheduled(event, env, ctx) {
+    const task = runScheduled(env).catch((e) => ({ ok: false, error: String(e) }));
+    if (ctx && typeof ctx.waitUntil === 'function') ctx.waitUntil(task);
+    else await task;
+  },
+
+  /** برای تست لوکال / دیباگ دستی */
+  async runNow(env) {
+    return runScheduled(env);
   },
 };

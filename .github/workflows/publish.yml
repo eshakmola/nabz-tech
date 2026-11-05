@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths-ignore: ['data/**', 'site/**']
   schedule:
-    - cron: '0 */3 * * *'      # هر ۳ ساعت — همیشه با آخرین داده
+    - cron: '15 * * * *'       # هر ۱ ساعت (UTC) — دقیقه ۱۵ تا با کران کلادفلر تلاقی نکند
   workflow_dispatch:
     inputs:
       perplexity_limit:
@@ -105,11 +105,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Deploy Cloudflare Worker (API + web)
+      - name: Deploy Cloudflare Worker (API + web + hourly cron)
         if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
         working-directory: cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
+          # KV: اگر از قبل هست دوباره استفاده می‌شود، وگرنه ساخته می‌شود
+          KV_ID="${{ secrets.CF_KV_NAMESPACE }}"
+          if [ -z "$KV_ID" ]; then
+            KV_ID=$(npx --yes wrangler@3 kv namespace list 2>/dev/null \
+              | python3 -c "import json,sys;ns=json.load(sys.stdin);print(next((n['id'] for n in ns if n['title'] in ('HUB','nabz-worker-HUB')),''))" || true)
+          fi
+          if [ -z "$KV_ID" ]; then
+            OUT=$(npx --yes wrangler@3 kv namespace create HUB 2>&1 || true); echo "$OUT"
+            KV_ID=$(echo "$OUT" | grep -oE '[0-9a-f]{32}' | head -1 || true)
+          fi
+          if [ -n "$KV_ID" ]; then python3 wire-kv.py "$KV_ID"; fi
           npx --yes wrangler@3 deploy --compatibility-date=2024-11-01

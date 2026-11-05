@@ -1,64 +1,70 @@
 #!/usr/bin/env bash
-# دیپلوی کامل Cloudflare Worker + ساخت KV — یک دستور
+# دیپلوی کامل: بررسی توکن → پیدا کردن Account ID → ساخت KV → دیپلوی → تست
 #
-#   export CLOUDFLARE_API_TOKEN=...      # توکن با دسترسی Workers Scripts:Edit و Workers KV Storage:Edit
-#   export CLOUDFLARE_ACCOUNT_ID=...     # از داشبورد کلادفلر (کنار نام حساب)
+#   export CLOUDFLARE_API_TOKEN=...      # Workers Scripts:Edit + Workers KV Storage:Edit
 #   bash cloudflare/deploy.sh
 #
-# اگر wrangler از قبل لاگین است (npx wrangler login)، دو متغیر بالا لازم نیست.
+# اگر wrangler از قبل لاگین است (npx wrangler login)، توکن لازم نیست.
 set -euo pipefail
-
 cd "$(dirname "$0")"
 
-if [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
-  echo "→ account: ${CLOUDFLARE_ACCOUNT_ID}"
+say() { printf '%s\n' "$*"; }
+die() { printf '✘ %s\n' "$*" >&2; exit 1; }
+
+# ---------- ۱) احراز هویت ----------
+if [ -n "${CLOUDFLARE_API_TOKEN:-}" ]; then
+  say "→ بررسی توکن ..."
+  VERIFY=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+    https://api.cloudflare.com/client/v4/user/tokens/verify || true)
+  case "$VERIFY" in
+    *'"success":true'*) say "  ✓ توکن معتبر است" ;;
+    *) die "توکن کلادفلر معتبر نیست → $VERIFY" ;;
+  esac
 fi
 
-echo "→ ساخت/یافتن namespace برای HUB ..."
-KV_JSON=$(npx --yes wrangler@3 kv namespace list 2>/dev/null || echo "[]")
-KV_ID=$(python3 - "$KV_JSON" <<'PY'
+# ---------- ۲) Account ID ----------
+if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+  say "→ پیدا کردن Account ID ..."
+  CLOUDFLARE_ACCOUNT_ID=$(curl -s -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN:-}" \
+    https://api.cloudflare.com/client/v4/accounts |
+    python3 -c "import json,sys;d=json.load(sys.stdin);print((d.get('result') or [{}])[0].get('id',''))" || true)
+  export CLOUDFLARE_ACCOUNT_ID
+fi
+[ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ] || die "Account ID پیدا نشد؛ آن را export کنید."
+say "  account: $CLOUDFLARE_ACCOUNT_ID"
+
+# ---------- ۳) KV namespace ----------
+say "→ بررسی/ساخت namespace برای HUB ..."
+LIST=$(npx --yes wrangler@3 kv namespace list 2>/dev/null || echo "[]")
+KV_ID=$(printf '%s' "$LIST" | python3 -c "
 import json, sys
 try:
-    namespaces = json.loads(sys.argv[1])
+    ns = json.load(sys.stdin)
 except Exception:
-    namespaces = []
-for ns in namespaces:
-    if ns.get("title") in ("HUB", "nabz-worker-HUB"):
-        print(ns["id"]); break
-PY
-)
+    ns = []
+for n in ns:
+    if n.get('title') in ('HUB', 'nabz-worker-HUB'):
+        print(n['id']); break
+" || true)
 
-if [ -z "${KV_ID}" ]; then
-  echo "→ ساخته نشد، ایجاد می‌کنیم ..."
+if [ -z "$KV_ID" ]; then
   OUT=$(npx --yes wrangler@3 kv namespace create HUB 2>&1 || true)
-  echo "$OUT"
-  KV_ID=$(echo "$OUT" | grep -oE '[0-9a-f]{32}' | head -1 || true)
+  printf '%s\n' "$OUT"
+  KV_ID=$(printf '%s' "$OUT" | grep -oE '[0-9a-f]{32}' | head -1 || true)
 fi
+[ -n "$KV_ID" ] || die "ساخت KV ناموفق بود."
+say "  KV: $KV_ID"
 
-if [ -n "${KV_ID}" ]; then
-  echo "→ KV namespace: ${KV_ID}"
-  python3 - "$KV_ID" <<'PY'
-import re, sys, pathlib
-kv = sys.argv[1]
-p = pathlib.Path("wrangler.toml")
-text = p.read_text(encoding="utf-8")
-block = f'[[kv_namespaces]]\nbinding = "HUB"\nid = "{kv}"\n'
-if "[[kv_namespaces]]" in text:
-    text = re.sub(r"\[\[kv_namespaces\]\][^\[]*", block, text)
-else:
-    text = text.replace("[observability]", block + "\n[observability]")
-p.write_text(text, encoding="utf-8")
-print("wrangler.toml به‌روزرسانی شد")
-PY
-else
-  echo "! KV_ID پیدا نشد — ورکر بدون KV هم کار می‌کند (fallback به GitHub raw)"
-fi
+python3 wire-kv.py "$KV_ID"
 
-echo "→ دیپلوی ..."
+# ---------- ۴) دیپلوی ----------
+say "→ دیپلوی ..."
 npx --yes wrangler@3 deploy
 
-echo
-echo "✅ تمام. آدرس‌ها:"
-npx --yes wrangler@3 deployments list 2>/dev/null | head -5 || true
-echo "   https://nabz-worker.<subdomain>.workers.dev/"
-echo "   https://nabz-worker.<subdomain>.workers.dev/api/news"
+# ---------- ۵) تست ----------
+say ""
+say "✅ دیپلوی انجام شد. تست:"
+say "   curl https://nabz-worker.<subdomain>.workers.dev/health"
+say "   curl https://nabz-worker.<subdomain>.workers.dev/api/meta    # وضعیت کران ساعتی"
+say ""
+say "⏰ کران کلادفلر هر ساعت اجرا می‌شود (crons = \"5 * * * *\") و خبرهای تازه را در KV ذخیره می‌کند."

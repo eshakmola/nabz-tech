@@ -3,7 +3,7 @@ name: Scrape Google News
 on:
   schedule:
     # هر ۳ ساعت
-    - cron: "40 */3 * * *"
+    - cron: "40 */6 * * *"   # هر ۶ ساعت؛ فید ساعتی از publish.yml + کران کلادفلر می‌آید
   workflow_dispatch:
     inputs:
       feed:

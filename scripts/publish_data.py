@@ -17,6 +17,7 @@ Outputs (all separate per source + one combined view for the API):
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import sys
@@ -26,6 +27,57 @@ from datetime import datetime, timezone
 from typing import Any
 
 CF_API = "https://api.cloudflare.com/client/v4"
+
+INLINE_MAX_BYTES = 120_000  # هر تصویر کوچک‌تر از این، بدون تغییر inline می‌شود
+INLINE_MAX_WIDTH = 900
+THUMB_WIDTH = 480  # بقیه به این عرض کوچک و JPEG می‌شوند (برای KV و لبه)
+THUMB_QUALITY = 70
+KV_MAX_VALUE = 24 * 1024 * 1024  # سقف مقدار در KV
+
+_MIME = {
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".png": "image/png",
+    ".webp": "image/webp",
+    ".gif": "image/gif",
+    ".avif": "image/avif",
+}
+
+
+def _thumb(path: str) -> str | None:
+    """تصویر را کوچک و base64 می‌کند تا در KV و پاسخ ورکر قابل استفاده باشد."""
+    if not path or not os.path.exists(path):
+        return None
+    size = os.path.getsize(path)
+    mime = _MIME.get(os.path.splitext(path)[1].lower(), "image/jpeg")
+    try:
+        if size <= INLINE_MAX_BYTES:
+            with open(path, "rb") as fh:
+                data = fh.read()
+            if mime == "image/jpeg" and size <= 60_000:
+                return f"data:{mime};base64," + base64.b64encode(data).decode()
+            from io import BytesIO
+
+            from PIL import Image
+
+            with Image.open(BytesIO(data)) as im:
+                im = im.convert("RGB")
+                im.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3))
+                out = BytesIO()
+                im.save(out, "JPEG", quality=THUMB_QUALITY, optimize=True)
+            return "data:image/jpeg;base64," + base64.b64encode(out.getvalue()).decode()
+        from io import BytesIO
+
+        from PIL import Image
+
+        with Image.open(path) as im:
+            im = im.convert("RGB")
+            im.thumbnail((THUMB_WIDTH, THUMB_WIDTH * 3))
+            out = BytesIO()
+            im.save(out, "JPEG", quality=THUMB_QUALITY, optimize=True)
+        return "data:image/jpeg;base64," + base64.b64encode(out.getvalue()).decode()
+    except Exception:
+        return None
 
 
 # --------------------------------------------------------------------------- #
@@ -41,6 +93,7 @@ def perplexity_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
     out = []
     for it in doc.get("items") or []:
         category = it.get("category") or doc.get("category") or "tech"
+        inline = _thumb(it.get("image_file"))
         out.append(
             {
                 "source": "perplexity",
@@ -58,9 +111,8 @@ def perplexity_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
                     {"domain": s.get("domain") or "", "url": s.get("url") or ""}
                     for s in (it.get("sources") or [])
                 ],
-                "image": it.get("image_url") or None,
-                # jsDelivr از همین ریپو سرو می‌کند (بدون نیاز به دامنه‌ی دیگر)
-                "image_cdn": it.get("image_url") or None,
+                "image": inline or it.get("image_url") or None,
+                "image_cdn": inline or it.get("image_url") or None,
                 "read_time": it.get("read_time_min"),
                 "lang": "en",
             }
@@ -72,6 +124,7 @@ def gnews_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
     out = []
     for it in doc.get("items") or []:
         related = it.get("related_links") or []
+        inline = _thumb(it.get("image_file"))
         out.append(
             {
                 "source": "gnews",
@@ -92,7 +145,8 @@ def gnews_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
                     }
                     for link in related[:8]
                 ],
-                "image": it.get("image_url") or None,
+                "image": inline or it.get("image_url") or None,
+                "image_cdn": inline or it.get("image_url") or None,
                 "read_time": None,
                 "lang": "en",
             }

@@ -4,6 +4,27 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and
 [Semantic Versioning](https://semver.org/).
 
+## [1.6.0] - 2026-11-05
+
+### Added
+- **Cloudflare Cron Trigger, hourly** (`crons = ["5 * * * *"]`): the worker itself now
+  ingests the Google News tech feed, resolves `CBM…` links via `batchexecute`, pulls
+  `og:image` (inlined as base64) + description + paragraphs, dedupes against the KV
+  archive, and writes `hub:gnews`, `hub:perplexity`, `hub:all`, `hub:meta`
+  (`KEEP_DAYS=14`, `MAX_ITEMS=800`).
+- `GET /api/meta` — last cron run, counts and step log.
+- `cloudflare/test-cron.mjs` — 8 checks for the cron path (live feed + `OFFLINE=1` mode).
+- `cloudflare/wire-kv.py`, smarter `deploy.sh` (token check → account discovery → KV
+  create/reuse → deploy).
+
+### Changed
+- GitHub Action `publish.yml` now runs **every hour** (`15 * * * *`); legacy
+  `scrape.yml`/`gnews.yml` moved to 6-hourly slots so they no longer race with the
+  Pages deploy.
+- KV payloads are **self-contained**: images are stored as base64 thumbnails
+  (`scripts/publish_data.py`), so the worker page shows pictures without hotlinking
+  publishers. Per-source JSON is now date-sorted as well.
+
 ## [1.5.0] - 2026-11-05
 
 ### Added

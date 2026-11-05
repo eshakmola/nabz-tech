@@ -10,6 +10,7 @@ GET /api/news         → فید ترکیبی مرتب بر اساس تاریخ
 GET /api/perplexity   → فقط Perplexity
 GET /api/gnews        → فقط Google News
 GET /api/hub          → { items, counts, generated_at, sources, warnings }
+GET /api/meta         → وضعیت آخرین اجرای کران (updated_at، شمارش‌ها، مراحل)
 GET /api/item/:id     → یک خبر
 GET /api/rss          → RSS 2.0 فید ترکیبی
 ```
@@ -21,6 +22,31 @@ GET /api/rss          → RSS 2.0 فید ترکیبی
 curl "https://nabz-worker.<account>.workers.dev/api/news?source=gnews&limit=3"
 curl "https://nabz-worker.<account>.workers.dev/api/rss"
 ```
+
+## ⏰ کران ساعتی (Cron Trigger)
+
+```toml
+[triggers]
+crons = ["5 * * * *"]     # هر ساعت، دقیقه‌ی ۵
+```
+
+`handler scheduled` در هر اجرا:
+
+1. فید **Google News Tech** را می‌خواند (بدون مرورگر).
+2. لینک‌های `news.google.com/rss/articles/CBM…` را با `batchexecute` به آدرس ناشر تبدیل می‌کند.
+3. از صفحه‌ی ناشر `og:image` (به‌صورت **base64 inline**، بدون هات‌لینک)، `og:description` و چند پاراگراف را برمی‌دارد.
+4. با آرشیو قبلی در KV **dedupe** می‌کند (کلید: منبع + عنوان + بخشی از لینک)، مرتب بر تاریخ،
+   با نگه‌داری `KEEP_DAYS` (پیش‌فرض ۱۴ روز) و سقف `MAX_ITEMS` (پیش‌فرض ۸۰۰).
+5. `hub:gnews`، `hub:perplexity` (تازه‌سازی از گیت‌هاب)، `hub:all` و `hub:meta` را در KV می‌نویسد.
+
+`GET /api/meta` وضعیت همین اجرا را نشان می‌دهد:
+
+```json
+{"cron": {"updated_at": "…", "counts": {"all": 20, "perplexity": 8, "gnews": 12}, "steps": ["gnews fetched: 12", "…"]}}
+```
+
+> Perplexity به مرورگر نیاز دارد، پس آن سمت با اکشن گیت‌هاب (هر ساعت) ساخته می‌شود؛
+> ورکر آن را در KV تازه می‌کند و در آرشیو ترکیبی می‌ریزد.
 
 ## داده از کجا می‌آید؟
 
@@ -67,7 +93,9 @@ npx wrangler deploy
 ```bash
 cd ..                       # ریشه‌ی ریپو
 python scripts/publish_data.py --dir output --out data
-node cloudflare/test-local.mjs      # 12/12 checks
+node cloudflare/test-local.mjs      # 12/12 بررسی (API + وب)
+node cloudflare/test-cron.mjs       # 8/8 بررسی (کران: فید واقعی → resolve → KV)
+OFFLINE=1 node cloudflare/test-cron.mjs   # همان تست، بدون شبکه
 ```
 
 ## امنیت
