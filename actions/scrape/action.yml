@@ -1,0 +1,102 @@
+name: Scrape Perplexity Discover
+description: Install Scrapling + Chromium, scrape a Discover category, and upload the rendered report as an artifact.
+author: perplexity-discover-scraper
+
+branding:
+  icon: rss
+  color: purple
+
+inputs:
+  category:
+    description: Discover category (tech, top, finance, sports, arts, health)
+    required: false
+    default: tech
+  limit:
+    description: Maximum number of articles (empty = all cards on the page)
+    required: false
+    default: ""
+  output-dir:
+    description: Directory that receives JSON/CSV/MD/HTML + images
+    required: false
+    default: output
+  images:
+    description: Download hero images ("true"/"false")
+    required: false
+    default: "true"
+  min-items:
+    description: Fail the step if fewer articles were scraped
+    required: false
+    default: "1"
+  upload-artifact:
+    description: Upload the output directory as a workflow artifact
+    required: false
+    default: "true"
+  artifact-name:
+    description: Name of the uploaded artifact
+    required: false
+    default: perplexity-discover
+  python-version:
+    description: Python version used for the run
+    required: false
+    default: "3.12"
+
+outputs:
+  count:
+    description: Number of scraped articles
+    value: ${{ steps.scrape.outputs.count }}
+  json-path:
+    description: Path to the produced JSON file
+    value: ${{ steps.scrape.outputs.json_path }}
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+        cache: pip
+
+    - name: Install package + Chromium
+      shell: bash
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e ".[dev]" || pip install "scrapling[ai]>=0.5,<0.6"
+        scrapling install
+
+    - name: Scrape
+      id: scrape
+      shell: bash
+      env:
+        CATEGORY: ${{ inputs.category }}
+        LIMIT: ${{ inputs.limit }}
+        OUT_DIR: ${{ inputs.output-dir }}
+        MIN_ITEMS: ${{ inputs.min-items }}
+        IMAGES: ${{ inputs.images }}
+      run: |
+        args=(--category "$CATEGORY" --out "$OUT_DIR" --min-items "$MIN_ITEMS")
+        [ -n "$LIMIT" ] && args+=(--limit "$LIMIT")
+        [ "$IMAGES" != "true" ] && args+=(--no-images)
+        python perplexity_tech_scraper.py "${args[@]}"
+
+        json_path="$OUT_DIR/perplexity_${CATEGORY}.json"
+        count=$(python -c "import json;print(json.load(open('$json_path'))['count'])")
+        echo "count=$count" >> "$GITHUB_OUTPUT"
+        echo "json_path=$json_path" >> "$GITHUB_OUTPUT"
+        {
+          echo "### Perplexity Discover · $CATEGORY"
+          echo ""
+          echo "| | |"
+          echo "|---|---|"
+          echo "| articles | **$count** |"
+          echo "| output | \`$OUT_DIR\` |"
+        } >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Upload artifact
+      if: inputs.upload-artifact == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ inputs.artifact-name }}
+        path: ${{ inputs.output-dir }}/
+        retention-days: 7
+        if-no-files-found: error

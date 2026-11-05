@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+output
+site
+smoke
+smoke2
+tests
+.pytest_cache
+.ruff_cache
+coverage.xml
+*.zip

@@ -1,0 +1,16 @@
+{
+  "name": "nabz-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "نبض فناوری API + web on Cloudflare Workers (Perplexity + Google News)",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}

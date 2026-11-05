@@ -1,0 +1,82 @@
+name: Scrape Google News
+
+on:
+  schedule:
+    # هر ۳ ساعت
+    - cron: "40 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      feed:
+        description: "RSS feed URL"
+        default: "https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGRqTVhZU0JXVnVMVlZUR2dKVlV5Z0FQAQ?hl=en-US&gl=US&ceid=US:en"
+      limit:
+        description: "Max items"
+        default: "10"
+      dynamic:
+        description: "Use a stealth browser for pages that block HTTP (slow)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: scrape-gnews
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  FEED: ${{ github.event.inputs.feed || 'https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGRqTVhZU0JXVnVMVlZUR2dKVlV5Z0FQAQ?hl=en-US&gl=US&ceid=US:en' }}
+  LIMIT: ${{ github.event.inputs.limit || '10' }}
+  DYNAMIC: ${{ github.event.inputs.dynamic || 'false' }}
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install package
+        run: |
+          pip install -e ".[dev]"
+          if [ "$DYNAMIC" = "true" ]; then scrapling install; fi
+
+      - name: Scrape feed
+        run: |
+          args=(--feed "$FEED" --limit "$LIMIT" --out output --site site --min-items 1)
+          [ "$DYNAMIC" = "true" ] && args+=(--dynamic)
+          python gnews_scraper.py "${args[@]}"
+
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          data = json.loads(pathlib.Path("output/gnews.json").read_text("utf-8"))
+          print("### Google News\n")
+          print(f"**{data['count']}** items from *{data.get('feed_title')}*\n")
+          print("| # | title | publisher | chars |")
+          print("|---|---|---|---|")
+          for item in data["items"][:10]:
+              print(f"| {item['position']} | {item['title'][:70]} | {item.get('publisher') or '—'} | {item.get('text_chars', 0)} |")
+          PY
+
+      - name: Commit data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore(data): refresh google news ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gnews-${{ github.run_number }}
+          path: output/
+          retention-days: 14

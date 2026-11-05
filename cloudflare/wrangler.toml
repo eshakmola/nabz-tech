@@ -1,0 +1,20 @@
+name = "nabz-worker"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+workers_dev = true
+
+# ناحیه/حساب در زمان deploy از طریق CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID تعیین می‌شود
+# (یا مقدار account_id را اینجا بگذارید)
+
+[vars]
+GITHUB_REPO = "eshakmola/nabz-tech"
+GITHUB_BRANCH = "main"
+
+# کش داده‌ها: اکشن گیت‌هاب هر ۳ ساعت JSON را در KV می‌نویسد
+[[kv_namespaces]]
+binding = "HUB"
+id = "00000000000000000000000000000000"
+preview_id = "00000000000000000000000000000000"
+
+[observability]
+enabled = true

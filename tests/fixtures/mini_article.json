@@ -1,0 +1,31 @@
+{
+  "status": "success",
+  "entries": [
+    {
+      "query_str": "Chip exports slow in Asia",
+      "thread_title": "Chip exports slow in Asia",
+      "updated_datetime": "2026-11-04T10:00:00",
+      "article_info": {
+        "title": "Chip exports slow in Asia",
+        "summary": "Exports fell 4% in October, the third monthly drop.",
+        "bullet_summary": "- Taiwan shipments fell 4%[1].\n- Korea **memory** exports flat[2].",
+        "read_time": 3
+      },
+      "featured_images": [
+        {
+          "image": "https://pplx-res.cloudinary.com/image/upload/t_limit/demo.jpg",
+          "author_url": "https://www.gettyimages.com/detail/news-photo/123"
+        }
+      ],
+      "text": "{\"answer\": \"Exports fell 4% in October[1]. Analysts blame [Samsung](pplx://entity_chip/abc123) inventory.\\n\\nThe drop was broad[2].\", \"web_results\": [{\"name\": \"Chip exports slide\", \"url\": \"https://www.reuters.com/tech/chips\", \"meta_data\": {\"date\": \"2026-11-04\"}}, {\"name\": \"Chip exports slide (dup)\", \"url\": \"https://www.reuters.com/tech/chips\", \"meta_data\": {}}, {\"name\": \"Asia trade data\", \"url\": \"https://www.bloomberg.com/news/asia\", \"meta_data\": {\"date\": \"2026-11-03\"}}]}"
+    },
+    {
+      "query_str": "Why it matters",
+      "thread_title": "Chip exports slow in Asia",
+      "updated_datetime": "2026-11-04T10:00:00",
+      "article_info": {},
+      "featured_images": null,
+      "text": "{\"answer\": \"Semiconductors are 40% of the island's GDP[1].\", \"web_results\": [{\"name\": \"TSMC filings\", \"url\": \"https://www.tsmc.com/investors\", \"meta_data\": {}}]}"
+    }
+  ]
+}

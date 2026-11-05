@@ -1,0 +1,381 @@
+/**
+ * nabz-worker — «نبض فناوری» API + web on Cloudflare Workers
+ *
+ * Routes
+ *   GET  /                → the web UI (same look as the GitHub Pages hub)
+ *   GET  /health          → liveness probe
+ *   GET  /api             → index of endpoints
+ *   GET  /api/news        → combined, date-sorted feed      (All / Perplexity / G News)
+ *   GET  /api/perplexity  → Perplexity items only
+ *   GET  /api/gnews       → Google News items only
+ *   GET  /api/hub         → prebuilt page payload (items + counts + generated_at)
+ *   GET  /api/item/:id    → one item
+ *   GET  /api/rss         → RSS 2.0 of the combined feed
+ *
+ * Query params (all endpoints): source, q, limit, offset, since, lang, format
+ *
+ * Caching: the upstream JSON is stored in KV (`HUB` binding) by the GitHub Action;
+ * if KV is empty or unreachable the worker falls back to raw.githubusercontent.com
+ * (so it works even before KV is wired up).
+ */
+
+const DEFAULTS = {
+  repo: 'eshakmola/nabz-tech',
+  branch: 'main',
+  ttl: 900,
+};
+
+const CORS = {
+  'access-control-allow-origin': '*',
+  'access-control-allow-methods': 'GET,HEAD,OPTIONS',
+  'access-control-allow-headers': 'content-type',
+};
+
+/* ------------------------------------------------------------------ utils */
+const json = (data, status = 200, extra = {}) =>
+  new Response(JSON.stringify(data, null, 2), {
+    status,
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'cache-control': `public, max-age=60, s-maxage=${DEFAULTS.ttl}`,
+      ...CORS,
+      ...extra,
+    },
+  });
+
+const bad = (message, status = 400) => json({ ok: false, error: message }, status);
+
+const esc = (s = '') =>
+  String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+const num = (v, fallback) => {
+  const n = parseInt(v, 10);
+  return Number.isFinite(n) && n >= 0 ? n : fallback;
+};
+
+/* -------------------------------------------------------- upstream loading */
+async function fetchSource(env, source) {
+  const repo = env.GITHUB_REPO || DEFAULTS.repo;
+  const branch = env.GITHUB_BRANCH || DEFAULTS.branch;
+  const file = source === 'perplexity' ? 'perplexity_tech.json' : 'gnews.json';
+
+  // 1) KV cache (filled by the scheduled GitHub Action)
+  if (env.HUB && typeof env.HUB.get === 'function') {
+    try {
+      const raw = await env.HUB.get(`hub:${source}`, 'json');
+      if (raw && Array.isArray(raw)) return { items: raw, via: 'kv' };
+    } catch (e) {
+      /* fall through to raw */
+    }
+  }
+
+  // 2) raw.githubusercontent.com
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 12000);
+  try {
+    const res = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/data/${file}`, {
+      signal: ctrl.signal,
+      headers: { 'user-agent': 'nabz-worker' },
+      cf: { cacheEverything: true, cacheTtl: 300 },
+    });
+    if (!res.ok) return { items: [], via: 'raw', error: `upstream ${res.status}` };
+    const doc = await res.json();
+    const items = normalize(Array.isArray(doc) ? doc : doc.items || [], source);
+    return { items, via: 'raw' };
+  } catch (e) {
+    return { items: [], via: 'raw', error: String(e && e.message ? e.message : e) };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+const dayKey = (iso) => (iso ? String(iso).slice(0, 10) : '');
+
+function normalize(items, source) {
+  return (items || []).map((it) => {
+    const ts = it.ts || it.published_iso || it.published || null;
+    const title = String(it.title || '').trim();
+    const id = it.id || slug(`${source}-${ts || ''}-${title}`);
+    return {
+      id,
+      source: it.source && it.source !== 'perplexity' && it.source !== 'gnews' ? source : it.source || source,
+      source_label: it.source_label || (source === 'perplexity' ? 'Perplexity' : 'G News'),
+      title,
+      url: it.url || '',
+      publisher: it.publisher || (source === 'perplexity' ? 'Perplexity' : ''),
+      ts,
+      summary: it.summary || '',
+      bullets: it.bullets || '',
+      sections: it.sections || [],
+      text: it.text || '',
+      sources_count: it.sources_count || 0,
+      sources: it.sources || [],
+      image: it.image || it.image_url || null,
+      read_time: it.read_time || null,
+      lang: it.lang || 'en',
+    };
+  });
+}
+
+function slug(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return 'i' + (h >>> 0).toString(36);
+}
+
+/* -------------------------------------------------------------- filtering */
+function applyQuery(items, url) {
+  const q = url.searchParams;
+  const source = (q.get('source') || '').toLowerCase();
+  const query = (q.get('q') || '').trim().toLowerCase();
+  const lang = q.get('lang');
+  const since = q.get('since');
+  const limit = num(q.get('limit'), 0);
+  const offset = num(q.get('offset'), 0);
+
+  let out = items;
+  if (source && source !== 'all') out = out.filter((i) => i.source === source);
+  if (lang) out = out.filter((i) => (i.lang || '').startsWith(lang.toLowerCase()));
+  if (since) {
+    const stamp = Date.parse(since);
+    if (Number.isFinite(stamp)) out = out.filter((i) => i.ts && Date.parse(i.ts) >= stamp);
+  }
+  if (query) {
+    out = out.filter((i) =>
+      [i.title, i.summary, i.text, i.publisher].join(' ').toLowerCase().includes(query),
+    );
+  }
+  out = out.slice().sort((a, b) => (Date.parse(b.ts) || 0) - (Date.parse(a.ts) || 0));
+  if (offset) out = out.slice(offset);
+  if (limit) out = out.slice(0, limit);
+  return out;
+}
+
+/* ------------------------------------------------------------------- html */
+const PAGE_CSS = `
+:root{--ink:#e8eefb;--ink2:#aab6cc;--muted:#7d8aa3;--line:rgba(148,163,184,.16);--pdx:#8b8cf9;--gn:#34d399}
+*{box-sizing:border-box}
+body{margin:0;background:#06080f;color:var(--ink);font-family:Vazirmatn,"Segoe UI",Tahoma,system-ui,sans-serif;
+background-image:radial-gradient(900px 520px at 88% -8%,rgba(99,102,241,.22),transparent 62%),
+radial-gradient(760px 460px at 6% 4%,rgba(16,185,129,.16),transparent 60%);background-attachment:fixed}
+.wrap{max-width:1160px;margin:0 auto;padding:34px 18px 70px}
+.top{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+h1{margin:0;font-size:30px;background:linear-gradient(120deg,#fff,#c7d2fe 52%,#a7f3d0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin:0;font-size:11.5px;letter-spacing:2.4px;color:var(--muted);text-transform:uppercase}
+.lede{color:var(--ink2);font-size:13.5px;line-height:2;margin:0}
+.dock{position:sticky;top:0;z-index:9;display:flex;justify-content:center;padding:14px 0;
+background:linear-gradient(180deg,rgba(6,8,15,.95) 42%,rgba(6,8,15,.7) 78%,transparent)}
+.switch{display:inline-flex;gap:2px;padding:5px;border-radius:999px;background:rgba(12,16,28,.88);
+border:1px solid var(--line);backdrop-filter:blur(16px)}
+.switch button{border:0;background:transparent;color:#9fadc6;font:inherit;font-size:13.5px;font-weight:600;
+padding:10px 20px;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.switch button[aria-selected="true"]{background:linear-gradient(135deg,rgba(99,102,241,.94),rgba(79,70,229,.86));color:#fff}
+.switch .n{font-size:11px;background:rgba(148,163,184,.16);border-radius:99px;padding:2px 7px}
+.strip{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:6px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.grid>*{min-width:0}
+.day{grid-column:1/-1;display:flex;align-items:center;gap:12px;margin:22px 2px 4px}
+.day h2{font-size:12.5px;margin:0;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.day .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.card{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:18px;overflow:hidden;
+background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.022));
+border:1px solid var(--line);box-shadow:0 18px 40px -28px #000}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#0d1220;display:block}
+.card .noimg{width:100%;aspect-ratio:16/9;border-radius:12px;display:grid;place-items:center;color:#8fa0bd;font-size:12px;
+background:radial-gradient(120% 120% at 20% 0%,rgba(99,102,241,.3),transparent 60%),#0b1020}
+.badge{font-size:10px;font-weight:800;letter-spacing:.6px;border-radius:99px;padding:3px 9px}
+.badge.perplexity{background:rgba(99,102,241,.9);color:#fff}
+.badge.gnews{background:rgba(5,150,105,.9);color:#fff}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--muted)}
+h3{margin:0;font-size:17px;line-height:1.6;color:#f2f6ff}
+a{color:inherit;text-decoration:none}
+.summary{border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.95;color:#d6e0f0;
+background:rgba(255,255,255,.035);border:1px solid rgba(148,163,184,.09);border-inline-start:3px solid var(--pdx)}
+.card.gnews .summary{border-inline-start-color:var(--gn)}
+.summary .label{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--pdx)}
+.card.gnews .summary .label{color:var(--gn)}
+.summary p{margin:0;unicode-bidi:plaintext;text-align:start;overflow-wrap:anywhere}
+strong{color:#fff}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+footer{margin-top:40px;text-align:center;color:#65728b;font-size:11.5px}
+code{background:rgba(148,163,184,.16);border-radius:5px;padding:1px 6px}
+`;
+
+const PAGE_JS = `
+const DATA = window.__HUB__ || [];
+const grid = document.getElementById('grid');
+function md(s){
+  return String(s || '').replace(/[&<>"']/g, function(c){
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);
+  }).replace(/\\*\\*([^*]+)\\*\\*/g, '<strong>$1</strong>');
+}
+function day(ts){ return ts ? new Date(ts).toISOString().slice(0, 10) : 'بدون تاریخ'; }
+function card(e){
+  var img = e.image
+    ? '<img loading="lazy" alt="" src="' + e.image + '">'
+    : '<div class="noimg">بدون تصویر</div>';
+  var row = '<div class="row"><span class="badge ' + e.source + '">' + md(e.source_label) + '</span>'
+    + (e.publisher ? '<span>' + md(e.publisher) + '</span>' : '')
+    + (e.ts ? '<span>' + day(e.ts) + '</span>' : '') + '</div>';
+  var sum = e.summary
+    ? '<div class="summary"><div class="label">خلاصه</div><p>' + md(e.summary) + '</p></div>'
+    : '';
+  return '<article class="card ' + e.source + '">' + img + row
+    + '<h3><a href="' + e.url + '" target="_blank" rel="noopener">' + md(e.title) + '</a></h3>'
+    + sum + '</article>';
+}
+function render(which){
+  var items = DATA.filter(function(e){ return which === 'all' || e.source === which; });
+  if (!items.length) { grid.innerHTML = '<div class="empty">داده‌ای برای این منبع نیست</div>'; return; }
+  var html = '', current = null;
+  items.forEach(function(e){
+    var key = day(e.ts);
+    if (key !== current) { current = key; html += '<div class="day"><h2>' + key + '</h2><div class="line"></div></div>'; }
+    html += card(e);
+  });
+  grid.innerHTML = html;
+}
+Array.prototype.forEach.call(document.querySelectorAll('.switch button'), function(b){
+  b.addEventListener('click', function(){
+    Array.prototype.forEach.call(document.querySelectorAll('.switch button'), function(x){
+      x.setAttribute('aria-selected', x === b ? 'true' : 'false');
+    });
+    render(b.dataset.src);
+  });
+});
+render('all');
+`;
+
+function pageHtml({ items, counts, generatedAt, origin }) {
+  const payload = JSON.stringify(items).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
+  const head = `<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>نبض فناوری · Perplexity + G News</title><style>${PAGE_CSS}</style></head>
+<body><div class="wrap">
+<header class="top">
+<h1>نبض فناوری</h1><p class="sub">Perplexity · Google News</p>
+<p class="lede">یک صفحه، دو منبع، مرتب بر اساس تاریخ انتشار — سروشده از Cloudflare Workers.</p>
+</header>
+<div class="dock"><div class="switch" role="tablist">
+<button data-src="all" aria-selected="true">All<span class="n">${counts.all}</span></button>
+<button data-src="perplexity" aria-selected="false">Perplexity<span class="n">${counts.perplexity}</span></button>
+<button data-src="gnews" aria-selected="false">G News<span class="n">${counts.gnews}</span></button>
+</div></div>
+<div class="strip"><span>${counts.all} خبر</span><span>·</span><span>${esc(generatedAt)}</span><span>·</span><code>/api/news</code></div>
+<main id="grid" class="grid"></main>
+<footer>nabz-worker · API: <code>/api/news</code> · <code>/api/rss</code> · <code>/api/hub</code></footer>
+</div>`;
+  return (
+    head +
+    '<script>window.__HUB__ = ' + payload + ';</script>' +
+    '<script>' + PAGE_JS + '</script>' +
+    '</body></html>'
+  );
+}
+
+/* -------------------------------------------------------------------- rss */
+function rss(items, origin) {
+  const entries = items
+    .slice(0, 100)
+    .map(
+      (i) => `    <item>
+      <title>${esc(i.title)}</title>
+      <link>${esc(i.url)}</link>
+      <guid isPermaLink="false">${esc(i.id)}</guid>
+      <category>${esc(i.source_label)}</category>
+      <pubDate>${i.ts ? new Date(i.ts).toUTCString() : new Date().toUTCString()}</pubDate>
+      <description>${esc(i.summary || i.text || '')}</description>
+    </item>`,
+    )
+    .join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+    <title>نبض فناوری — Perplexity + Google News</title>
+    <link>${origin}/</link>
+    <description>Combined tech news hub</description>
+    <language>fa</language>
+${entries}
+</channel></rss>`;
+}
+
+/* ------------------------------------------------------------------- main */
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    const path = url.pathname.replace(/\/+$/, '') || '/';
+
+    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
+    if (request.method !== 'GET' && request.method !== 'HEAD') return bad('method not allowed', 405);
+
+    if (path === '/health') return json({ ok: true, service: 'nabz-worker', time: new Date().toISOString() });
+
+    if (path === '/api' || path === '/api/') {
+      return json({
+        ok: true,
+        service: 'nabz-worker',
+        endpoints: ['/api/news', '/api/perplexity', '/api/gnews', '/api/hub', '/api/item/:id', '/api/rss', '/health', '/'],
+        params: ['source=all|perplexity|gnews', 'q=text', 'limit', 'offset', 'since=ISO', 'lang=en', 'format=json|rss'],
+        example: `${url.origin}/api/news?source=gnews&limit=5`,
+      });
+    }
+
+    // data endpoints
+    if (path.startsWith('/api/')) {
+      const [p, g] = await Promise.all([fetchSource(env, 'perplexity'), fetchSource(env, 'gnews')]);
+      const all = [...p.items, ...g.items].sort((a, b) => (Date.parse(b.ts) || 0) - (Date.parse(a.ts) || 0));
+
+      if (path === '/api/item' || path.startsWith('/api/item/')) {
+        const id = path.split('/')[3] || url.searchParams.get('id') || '';
+        const found = all.find((i) => i.id === id);
+        return found ? json({ ok: true, item: found }) : bad('item not found', 404);
+      }
+
+      const counts = {
+        all: all.length,
+        perplexity: all.filter((i) => i.source === 'perplexity').length,
+        gnews: all.filter((i) => i.source === 'gnews').length,
+      };
+      const generatedAt = new Date().toISOString();
+      const origin = url.origin;
+
+      if (path === '/api/hub') {
+        return json({
+          ok: true,
+          generated_at: generatedAt,
+          counts,
+          sources: { perplexity: p.via, gnews: g.via },
+          warnings: [p.error, g.error].filter(Boolean),
+          items: all,
+        });
+      }
+
+      let items = all;
+      if (path === '/api/perplexity') items = all.filter((i) => i.source === 'perplexity');
+      if (path === '/api/gnews') items = all.filter((i) => i.source === 'gnews');
+      items = applyQuery(items, url);
+
+      if (path === '/api/rss' || url.searchParams.get('format') === 'rss') {
+        return new Response(rss(items, origin), {
+          headers: { 'content-type': 'application/rss+xml; charset=utf-8', 'cache-control': 'public, max-age=300', ...CORS },
+        });
+      }
+      return json({ ok: true, generated_at: generatedAt, count: items.length, counts, items });
+    }
+
+    if (path === '/') {
+      const [p, g] = await Promise.all([fetchSource(env, 'perplexity'), fetchSource(env, 'gnews')]);
+      const all = [...p.items, ...g.items].sort((a, b) => (Date.parse(b.ts) || 0) - (Date.parse(a.ts) || 0));
+      const counts = {
+        all: all.length,
+        perplexity: all.filter((i) => i.source === 'perplexity').length,
+        gnews: all.filter((i) => i.source === 'gnews').length,
+      };
+      return new Response(
+        pageHtml({ items: all, counts, generatedAt: new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC', origin: url.origin }),
+        { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=300', 'content-security-policy': "default-src 'self' 'unsafe-inline' data: https:" } },
+      );
+    }
+
+    return bad('not found', 404);
+  },
+};

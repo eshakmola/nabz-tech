@@ -1,0 +1,31 @@
+# نمونه‌ی استفاده از Composite Action در ریپوی خودتان
+# این فایل را در .github/workflows/ کپی کنید (پسوند .yml/.yaml)
+name: Use the scrape action
+
+on:
+  schedule:
+    - cron: "0 */8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      # use: ./.github/actions/scrape          ← اگر action را داخل ریپو کپی کرده‌اید
+      # use: owner/repo/actions/scrape@main    ← اگر ریپو عمومی و جداگانه است
+      - id: discover
+        uses: ./actions/scrape
+        with:
+          category: tech
+          limit: 10
+          images: "true"
+          artifact-name: discover-tech
+
+      - name: Print result
+        run: echo "scraped ${{ steps.discover.outputs.count }} articles → ${{ steps.discover.outputs.json-path }}"

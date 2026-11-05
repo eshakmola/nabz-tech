@@ -1,0 +1,142 @@
+name: Scrape Discover
+
+on:
+  schedule:
+    # هر ۶ ساعت (UTC): 00:15، 06:15، 12:15، 18:15
+    - cron: "15 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Discover category"
+        type: choice
+        default: tech
+        options: [tech, top, finance, sports, arts, health]
+      limit:
+        description: "Max articles (empty = all cards on the page)"
+        default: ""
+      max_age_hours:
+        description: "Only keep articles newer than N hours (empty = no filter)"
+        default: ""
+      publish_pages:
+        description: "Deploy the report to GitHub Pages"
+        type: boolean
+        default: false
+
+concurrency:
+  group: scrape-discover
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  CATEGORY: ${{ github.event.inputs.category || 'tech' }}
+  GNEWS_LIMIT: "10"
+  LIMIT: ${{ github.event.inputs.limit || '' }}
+  MAX_AGE_HOURS: ${{ github.event.inputs.max_age_hours || '' }}
+  PUBLISH_PAGES: ${{ github.event.inputs.publish_pages || 'false' }}
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  scrape:
+    name: Fetch → render → commit
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      count: ${{ steps.scrape.outputs.count }}
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies + Chromium
+        run: |
+          pip install -e ".[dev]"
+          scrapling install
+
+      - name: Scrape Perplexity
+        id: scrape
+        run: |
+          args=(--category "$CATEGORY" --out output --min-items 1)
+          [ -n "$LIMIT" ] && args+=(--limit "$LIMIT")
+          [ -n "$MAX_AGE_HOURS" ] && args+=(--max-age-hours "$MAX_AGE_HOURS")
+          python perplexity_tech_scraper.py "${args[@]}"
+
+          count=$(python -c "import json;print(json.load(open('output/perplexity_${CATEGORY}.json'))['count'])")
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "### Scraped **$count** articles from \`$CATEGORY\`" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Scrape Google News
+        run: |
+          python gnews_scraper.py --limit "${GNEWS_LIMIT:-10}" --out output --min-items 1 || true
+
+      - name: Build hub page (All / Perplexity / G News)
+        run: |
+          python build_hub.py --dir output --out site/index.html
+
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          hub = json.loads(pathlib.Path("output/gnews.json").read_text("utf-8"))
+          print(f"\n### Google News\n\n**{hub['count']}** items · [hub page](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)\n")
+          for item in hub["items"][:5]:
+              print(f"- {item['title'][:70]} — *{item.get('publisher') or '—'}*")
+          PY
+
+      - name: Commit updated data
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --cached --quiet; then
+            echo "no changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore(data): refresh ${CATEGORY} discover ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: discover-${{ env.CATEGORY }}-${{ github.run_number }}
+          path: |
+            output/
+            site/
+          retention-days: 14
+
+      # رفع خطای رایج Pages: پروژه باید از قبل با "GitHub Actions" فعال شده باشد
+      - name: Ensure Pages is enabled
+        if: env.PUBLISH_PAGES == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api -X POST "repos/$REPO/pages" -f build_type=workflow 2>/dev/null \
+            || gh api -X PUT "repos/$REPO/pages" -f build_type=workflow 2>/dev/null \
+            || echo "Pages already configured (or token lacks admin scope)"
+
+      - name: Package Pages artifact
+        if: env.PUBLISH_PAGES == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: scrape
+    if: env.PUBLISH_PAGES == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
