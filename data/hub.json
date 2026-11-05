@@ -318,45 +318,6 @@
  {
   "source": "gnews",
   "source_label": "G News",
-  "title": "iOS 27.3 changes the iPhone Duo keyboard, here’s how - 9to5Mac",
-  "url": "https://9to5mac.com/2026/11/05/ios-27-3-changes-the-iphone-duo-keyboard-heres-how/",
-  "publisher": "9to5Mac",
-  "ts": "2026-11-05T19:52:00+00:00",
-  "summary": "The iOS 27.3 beta introduced this week brings a convenient change to the iPhone Duo’s outer display keyboard.",
-  "bullets": "",
-  "sections": [],
-  "text": "If you’re one of the fortunate early adopters who managed to get an iPhone Duo on or near launch day, you may have noticed that changes keep arriving via software updates.\n\niPhone Duo shipped with iOS 27.1, but just a few days later iOS 27.2 arrived and added Apple Pencil support and Edge Light for video calls.\n\nNow just about one week later, the iOS 27.3 beta has introduced even more changes.\n\nReachability lets you slide outer display content to the left or right to make it more reachable. And as highlighted by Beta Profiles on X , the keyboard has gotten an improvement too.\n\niOS 27.3 beta tweaks iPhone Duo's outer display keyboard, with narrower keys and a slightly thinner, smaller font. pic.twitter.com/BDKCBZc52Z\n\nThe keyboard refresh with narrower keys and smaller font makes it easier than before to type on the iPhone Duo’s outer screen, especially one-handed.\n\nIt’s a subtle difference, but one that early testers have found a clear upgrade.\n\nBy combining keyboard changes with Reachability, iOS 27.3 offers a noteworthy improvement to the one-handed iPhone Duo experience.\n\nHave you tried the new iPhone Duo keyboard in iOS 27.3? How is it working for you? Let us know in the comments.\n\nMacBook Pro with PROLED XDR Display review: A lot more than touch Chance Miller Nov 5 2026 iOS 27.3 upgrades Apple Music in two ways, here’s what’s new Ryan Christoffel Nov 4 2026 Report: Apple reduces employees’ AI token allowances as Ternus moves to cut costs Marcus Mendes Nov 4 2026 MacBook ",
-  "sources_count": 5,
-  "sources": [
-   {
-    "domain": "9to5Mac",
-    "url": "https://9to5mac.com/2026/11/05/ios-27-3-changes-the-iphone-duo-keyboard-heres-how/"
-   },
-   {
-    "domain": "Inc.com",
-    "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395"
-   },
-   {
-    "domain": "MacRumors",
-    "url": "https://www.macrumors.com/2026/11/05/ios-27-3-public-beta/"
-   },
-   {
-    "domain": "Apple",
-    "url": "https://www.apple.com/newsroom/2026/11/redesigned-health-app-expands-language-support/"
-   },
-   {
-    "domain": "Engadget",
-    "url": "https://www.engadget.com/2308154/iphone-duo-new-accessibility-feature-ios-27-3-beta-reachability/"
-   }
-  ],
-  "image": null,
-  "read_time": null,
-  "lang": "en",
-  "order": 4
- },
- {
-  "source": "gnews",
-  "source_label": "G News",
   "title": "Meta says US users can now video chat with their Muse AI avatar - TechCrunch",
   "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
   "publisher": "TechCrunch",
@@ -391,7 +352,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 5
+  "order": 4
  },
  {
   "source": "perplexity",
@@ -507,7 +468,7 @@
   "image": null,
   "read_time": 3,
   "lang": "en",
-  "order": 6
+  "order": 5
  },
  {
   "source": "perplexity",
@@ -595,7 +556,7 @@
   "image": null,
   "read_time": 3,
   "lang": "en",
-  "order": 7
+  "order": 6
  },
  {
   "source": "perplexity",
@@ -715,7 +676,7 @@
   "image": null,
   "read_time": 3,
   "lang": "en",
-  "order": 8
+  "order": 7
  },
  {
   "source": "gnews",
@@ -754,7 +715,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 9
+  "order": 8
  },
  {
   "source": "perplexity",
@@ -882,28 +843,32 @@
   "image": null,
   "read_time": 2,
   "lang": "en",
-  "order": 10
+  "order": 9
  },
  {
   "source": "gnews",
   "source_label": "G News",
-  "title": "Sony Debuts $60 Wired Headphones With ’80s-Inspired Design - Bloomberg.com",
-  "url": "https://www.bloomberg.com/news/articles/2026-11-05/sony-debuts-retro-60-wired-headphones-in-tribute-to-1979-walkman",
-  "publisher": "Bloomberg.com",
-  "ts": "2026-11-05T16:00:05+00:00",
-  "summary": "Sony Group Corp. introduced an inexpensive pair of wired headphones, joining a growing trend in what it called “a nod to both the ’80s Walkman era and today’s retro tech revival.”",
+  "title": "Sony revives its classic 1979 Walkman headphones for modern listeners – with a surprisingly affordable price - What Hi-Fi?",
+  "url": "https://www.whathifi.com/headphones/wired-headphones/sony-revives-its-classic-1979-walkman-headphones-for-modern-listeners-with-a-surprisingly-affordable-price",
+  "publisher": "What Hi-Fi?",
+  "ts": "2026-11-05T16:00:00+00:00",
+  "summary": "The new MDR-3R wired on-ears have the same design as the originals, now with a USB-C connection",
   "bullets": "",
   "sections": [],
-  "text": "X LinkedIn Email Link Gift Expand Sony’s new retro-styled headphones include modern touches like USB-C.\n\nX LinkedIn Email Link Gift Gift this article Contact us: Provide news feedback or report an error Confidential tip? Send a tip to our reporters Site feedback: Take our Survey New Window Facebook X LinkedIn Email Link Gift By Chris Welch November 5, 2026 at 4:00 PM UTC Bookmark Save Takeaways by Bloomberg AI Sony Group Corp. introduced an inexpensive pair of wired headphones, joining a growing trend in what it called “a nod to both the ’80s Walkman era and today’s retro tech revival.”\n\nThe $60 MDR-3R, available Thursday, are inspired by the pair that Sony shipped alongside the original Walkman in 1979, but the new set has been modernized with a USB-C connector, built-in microphone for voice calls, and an in-line remote.",
+  "text": "Wired Headphones Sony revives its classic 1979 Walkman headphones for modern listeners – with a surprisingly affordable price News By Kashfia Kabir Published 5 November 2026 3 min read The new MDR-3R wired on-ears have the same design as the originals, now with a USB-C connection\n\nWhen you purchase through links on our site, we may earn an affiliate commission. Here’s how it works .\n\n(Image credit: Sony) {alert('Link copied')}).catch(err => {console.error('Failed to copy: ', err)})\" data-platform=\"copy_link\" data-action=\"\" class=\"font-ui-heading py-2 text-sm text-neutral-700 hover:bg-neutral-100 transition-colors no-underline block cursor-pointer border-0 bg-transparent w-full text-left normal-case\" aria-label=\"Copy link\" role=\"menuitem\" data-analytics-id=\"article-social\" analytics-label=\"utility-bar-social-share-copy-link\" analytics-name=\"utility-bar-secondary\" data-mrf-recirculation=\"article-social\"> Copy link Facebook X Whatsapp Pinterest Flipboard Email Share this article 2 Join the conversation Follow us Add us as a preferred source on Google Newsletter Subscribe to our newsletter When Sony launched the first Walkman (TPS-L2) in 1979 , the wired headphones it made to go along with this new portable tape player were the slim and lightweight Sony MDR-3.\n\nAnd now, nearly five decades later, Sony is bringing them back. Enter the all-new, but very familiar-looking Sony MDR-3R wired headphones with a USB-C connection.\n\nCapitalising on the popular trend for wired headphones and",
   "sources_count": 5,
   "sources": [
+   {
+    "domain": "What Hi-Fi?",
+    "url": "https://www.whathifi.com/headphones/wired-headphones/sony-revives-its-classic-1979-walkman-headphones-for-modern-listeners-with-a-surprisingly-affordable-price"
+   },
    {
     "domain": "Bloomberg.com",
     "url": "https://www.bloomberg.com/news/articles/2026-11-05/sony-debuts-retro-60-wired-headphones-in-tribute-to-1979-walkman"
    },
    {
-    "domain": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/technology/articles/sony-electronics-introduces-mdr-3r-160000870.html"
+    "domain": "Ars Technica",
+    "url": "https://arstechnica.com/gadgets/2026/11/sony-adds-usb-c-to-its-70s-era-mdr-3-walkman-headphones/"
    },
    {
     "domain": "CNET",
@@ -912,16 +877,12 @@
    {
     "domain": "Gizmodo",
     "url": "https://gizmodo.com/sony-mdr-3r-review-walkman-2000834508"
-   },
-   {
-    "domain": "The Verge",
-    "url": "https://www.theverge.com/tech/1026958/sony-mdr-3r-headphones-review"
    }
   ],
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 11
+  "order": 10
  },
  {
   "source": "perplexity",
@@ -1001,7 +962,7 @@
   "image": null,
   "read_time": 3,
   "lang": "en",
-  "order": 12
+  "order": 11
  },
  {
   "source": "gnews",
@@ -1029,18 +990,18 @@
     "url": "https://www.theverge.com/tech/1026570/apple-macbook-pro-proled-xdr-display-review"
    },
    {
-    "domain": "CNET",
-    "url": "https://www.cnet.com/tech/computing/apple-imac-m6-2026-review/"
+    "domain": "No Film School",
+    "url": "https://nofilmschool.com/filmmakers-will-absolutely-use-touch-for-macbook-proembargo-lifts-thursday-november-5-at-6-a-m-pt"
    },
    {
-    "domain": "PetaPixel",
-    "url": "https://petapixel.com/2026/11/05/apple-m5-max-macbook-pro-with-proled-xdr-review-dont-touch-it/"
+    "domain": "CNET",
+    "url": "https://www.cnet.com/tech/computing/apple-macbook-pro-16-proled-xdr-review/"
    }
   ],
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 13
+  "order": 12
  },
  {
   "source": "gnews",
@@ -1063,7 +1024,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 14
+  "order": 13
  },
  {
   "source": "gnews",
@@ -1102,7 +1063,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 15
+  "order": 14
  },
  {
   "source": "gnews",
@@ -1136,6 +1097,45 @@
    {
     "domain": "The Verge",
     "url": "https://www.theverge.com/tech/1025015/2026-ipad-mini-oled-review"
+   }
+  ],
+  "image": null,
+  "read_time": null,
+  "lang": "en",
+  "order": 15
+ },
+ {
+  "source": "gnews",
+  "source_label": "G News",
+  "title": "Apple’s Latest Siri Announcement Could Mean the End of Apps on Your iPhone - Inc.com",
+  "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395",
+  "publisher": "MacRumors",
+  "ts": "2026-11-05T00:57:06+00:00",
+  "summary": "Apple today seeded the first betas of iOS 27.3, iPadOS 27.3, macOS Golden Gate 27.3, tvOS 27.3, and watchOS 27.3. The new software comes two days after Apple released the betas for developers. iOS 27.3 is a major update that adds a Vertical Tabs layout option and Adaptive Dark Mode for Safari. Siri AI can do more in and across Apple's apps, and developers are now able to create actions for Siri to carry out.",
+  "bullets": "",
+  "sections": [],
+  "text": "Apple today seeded the first betas of iOS 27.3, iPadOS 27.3, macOS Golden Gate 27.3, tvOS 27.3, and watchOS 27.3. The new software comes two days after Apple released the betas for developers.\n\niOS 27.3 is a major update that adds a Vertical Tabs layout option and Adaptive Dark Mode for Safari. Siri AI can do more in and across Apple's apps, and developers are now able to create actions for ‌Siri‌ to carry out.\n\nThe redesigned Health app is now available with custom Insights and Longevity information, and the iPhone Duo supports Reachability. There's a new Selfie Sing feature in Apple Music , plus changes to StandBy on non-Duo iPhones. A full list of what's new in the beta can be found in our guide .\n\nOn the Apple Watch Series 12 and Ultra 4, Audio Intelligence features Live Rewind and ‌Siri‌ Recap are available for testing. Live Rewind creates a transcript of the last 15 seconds of speech, and ‌Siri‌ Recap offers a high-level summary of conversations throughout the day.\n\n‌macOS Golden Gate‌ 27.3 has the same Safari features, and it brings Live Activities to Macs without a Dynamic Island .\n\nWe're expecting all of Apple's updates to launch in December.",
+  "sources_count": 5,
+  "sources": [
+   {
+    "domain": "Inc.com",
+    "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395"
+   },
+   {
+    "domain": "MacRumors",
+    "url": "https://www.macrumors.com/2026/11/05/ios-27-3-public-beta/"
+   },
+   {
+    "domain": "Apple",
+    "url": "https://www.apple.com/newsroom/2026/11/redesigned-health-app-expands-language-support/"
+   },
+   {
+    "domain": "Engadget",
+    "url": "https://www.engadget.com/2308154/iphone-duo-new-accessibility-feature-ios-27-3-beta-reachability/"
+   },
+   {
+    "domain": "MacStories",
+    "url": "https://www.macstories.net/stories/siri-ais-evolution-is-both-surprising-and-obvious/"
    }
   ],
   "image": null,
