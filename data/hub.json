@@ -82,7 +82,8 @@
     "url": "https://www.newsbytesapp.com/news/business/house-republicans-ask-nvidia-ceo-jensen-huang-explain-china-ties/tldr"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793910720/getty_uploads/2301328054_buxkft.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793910720/getty_uploads/2301328054_buxkft.jpg",
   "read_time": 2,
   "lang": "en",
   "order": 1
@@ -206,7 +207,8 @@
     "url": "https://www.mitrade.com/es/articulo/news/live-news/article-8-2233962-20261106"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793917429/url_uploads/GettyImages-2259269004-1920x1280_wtemq3.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793917429/url_uploads/GettyImages-2259269004-1920x1280_wtemq3.jpg",
   "read_time": 2,
   "lang": "en",
   "order": 2
@@ -310,7 +312,8 @@
     "url": "https://www.newsbytesapp.com/news/science/anthropics-ai-development-doubles-pace-despite-dario-amodei-plea/tldr"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/fetch/s--VWWYb4si--/t_limit/https://www.cmswire.com/-/media/f8d0251dfd4541319e0513f7933bc88f.ashx",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--VWWYb4si--/t_limit/https://www.cmswire.com/-/media/f8d0251dfd4541319e0513f7933bc88f.ashx",
   "read_time": 3,
   "lang": "en",
   "order": 3
@@ -349,7 +352,7 @@
     "url": "https://www.webwire.com/ViewPressRel.asp?aId"
    }
   ],
-  "image": null,
+  "image": "https://techcrunch.com/wp-content/uploads/2026/09/muse-ai-meta.jpg?w=1200",
   "read_time": null,
   "lang": "en",
   "order": 4
@@ -465,7 +468,8 @@
     "url": "https://au.investing.com/news/stock-market-news/anthropic-partners-with-plaid-for-ai-financial-advice-tool-4748617"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/fetch/s--7BT4iDXP--/t_limit/https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Personal-Finance-in-Claude-hed.jpg%3Fquality%3D90%26strip%3Dall%26crop%3D0%2C0%2C100%2C100",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--7BT4iDXP--/t_limit/https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Personal-Finance-in-Claude-hed.jpg%3Fquality%3D90%26strip%3Dall%26crop%3D0%2C0%2C100%2C100",
   "read_time": 3,
   "lang": "en",
   "order": 5
@@ -553,7 +557,8 @@
     "url": "https://www.channelnewsasia.com/business/openai-launches-gpt-6-cyber-critical-cybersecurity-rating-6528536"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/fetch/s--4ZDygaRf--/t_limit/https://ismg-cdn.nyc3.cdn.digitaloceanspaces.com/articles/openai-touts-wider-access-to-its-new-cyber-model-image_large-4-a-31422.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--4ZDygaRf--/t_limit/https://ismg-cdn.nyc3.cdn.digitaloceanspaces.com/articles/openai-touts-wider-access-to-its-new-cyber-model-image_large-4-a-31422.jpg",
   "read_time": 3,
   "lang": "en",
   "order": 6
@@ -673,7 +678,8 @@
     "url": "https://startupfortune.com/baidu-open-sources-ernie-55-flash-base-in-a-race-to-cheap-inference/"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793901359/url_uploads/107295593-1693900544756-gettyimages-1251294603-PGONCHAR_7724_damewt.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793901359/url_uploads/107295593-1693900544756-gettyimages-1251294603-PGONCHAR_7724_damewt.jpg",
   "read_time": 3,
   "lang": "en",
   "order": 7
@@ -712,7 +718,7 @@
     "url": "https://www.ign.com/articles/microsoft-updates-xbox-pc-app-says-its-60-faster"
    }
   ],
-  "image": null,
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/XBOX-PC-App-1.jpg?quality=90&strip=all&crop=0%2C3.4613147178592%2C100%2C93.077370564282&w=1200",
   "read_time": null,
   "lang": "en",
   "order": 8
@@ -840,7 +846,8 @@
     "url": "https://techcrunch.com/2024/12/29/ai-data-centers-could-be-distorting-the-us-power-grid/"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/fetch/s--Yi-Mboij--/t_limit/https://npr.brightspotcdn.com/dims4/default/bfbe183/2147483647/strip/true/crop/1760x1174%2B0%2B0/resize/880x587%21/quality/90/%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252Fb8%252Fb5%252Fe421642c49b7af05d67dc441708e%252Fdownload-20.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--Yi-Mboij--/t_limit/https://npr.brightspotcdn.com/dims4/default/bfbe183/2147483647/strip/true/crop/1760x1174%2B0%2B0/resize/880x587%21/quality/90/%3Furl%3Dhttp%253A%252F%252Fnpr-brightspot.s3.amazonaws.com%252Fb8%252Fb5%252Fe421642c49b7af05d67dc441708e%252Fdownload-20.jpg",
   "read_time": 2,
   "lang": "en",
   "order": 9
@@ -871,15 +878,15 @@
     "url": "https://arstechnica.com/gadgets/2026/11/sony-adds-usb-c-to-its-70s-era-mdr-3-walkman-headphones/"
    },
    {
-    "domain": "CNET",
-    "url": "https://www.cnet.com/tech/mobile/sony-mdr-3r-usb-c-walkman-headphones-review/"
+    "domain": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/technology/articles/sony-electronics-introduces-mdr-3r-160000870.html"
    },
    {
-    "domain": "Gizmodo",
-    "url": "https://gizmodo.com/sony-mdr-3r-review-walkman-2000834508"
+    "domain": "CNET",
+    "url": "https://www.cnet.com/tech/mobile/sony-mdr-3r-usb-c-walkman-headphones-review/"
    }
   ],
-  "image": null,
+  "image": "https://cdn.mos.cms.futurecdn.net/8BBHntaq7oMXKKhJ333Dme-2560-80.jpg",
   "read_time": null,
   "lang": "en",
   "order": 10
@@ -959,7 +966,8 @@
     "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-reportedly-restricts-chinese-access-112552007.html"
    }
   ],
-  "image": null,
+  "image": "https://pplx-res.cloudinary.com/image/fetch/s--50arFmmD--/t_limit/https://siliconvalleyinvestclub.com/svic-media/1785772221091-moonshot.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--50arFmmD--/t_limit/https://siliconvalleyinvestclub.com/svic-media/1785772221091-moonshot.jpg",
   "read_time": 3,
   "lang": "en",
   "order": 11
@@ -990,41 +998,18 @@
     "url": "https://www.theverge.com/tech/1026570/apple-macbook-pro-proled-xdr-display-review"
    },
    {
-    "domain": "No Film School",
-    "url": "https://nofilmschool.com/filmmakers-will-absolutely-use-touch-for-macbook-proembargo-lifts-thursday-november-5-at-6-a-m-pt"
-   },
-   {
     "domain": "CNET",
     "url": "https://www.cnet.com/tech/computing/apple-macbook-pro-16-proled-xdr-review/"
+   },
+   {
+    "domain": "WIRED",
+    "url": "https://www.wired.com/review/apple-macbook-pro-oled-2026/"
    }
   ],
-  "image": null,
+  "image": "https://www.engadget.com/img/gallery/macbook-pro-m6-review-a-slight-upgrade-but-still-the-most-accessible-macbook-pro/l-intro-1793884787.jpg",
   "read_time": null,
   "lang": "en",
   "order": 12
- },
- {
-  "source": "gnews",
-  "source_label": "G News",
-  "title": "Apple iMac M6 Review: Faster, More Expensive And Deeply In Need Of A Refresh - Engadget",
-  "url": "https://www.engadget.com/2307246/apple-imac-m6-review/",
-  "publisher": "Engadget",
-  "ts": "2026-11-05T14:00:00+00:00",
-  "summary": "Most buyers would be better off with a Mac mini and a bigger external display.",
-  "bullets": "",
-  "sections": [],
-  "text": "Most buyers would be better off with a Mac mini and a bigger external display.\n\nSteve Dent for Engadget Add Engadget on Google: Preferred Source Google Discover RATING : 8.5 / 10 Pros Powerful M6 processor Improved wireless connectivity Easy setup Cons Design is starting to get stale No longer a great value We may receive a commission on purchases made from links.\n\nWith its new iPhone Duo and MacBook Pro touchscreen models, Apple is finally embracing change and shaking up its product mix. Unfortunately the new iMac M6 all-in-one — once one of Apple's most revolutionary products — has not been a beneficiary of that new ethos.\n\nIt is faster than ever thanks to the new M6 chip and updated memory. But the design, which hasn't changed since the 2021 iMac M1, is getting stale. The 24-inch display's small size is more of an issue than ever, considering that 27- and 32-inch monitors are now the norm. It's still a solid computer for consumers or business users, but at a $1,499 starting price ($200 more than before), there are better options — including other Macs.\n\nI tested the iMac M6 in a pretty, pale blue color, with the higher-end 12-core CPU, 12-core GPU (with a dual 16-core neural engine) and 16GB of memory. After recently reviewing a Mac Studio M5 Ultra with 256GB of RAM , I was curious to try a Mac model configured with the least amount of memory possible.\n\nApple didn't release a new iMac last year, so the biggest change from the 2024 model is an upgrade from the M4 to the M6 ",
-  "sources_count": 1,
-  "sources": [
-   {
-    "domain": "Engadget",
-    "url": "https://www.engadget.com/2307246/apple-imac-m6-review/"
-   }
-  ],
-  "image": null,
-  "read_time": null,
-  "lang": "en",
-  "order": 13
  },
  {
   "source": "gnews",
@@ -1060,10 +1045,10 @@
     "url": "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-24-the-legend-of-zelda-ocarina-of-time-part-1/"
    }
   ],
-  "image": null,
+  "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2299610990.jpg?c=16x9&q=w_800,c_fill",
   "read_time": null,
   "lang": "en",
-  "order": 14
+  "order": 13
  },
  {
   "source": "gnews",
@@ -1075,7 +1060,7 @@
   "summary": "It's more compelling than ever, but also more expensive.",
   "bullets": "",
   "sections": [],
-  "text": "A20 Pro 2026 iPad mini review: Maximizing the mini It’s more compelling than ever, but also more expensive.\n\n58 ... ... ... The 2026 iPad mini. Credit: Scharon Harding The 2026 iPad mini. Credit: Scharon Harding Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav The iPad mini has long felt like a niche product. It has earned a reputation as a quality tablet for people who want something small, comfortable, and portable, but its small screen and comparatively limited processing power have restricted its appeal, making it best suited to watching media or playing games.\n\nWith the 2026 version , the iPad mini is more competitive than ever. Its chip is current, its speakers are better, and, most impressively, it trades its 8.3-inch IPS screen for an 8.5-inch OLED that can hold its own against other premium tablets. There isn’t much more you can ask of an iPad this small.\n\nBut at just $50 less than the larger, more powerful iPad Air (11-inch) , the iPad mini still has a hard time making a case for itself.\n\nThe most immediately noticeable change to the 2026 iPad mini is its display. At 0.2 inches larger than the 2024 iPad mini’s screen, the difference might not sound like much, but it has a meaningful impact on a tablet this small. Beyond providing a bigger view of photos, video content, and lengthy documents, the extra space makes it easier to work with multiple windows, giving you more room t",
+  "text": "A20 Pro 2026 iPad mini review: Maximizing the mini It’s more compelling than ever, but also more expensive.\n\n59 ... ... ... The 2026 iPad mini. Credit: Scharon Harding The 2026 iPad mini. Credit: Scharon Harding Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav The iPad mini has long felt like a niche product. It has earned a reputation as a quality tablet for people who want something small, comfortable, and portable, but its small screen and comparatively limited processing power have restricted its appeal, making it best suited to watching media or playing games.\n\nWith the 2026 version , the iPad mini is more competitive than ever. Its chip is current, its speakers are better, and, most impressively, it trades its 8.3-inch IPS screen for an 8.5-inch OLED that can hold its own against other premium tablets. There isn’t much more you can ask of an iPad this small.\n\nBut at just $50 less than the larger, more powerful iPad Air (11-inch) , the iPad mini still has a hard time making a case for itself.\n\nThe most immediately noticeable change to the 2026 iPad mini is its display. At 0.2 inches larger than the 2024 iPad mini’s screen, the difference might not sound like much, but it has a meaningful impact on a tablet this small. Beyond providing a bigger view of photos, video content, and lengthy documents, the extra space makes it easier to work with multiple windows, giving you more room t",
   "sources_count": 5,
   "sources": [
    {
@@ -1099,7 +1084,46 @@
     "url": "https://www.theverge.com/tech/1025015/2026-ipad-mini-oled-review"
    }
   ],
-  "image": null,
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/20261104_095710-1152x648.jpg",
+  "read_time": null,
+  "lang": "en",
+  "order": 14
+ },
+ {
+  "source": "gnews",
+  "source_label": "G News",
+  "title": "Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says - The Hacker News",
+  "url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
+  "publisher": "The Hacker News",
+  "ts": "2026-11-05T05:17:00+00:00",
+  "summary": "CISA adds Apple CVE-2024-27834 to its KEV catalog after reports of active exploitation involving a pointer authentication bypass.",
+  "bullets": "",
+  "sections": [],
+  "text": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a medium-severity security flaw impacting multiple Apple operating systems to its Known Exploited Vulnerabilities ( KEV ) catalog, following reports of active exploitation.\n\nThe vulnerability in question is CVE-2024-27834 (CVSS score: 5.5), a case of improper authentication that could allow an attacker with arbitrary read and write capability to bypass Pointer Authentication.\n\nIt was addressed by Apple in May 2024 with improved checks in iOS 16.7.8 and iPadOS 16.7.8, iOS 17.5 and iPadOS 17.5, macOS Sonoma 14.5, tvOS 17.5, watchOS 10.5, and Safari 17.5. The vulnerability was demonstrated as a zero-day at the Pwn2Own Vancouver hacking contest held in March that year.\n\nThe addition of CVE-2024-27834 to the KEV catalog follows a report from Sekoia that threat actors possibly linked to Russia exploited previously patched vulnerabilities in Safari and Google Chrome to deliver malware capable of harvesting browser and device data.\n\nThe activity has been attributed to APT29 (aka Cozy Bear and Midnight Blizzard), a state-sponsored hacking group affiliated with Russia's Foreign Intelligence Service, with \"moderate to high confidence.\"\n\nThe attacks involve three initial access pathways – compromised legitimate websites, fake sites masquerading as popular websites, and a supply chain attack aimed at Plerdy SEO Tracker – to serve malicious JavaScript that triggers the vulnerability and ultimately deploy th",
+  "sources_count": 5,
+  "sources": [
+   {
+    "domain": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html"
+   },
+   {
+    "domain": "Ars Technica",
+    "url": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/"
+   },
+   {
+    "domain": "Dark Reading",
+    "url": "https://www.darkreading.com/mobile-security/apt29-watering-holes-target-mobile-users"
+   },
+   {
+    "domain": "TechRepublic",
+    "url": "https://www.techrepublic.com/article/news-iphone-android-hackers-infected-websites/"
+   },
+   {
+    "domain": "mediasat.info",
+    "url": "https://mediasat.info/en/2026/11/05/hackers-hijacked-ukraines-plerdy-tracker-to-target-phones/"
+   }
+  ],
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkv0B0acGnMDLnCJQYXNCkpzSeKKr_1m4-a10Q2Iy6DZOorGLb35YDD9vw3iQQA9fZTi7QGIZYlSsvTSmxc8w0UbgN_Xtl-QPyTngA9qhOuoryee3Z8X8CZRnHiUAY3wuIXG_UIO1DyDnjnfS5cOilt3WPzRnYYqFDZ1NHbXS0OVAsrVYHSeFuc7zglZw5/s1700-nu-rw-lo-l85-e365/apple-0day.jpg",
   "read_time": null,
   "lang": "en",
   "order": 15
@@ -1107,38 +1131,38 @@
  {
   "source": "gnews",
   "source_label": "G News",
-  "title": "Apple’s Latest Siri Announcement Could Mean the End of Apps on Your iPhone - Inc.com",
-  "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395",
-  "publisher": "MacRumors",
-  "ts": "2026-11-05T00:57:06+00:00",
-  "summary": "Apple today seeded the first betas of iOS 27.3, iPadOS 27.3, macOS Golden Gate 27.3, tvOS 27.3, and watchOS 27.3. The new software comes two days after Apple released the betas for developers. iOS 27.3 is a major update that adds a Vertical Tabs layout option and Adaptive Dark Mode for Safari. Siri AI can do more in and across Apple's apps, and developers are now able to create actions for Siri to carry out.",
+  "title": "Galaxy Buds Canal 5 earbuds uncovered this past summer visit the FCC ahead of US launch - SamMobile",
+  "url": "https://www.sammobile.com/news/galaxy-buds-canal-5-earbuds-visit-fcc-ahead-of-usa-launch/",
+  "publisher": "SamMobile",
+  "ts": "2026-11-04T16:59:00+00:00",
+  "summary": "The Samsung Galaxy Buds Canal 5 earhook earbuds we uncovered this past summer has visited the FCC. They may soon launch in the US.",
   "bullets": "",
   "sections": [],
-  "text": "Apple today seeded the first betas of iOS 27.3, iPadOS 27.3, macOS Golden Gate 27.3, tvOS 27.3, and watchOS 27.3. The new software comes two days after Apple released the betas for developers.\n\niOS 27.3 is a major update that adds a Vertical Tabs layout option and Adaptive Dark Mode for Safari. Siri AI can do more in and across Apple's apps, and developers are now able to create actions for ‌Siri‌ to carry out.\n\nThe redesigned Health app is now available with custom Insights and Longevity information, and the iPhone Duo supports Reachability. There's a new Selfie Sing feature in Apple Music , plus changes to StandBy on non-Duo iPhones. A full list of what's new in the beta can be found in our guide .\n\nOn the Apple Watch Series 12 and Ultra 4, Audio Intelligence features Live Rewind and ‌Siri‌ Recap are available for testing. Live Rewind creates a transcript of the last 15 seconds of speech, and ‌Siri‌ Recap offers a high-level summary of conversations throughout the day.\n\n‌macOS Golden Gate‌ 27.3 has the same Safari features, and it brings Live Activities to Macs without a Dynamic Island .\n\nWe're expecting all of Apple's updates to launch in December.",
+  "text": "BEST PICKS BY OUR SAMSUNG EXPERTS Best Samsung Galaxy Earbuds in 2026 Best Samsung Galaxy Phones in 2026 Best Samsung Watch in 2026 Best Samsung Galaxy Tablets in 2026 Best cheap Android phones 2026 by Samsung HOT RIGHT NOW Galaxy Z Flip 8 Galaxy Z Fold 8 Galaxy Z Fold 8 Ultra Galaxy S26 Ultra Galaxy A56 Galaxy A36 Galaxy Z Flip FE Galaxy Ring 2 Galaxy Watch 8 Order the King of Android! Latest reviews Samsung R85H Micro RGB TV review Samsung S95H OLED TV review Samsung Galaxy Tab S12 Ultra review Samsung Galaxy Z Flip 8 review Samsung Galaxy S26 FE review Samsung Galaxy Z Fold 8 Ultra review Samsung Galaxy Z Fold 8 review Samsung Galaxy Watch Ultra 2 review Samsung Galaxy A27 review BEST PICKS BY OUR SAMSUNG EXPERTS Best TV in 2026 Best Samsung OLED TV in 2026 Best Samsung QLED TV in 2026 Best Samsung Frame TV in 2026 HOT RIGHT NOW Samsung S95H QD-OLED TV (2026) Samsung S95F QD OLED TV (2025) Samsung S90H QD-OLED TV (2026) The Frame Pro LS03FW TV (2025) Samsung QN900F Neo QLED TV (2025) Samsung QN990F Neo QLED TV (2025) TV What is a QLED TV? What is a QD-OLED TV? What is a MicroLED TV? QLED vs QD-OLED vs Micro LED Mihai Matei Explaining Samsung's QD-Display technology Trending One UI One UI 8.5 One UI 9 Will my device get One UI 9? Galaxy AI Galaxy AI vs. Awesome Intelligence One UI 9.5 One UI 10 Everything about the latest version of One UI Trending One UI 8.5 Samsung R95H Micro RGB TV Galaxy Z Fold 8 Galaxy Z Fold 8 Wide Galaxy S26 Ultra One UI 9.0 Samsung S95H OLED-TV Sams",
   "sources_count": 5,
   "sources": [
    {
-    "domain": "Inc.com",
-    "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395"
+    "domain": "SamMobile",
+    "url": "https://www.sammobile.com/news/galaxy-buds-canal-5-earbuds-visit-fcc-ahead-of-usa-launch/"
    },
    {
-    "domain": "MacRumors",
-    "url": "https://www.macrumors.com/2026/11/05/ios-27-3-public-beta/"
+    "domain": "Android Authority",
+    "url": "https://www.androidauthority.com/samsung-galaxy-t1-earbuds-fcc-certification-3731590/"
    },
    {
-    "domain": "Apple",
-    "url": "https://www.apple.com/newsroom/2026/11/redesigned-health-app-expands-language-support/"
+    "domain": "PhoneArena",
+    "url": "https://www.phonearena.com/news/What-are-the-Galaxy-T1s-Samsungs-mystery-fitness-earbuds-just-leaked_id184560"
    },
    {
-    "domain": "Engadget",
-    "url": "https://www.engadget.com/2308154/iphone-duo-new-accessibility-feature-ios-27-3-beta-reachability/"
+    "domain": "Android Headlines",
+    "url": "https://www.androidheadlines.com/2026/11/samsungs-galaxy-studio-headphones-could-be-travel-ready.html"
    },
    {
-    "domain": "MacStories",
-    "url": "https://www.macstories.net/stories/siri-ais-evolution-is-both-surprising-and-obvious/"
+    "domain": "SammyGuru",
+    "url": "https://sammyguru.com/samsung-galaxy-studio-headphones-fcc-photo/"
    }
   ],
-  "image": null,
+  "image": "https://www.sammobile.com/wp-content/uploads/2026/03/Galaxy-Buds-4-Pro-review-9.jpg",
   "read_time": null,
   "lang": "en",
   "order": 16
