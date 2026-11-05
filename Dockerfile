@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # Playwright/Patchright base image already ships Chromium + all system deps.
-FROM mcr.microsoft.com/playwright/python:v1.49.0-noble
+FROM mcr.microsoft.com/playwright/python:v1.64.1-noble
 
 ENV PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
