@@ -2,516 +2,616 @@
  {
   "source": "perplexity",
   "source_label": "Perplexity",
-  "title": "House Republicans seek Nvidia CEO briefing on spy claims",
-  "url": "https://www.perplexity.ai/discover/tech/house-republicans-seek-nvidia-ds3xXxNUQAW4KyhYHtlylQ",
+  "title": "OpenAI adds cheaper model to Dots as compute costs mount",
+  "url": "https://www.perplexity.ai/discover/tech/openai-adds-cheaper-model-to-d-k755NW99QGqa26gAOTvBxQ",
   "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T20:38:14.626525",
-  "summary": "Three House committee chairmen asked Jensen Huang for a private Nov. 18 briefing on his ties to an alleged Chinese intelligence asset.",
-  "bullets": "- The chairmen of the House **Foreign Affairs**, **China** and **Intelligence** committees asked **Nvidia** CEO **Jensen Huang** to brief them privately on Nov. 18, Reuters reported.\n- A New York Times report said U.S. officials believe **Alice Huang**, a former executive at Nvidia customer **Megaspeed**, passed information to Beijing.\n- Nvidia says its Asian cloud customers get only routine business information, and China's foreign ministry called the report \"groundless speculation\".",
+  "ts": "2026-11-04T17:53:46.974542",
+  "summary": "The ChatGPT maker's consumer chief called its Pro-only personal assistants \"compute heavy,\" echoing Musk's warning that Grok Bot costs are unsustainable.",
+  "bullets": "- **OpenAI** said Tuesday it added the smaller **GPT-6.1 Terra** model to power Dots, letting assistants route some tasks away from the costlier GPT-6 Astra.\n- ChatGPT consumer head **Adam Fry** called Dots \"compute heavy,\" noting each runs its own cloud computer and remains limited to the $100-a-month Pro plan.\n- **Elon Musk** called Grok Bot's costs \"unsustainably high,\" while OpenAI has raised less than half its $30 billion target, per The Wall Street Journal.",
   "sections": [
    {
-    "heading": "House Republicans ask Nvidia CEO Huang to brief them on Chinese spy allegations",
-    "body": "Three senior House Republicans have asked Nvidia CEO Jensen Huang to brief Congress in private later this month. Their request follows a New York Times report that he had a close relationship with a Chinese businesswoman who U.S. officials believe passed information to Beijing, Reuters reported on Thursday, citing a letter it had seen.\n\nThe letter is dated November 4 and signed by House Foreign Affairs Committee Chairman Brian Mast, China Select Committee Chairman John Moolenaar and Intelligence Committee Chairman Eric Crawford. It asks Huang to give a closed-door briefing on November 18 about the Times report and Nvidia's \"security protocols against foreign adversary espionage,\" according to Reuters. The lawmakers wrote that the report raises \"significant national security concerns regarding (China's) access to sensitive U.S. technology and information.\" They added that \"it is vital that Congress determines the extent to which U.S. national security has been placed at risk.\""
+    "heading": "OpenAI Dots compute costs raise doubts on personal AI agents",
+    "body": "OpenAI says its new Dots personal assistants use a lot of computing power. The company is now sending some of their work to a smaller, cheaper model. The admission adds to doubts about whether the industry can afford always-on AI agents. At a dinner with reporters in New York on Monday, November 2, Adam Fry, head of ChatGPT's consumer business, said Dots are \"on the compute heavy side.\" He added that each assistant runs its own cloud computer to carry out tasks for users across their connected accounts.\n\nRivals face the same problem. Elon Musk said this week that the cost of running Grok Bot, the personal assistant SpaceX launched in August, is \"unsustainably high relative to revenue.\" He suggested the company was cutting back the computing power assigned to it, so users hit their limits sooner. The industry's push into agents follows the success of Meta's Muse assistant, according to Fortune."
    },
    {
-    "heading": "The Megaspeed connection",
-    "body": "The letter asks about Huang's dealings with Alice Huang of Megaspeed. The chairmen called her \"a publicly reported People's Republic of China (PRC) intelligence asset,\" Bloomberg Law reported. She is a former executive at the Singapore-based company, which buys AI chips from Nvidia. U.S. authorities have looked into whether Megaspeed helped Beijing get advanced chips that are barred from shipment to China, according to Reuters.\n\nThe Times published its report on October 29, citing unnamed people briefed on the surveillance. It said U.S. intelligence agencies had monitored Alice Huang, also known as Huang Le, for about a year. The paper also reported that President Donald Trump was briefed but chose not to act, TweakTown reported. According to the Times, officials do not believe Jensen Huang knew of any intelligence activity, and he has not received a defensive briefing. The two are not related. The Times said a Malaysian sister company of Megaspeed bought at least $4.8 billion in Nvidia equipment between June 2024 and February 2026, according to a summary of the report."
+    "heading": "A cheaper model in the mix",
+    "body": "On Tuesday, November 3, OpenAI said it was expanding the models that power dots to include GPT-6.1 Terra. A dot can now use different models for different parts of its work. Terra is smaller and needs less computing power than GPT-6 Astra, which originally ran every Dots task. The new automatic router is meant to make Dots less compute-intensive.\n\nFor now, Dots are only available on the $100-a-month Pro plan. Fry said bringing them to more users depends on a breakthrough in compute efficiency, which he expects will come and drive costs down quickly. He also wants Dots to become an always-available presence through features like \"background mode,\" which would mean using even more compute."
    },
    {
-    "heading": "Nvidia and Beijing push back",
-    "body": "Nvidia did not comment on the letter. It said Huang talks with \"thousands of customer executives every year,\" and that cloud customers in Asia receive ordinary business information, not sensitive trade secrets or anything tied to U.S. national security, Reuters reported. \"We often receive updates from the U.S. government regarding parties and entities of concern and always act accordingly,\" the company added.\n\nNvidia had earlier said that allegations Megaspeed diverted chips \"were thoroughly investigated and debunked last year,\" according to TweakTown. Megaspeed said it had hired outside legal advisers to run an internal investigation and had offered to cooperate with the U.S. government. China's foreign ministry spokesman Guo Jiakun called the Times report \"groundless speculation\" and \"nothing more than an attempt to smear China,\" Slicast reported."
+    "heading": "Funding gets harder",
+    "body": "Money is the other constraint. OpenAI has secured about $11 billion in commitments for its latest round, less than half of its $30 billion target, at a $1.25 trillion valuation, The Wall Street Journal reported. The company had hoped for $1.4 trillion. The Financial Times reported that OpenAI cut its goal to $20 billion, with a later offering for wealthy individuals meant to close the gap. OpenAI has not publicly confirmed the figures."
+   },
+   {
+    "heading": "Chips and competition",
+    "body": "OpenAI relies mostly on Nvidia GPUs and plans to scale up production of its in-house chip, called Jalapeno, in 2027, Fortune reported. Anthropic, which uses four types of chips, has signed purchase agreements worth $895.4 billion, \"substantially all of which is related to compute and infrastructure,\" according to its amended S-1. Even so, it lists the inability to secure more compute as a major risk. Fortune put the problem this way: \"the more powerful—and constantly running—personal AI agents become, the more compute they consume. Will OpenAI ever be able to catch up with itself?\""
    }
   ],
   "text": "",
-  "sources_count": 14,
+  "sources_count": 21,
   "sources": [
    {
-    "domain": "reuters.com",
-    "url": "https://www.reuters.com/legal/litigation/key-republicans-seek-briefing-nvidia-ceo-over-chinese-spy-allegations-document-2026-11-05/"
+    "domain": "finance.yahoo.com",
+    "url": "https://finance.yahoo.com/technology/ai/articles/musk-says-grok-bot-costs-200129270.html"
    },
    {
-    "domain": "news.bloomberglaw.com",
-    "url": "https://news.bloomberglaw.com/artificial-intelligence/nvidias-huang-is-asked-to-brief-lawmakers-about-china-ties"
+    "domain": "fortune.com",
+    "url": "https://www.fortune.com/2026/11/04/will-compute-curtail-personal-ai-agent-push/"
    },
    {
-    "domain": "tweaktown.com",
-    "url": "https://www.tweaktown.com/news/114387/nvidia-pushes-back-against-report-linking-ceo-jensen-huang-to-suspected-chinese-intelligence-asset/index.html"
+    "domain": "openai.com",
+    "url": "https://openai.com/index/how-we-build-safety-security-and-privacy-into-dots/"
    },
    {
-    "domain": "yahoo.com",
-    "url": "https://www.yahoo.com/news/us/articles/high-flying-past-alleged-spy-002755680.html"
+    "domain": "wsj.com",
+    "url": "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5"
    },
    {
-    "domain": "slicast.com",
-    "url": "https://slicast.com/article/x8t6tl"
+    "domain": "techcrunch.com",
+    "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/"
    },
    {
-    "domain": "siliconreport.com",
-    "url": "https://www.siliconreport.com/sources-say-alice-huang-was-chinese-asset-tied-to-jensen-huang"
+    "domain": "fidelity.com",
+    "url": "https://www.fidelity.com/news/article/default/202611020538MIDNIGHTUSEQUITY_A3741019"
    },
    {
-    "domain": "wol.com",
-    "url": "https://www.wol.com/2026/10/29/nvidia-responds-to-accusations-that-jensen-huang-was-chinese-target/"
+    "domain": "marketscreener.com",
+    "url": "https://www.marketscreener.com/news/openai-s-latest-funding-round-falls-short-of-30-billion-target-ce785fd8de80ff26"
    },
    {
-    "domain": "worldattention.com",
-    "url": "https://worldattention.com/stories/us-investigation-into-alleged-chinese-intelligence-operation-targeting-nvidia-ceo-jensen-huang-641dda907b"
+    "domain": "perplexity.ai",
+    "url": "https://www.perplexity.ai/discover/tech/edded534-339c-4d33-9761-a65c195c2ed8"
    },
    {
-    "domain": "news.sbs.co.kr",
-    "url": "http://news.sbs.co.kr/english/article.do?news_id=N1008823908"
+    "domain": "the-decoder.com",
+    "url": "https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/"
    },
    {
-    "domain": "wol.com",
-    "url": "https://www.wol.com/2026/10/30/chinese-female-spy-suspected-of-targeting-nvidia-chief/"
+    "domain": "investing.com",
+    "url": "https://www.investing.com/news/company-news/openai-raises-just-11bn-of-30bn-target-as-ai-investor-appetite-cools--wsj-4989165"
    },
    {
-    "domain": "slicast.com",
-    "url": "https://slicast.com/ko/article/3xssfr"
+    "domain": "thepaypers.com",
+    "url": "https://thepaypers.com/fintech/news/openai-reportedly-cuts-funding-round-target-to-usd-20-billion"
    },
    {
-    "domain": "economictimes.indiatimes.com",
-    "url": "https://economictimes.indiatimes.com/tech/technology/key-republicans-seek-briefing-from-nvidia-ceo-over-chinese-spy-allegations/articleshow/135584655.cms"
+    "domain": "kulu-media.com",
+    "url": "https://kulu-media.com/openai-funding-round-secures-11-billion-below-30-billion-target/"
    },
    {
-    "domain": "miamiherald.com",
-    "url": "https://www.miamiherald.com/news/nation-world/national/article317945214.html"
+    "domain": "bgnes.com",
+    "url": "http://www.bgnes.com/economy/openai-falls-short-of-fundraising-target-amid-cooling-sentiment-towards-ai-sector"
    },
    {
-    "domain": "newsbytesapp.com",
-    "url": "https://www.newsbytesapp.com/news/business/house-republicans-ask-nvidia-ceo-jensen-huang-explain-china-ties/tldr"
+    "domain": "fortune.com",
+    "url": "https://fortune.com/2026/11/02/ai-boom-supply-crunch-capital-debt-bonds-capex-spending/"
+   },
+   {
+    "domain": "xenospectrum.com",
+    "url": "https://xenospectrum.com/en/openai-funding-commitments-new-round/"
+   },
+   {
+    "domain": "ontimebrief.com",
+    "url": "https://ontimebrief.com/en/2026/11/01/openai-raises-11-billion-far-short-of-30-billion-target/"
+   },
+   {
+    "domain": "blockwest.co",
+    "url": "https://blockwest.co/category/markets/"
+   },
+   {
+    "domain": "manifold.markets",
+    "url": "https://manifold.markets/Terminator2/will-openai-close-or-announce-a-fun"
+   },
+   {
+    "domain": "blockwest.co",
+    "url": "https://blockwest.co/tag/venture-capital/"
+   },
+   {
+    "domain": "in.investing.com",
+    "url": "https://in.investing.com/news/company-news/openai-raises-just-11bn-of-30bn-target-as-ai-investor-appetite-cools--wsj-5669569"
+   },
+   {
+    "domain": "techbooky.com",
+    "url": "https://www.techbooky.com/openai-cuts-funding-target-to-20b-as-report-puts-commitments-near-11b/"
    }
   ],
   "image": null,
-  "read_time": 2,
+  "read_time": 3,
   "lang": "en",
   "order": 1
  },
  {
   "source": "perplexity",
   "source_label": "Perplexity",
-  "title": "Google to invest $17 billion in first Wyoming data center",
-  "url": "https://www.perplexity.ai/discover/tech/google-to-invest-17-billion-in-1kj2wdacToWlgBqDRBPTVA",
+  "title": "Pangram expands AI detection to images and video",
+  "url": "https://www.perplexity.ai/discover/tech/pangram-expands-ai-detection-t-dNEjyhk.RSyPaUlkWB9W9Q",
   "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T20:27:49.573197",
-  "summary": "The Laramie County campus will rely on gas-fed fuel cells with carbon capture, Google says, arriving days after voters rebuked data centers.",
-  "bullets": "- **Google** Alphabet Inc. announced Thursday its first **Wyoming** data center, a $17 billion investment in **Laramie County** with partners including Tallgrass Energy and Related Digital.\n- Google said power will come largely from a 702-megawatt **Bloom Energy** Bloom Energy Corporation fuel cell project with **AEP** American Electric Power Company, Inc., with emissions stored underground.\n- The announcement came two days after voters backed data center limits in 40 of 41 local ballot measures, **Bloomberg Law** reported.",
+  "ts": "2026-11-04T17:27:48.191603",
+  "summary": "Pangram Image 1.0 replaces a July research preview, and a faster Flash model scans video frame by frame, the company says.",
+  "bullets": "- **Pangram** released Image 1.0 and the video-focused Image Flash 1.0, saying they scored 99.96% on an internal test and 98.7% on the DF26 benchmark.\n- The launch follows a July research preview that came out alongside the Pangram 4 text detector and a $9 million funding round.\n- CEO **Max Spero** told Pirate Wires that rival detectors \"kind of sucked.\" He pointed to fake Iran war drone footage and AI images in Amazon ads.",
   "sections": [
    {
-    "heading": "Google plans $17 billion Wyoming data center",
-    "body": "Google said Thursday, Nov. 5, that it will build its first data center in Wyoming, calling it a long-term $17 billion investment in Laramie County. The campus is being developed with Tallgrass Energy, Black Hills Energy, American Electric Power and Related Digital, according to Google's announcement.\n\nThe timing stands out. Bloomberg Law reported that the price tag came two days after voters across the U.S. delivered a broad rebuke to large AI data center projects. Voters in Tuesday's midterms sided with limits on data centers in 40 of 41 local ballot measures, Bloomberg Law said, citing Ballotpedia. In Texas, Democrat Gina Hinojosa won the governor's race after promising a data center moratorium."
+    "heading": "Pangram launches AI image and video detection models",
+    "body": "Pangram, a startup best known for detecting AI-written text, released Pangram Image 1.0 on Wednesday, Nov. 4. The image model replaces a research preview from earlier this year, and the company also released a companion model built to detect AI-generated video. With the launch, Pangram's product line now covers images and video as well as text. CEO Max Spero said the move responds to AI imagery that is getting harder to spot."
    },
    {
-    "heading": "Power and water plans",
-    "body": "The project's power supply relies heavily on natural gas paired with carbon capture. Google said the campus is contracted with AEP for a 702-megawatt fuel cell development with carbon capture and storage, which it called \"the largest planned development of its kind to date.\" Google said Bloom Energy will make the gas-fed fuel cells and most of their emissions will be stored permanently at Tallgrass's nearby Eastern Wyoming Sequestration Hub. The company said the deal brings its total contracted carbon capture capacity to nearly 1 gigawatt.\n\nGoogle said it will also draw power from gas generators run by Tallgrass and Black Hills Energy, and it is studying whether carbon capture can be fitted to Tallgrass's combined-cycle turbines. The company said it \"will pay for 100% of the power we use\" and cover the infrastructure costs its growth creates. It also said the facility will be air-cooled to limit strain on local water supplies, according to its post. Google expects the project to bring in hundreds of millions of dollars in property taxes for Laramie County and School District 1, Anadolu Agency reported."
+    "heading": "Two new models",
+    "body": "The flagship Pangram Image 1.0 produces a heatmap showing where AI content appears in an image. Pangram says it holds up against edits, compression and low resolutions. The company lowered the minimum image size from 512x512 to 256x256 pixels, though results below 512 pixels come with a reduced-confidence disclaimer. Pangram reported 99.96% accuracy on an internal test set of 1,200 synthetic images, made with 12 frontier generators that mirrored 100 real photos.\n\nThe second model, Pangram Image Flash 1.0, is a smaller, faster model aimed at video. It analyzes clips frame by frame. Pangram said it scored 98.7% on the DF26 academic benchmark, 29 points ahead of the next-best detector. Both models are now part of Pangram's Chrome extension, which flags AI content on social media, shopping sites and rental listings. They are also available through the company's API."
    },
    {
-    "heading": "From Project Jade to Project Tembo",
-    "body": "The site has been public for months. It began as Project Jade, which Crusoe was developing with Tallgrass. Google was later identified as the customer behind a 2.7-gigawatt campus on 716 acres in the Switchgrass Industrial Park, about eight miles south of Cheyenne. The project was renamed Project Tembo, Data Center Dynamics reported in July. Crusoe had paused work on the site \"at the request of our customer.\"\n\nLocal outlet Cap City News reported that Google will own and operate the campus, with Related Digital as lead developer. Plans include four data center buildings, with some data halls scheduled to start operating in the second half of 2028 and the full build finishing around the end of 2031. Related Digital has said the facility will use a closed-loop air cooling system and will not take up existing farmland.\n\nGoogle said it has met with more than 200 Laramie County residents. It is also forming a community council with its partners to address how data center growth is affecting Cheyenne, the company said."
-   }
-  ],
-  "text": "",
-  "sources_count": 23,
-  "sources": [
-   {
-    "domain": "blog.google",
-    "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/"
-   },
-   {
-    "domain": "news.bloomberglaw.com",
-    "url": "https://news.bloomberglaw.com/artificial-intelligence/google-plans-to-spend-17-billion-on-wyoming-data-center"
-   },
-   {
-    "domain": "f.aa.com.tr",
-    "url": "https://f.aa.com.tr/en/americas/google-unveils-17b-investment-for-1st-data-center-in-us-state-of-wyoming/4113445"
-   },
-   {
-    "domain": "datacenterdynamics.com",
-    "url": "https://www.datacenterdynamics.com/en/news/google-is-customer-behind-27gw-data-center-campus-near-cheyenne-wyoming/"
-   },
-   {
-    "domain": "related-digital.com",
-    "url": "https://www.related-digital.com/laramiecounty"
-   },
-   {
-    "domain": "capcity.news",
-    "url": "https://capcity.news/community/county-community/2026/09/10/google-stepping-in-for-crusoe-pitches-700-acre-data-center-campus-to-laramie-county-on-wednesday/"
-   },
-   {
-    "domain": "article.wn.com",
-    "url": "https://article.wn.com/view/2026/11/05/Investing_in_Wyoming_s_infrastructure_energy_and_workforce_G/"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/technology/articles/alphabet-apos-google-plans-17-173055976.html?fr=sycsrp_catchall"
-   },
-   {
-    "domain": "tradingkey.com",
-    "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262283210-google-17-billion-wyoming-data-center-ai-regulation-tradingkey"
-   },
-   {
-    "domain": "news.az",
-    "url": "https://news.az/news/google-unveils-plans-for-17b-data-center-in-wyoming"
-   },
-   {
-    "domain": "fourweekmba.com",
-    "url": "https://fourweekmba.com/ai-google-confirms-17b-wyoming-data-center-pays-100-of-power/"
-   },
-   {
-    "domain": "news.bloomberglaw.com",
-    "url": "https://news.bloomberglaw.com/ip-law/google-plans-to-spend-17-billion-on-wyoming-data-center"
-   },
-   {
-    "domain": "mitrade.com",
-    "url": "https://www.mitrade.com/insights/news/live-news/article-8-2233948-20261106"
-   },
-   {
-    "domain": "unite.ai",
-    "url": "https://www.unite.ai/google-plans-its-first-wyoming-data-center-with-carbon-capture-power/"
-   },
-   {
-    "domain": "ground.news",
-    "url": "https://ground.news/article/google-commits-17-billion-to-its-first-wyoming-data-center-campus"
-   },
-   {
-    "domain": "lookonchain.com",
-    "url": "https://www.lookonchain.com/feeds/80720"
-   },
-   {
-    "domain": "benzinga.com",
-    "url": "https://www.benzinga.com/news/26/11/62936363/google-investing-17b-data-center-construction-wyoming"
-   },
-   {
-    "domain": "techflowpost.com",
-    "url": "https://techflowpost.com/en-US/newsletter/143231"
-   },
-   {
-    "domain": "suedatacenters.org",
-    "url": "https://suedatacenters.org/data-centers/tallgrass-project-jade-cheyenne-wy"
-   },
-   {
-    "domain": "constructionreviewonline.com",
-    "url": "https://constructionreviewonline.com/purported-customer-of-50bn-project-tembo-data-center-near-cheyenne-revealed-as-google/"
-   },
-   {
-    "domain": "fourweekmba.com",
-    "url": "https://fourweekmba.com/nl/AI-Google-bevestigt-dat-datacenter-in-Wyoming-17-miljard-dollar-betaalt-voor-100%25-van-de-elektriciteit./"
-   },
-   {
-    "domain": "moomoo.com",
-    "url": "https://www.moomoo.com/news/post/1003693619/alphabet-s-google-plans-17-billion-investment-in-wyoming-data"
-   },
-   {
-    "domain": "mitrade.com",
-    "url": "https://www.mitrade.com/es/articulo/news/live-news/article-8-2233962-20261106"
-   }
-  ],
-  "image": null,
-  "read_time": 2,
-  "lang": "en",
-  "order": 2
- },
- {
-  "source": "perplexity",
-  "source_label": "Perplexity",
-  "title": "Outside study finds Anthropic AI improving twice as fast",
-  "url": "https://www.perplexity.ai/discover/tech/outside-study-finds-anthropic-VCXe15f4SSKjBGQIgksDmQ",
-  "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T20:22:46.842221",
-  "summary": "METR credits most of the speedup to Anthropic using AI in its research, weeks after CEO Dario Amodei urged a slowdown.",
-  "bullets": "- Nonprofit **METR** said Thursday **Anthropic** is improving its models roughly twice as fast as it did from March 2024 to October 2025.\n- The 11-week assessment, using confidential data and unreleased models, attributed most acceleration to Anthropic's in-house use of AI, not more computing power, Reuters Thomson Reuters Corporation reported.\n- METR also said Anthropic's August risk report understated the acceleration, as Anthropic prepares for an IPO expected later this month, AP reported.",
-  "sections": [
-   {
-    "heading": "METR finds Anthropic is developing AI about twice as fast as last year",
-    "body": "Anthropic is improving its AI models about twice as fast as it did a year ago, according to an independent assessment released Thursday by the nonprofit METR. The finding comes weeks after CEO Dario Amodei urged the industry to slow its pace. The report is one of the most detailed outside looks yet at whether AI is speeding up its own development. It arrives as Anthropic prepares for an initial public offering expected later this month, the Associated Press reported."
-   },
-   {
-    "heading": "What METR found",
-    "body": "METR staff ran a \"high-access evaluation\" at Anthropic from Aug. 12 to Oct. 29. METR's report concludes that as of October, the company is \"likely improving the capabilities of their models on well-specified tasks at around twice the rate\" it did between March 2024 and October 2025. The group measured progress with Anthropic's internal benchmark index and found scores have grown about 1.9 times faster since October 2025, with a 95% confidence interval of 1.5 to 2.8 times. In other words, Anthropic has made roughly two years of its earlier progress in the past year.\n\nMETR said it was \"confident\" that faster growth in training compute did not cause the speedup. It said most of the current acceleration likely comes from Anthropic's heavy use of AI in its own research. Reuters reported that METR put AI's share of the acceleration at perhaps 80%, while calling that figure uncertain. Researchers also found no convincing evidence of major bottlenecks that could slow progress over the next year.\n\nThe report came with caveats. METR said the true rate could be closer to 1.3 or 3 times the historical pace. The speedup might apply only to tasks that can be graded automatically. Anthropic's redactions also limited how much detail the group could publish, AP reported."
-   },
-   {
-    "heading": "Disagreement over Anthropic's own risk report",
-    "body": "In a separate review, METR said Anthropic's August risk report \"understates the level of acceleration that was occurring.\" It said Anthropic's internal \"2x Acceleration Threshold\" had plausibly been crossed by July 15. METR still agreed that the direct catastrophic risks from those models were low. It added that it \"cannot rule out a substantial further acceleration\" over the next six months."
-   },
-   {
-    "heading": "Amodei's call to slow down",
-    "body": "In a Sept. 12 essay, Amodei urged the AI world to \"slow the pace at which we improve the capabilities of AI models.\" He warned that recursive self-improvement \"could outrun our ability to understand and control these systems.\" In the same essay he named METR as a suitable outside evaluator, according to AP. The company has also published its own research showing that AI is already accelerating its development work.\n\nAnthropic did not immediately respond to requests for comment. METR said AI cannot yet make \"highly significant and fully autonomous contributions\" to model training, but noted that Anthropic researchers described \"signs of life\" suggesting that could change soon."
-   }
-  ],
-  "text": "",
-  "sources_count": 17,
-  "sources": [
-   {
-    "domain": "abcnews.com",
-    "url": "https://abcnews.com/Technology/wireStory/anthropic-rapidly-accelerating-ai-development-amid-slowdown-calls-137885082"
-   },
-   {
-    "domain": "metr.org",
-    "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
-   },
-   {
-    "domain": "reuters.com",
-    "url": "https://www.reuters.com/technology/anthropics-models-improving-nearly-twice-fast-with-help-ai-study-finds-2026-11-05/"
-   },
-   {
-    "domain": "metr.org",
-    "url": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/"
-   },
-   {
-    "domain": "anthropic.com",
-    "url": "https://www.anthropic.com/institute/recursive-self-improvement"
-   },
-   {
-    "domain": "usnews.com",
-    "url": "https://www.usnews.com/news/best-states/california/articles/2026-11-05/anthropic-is-rapidly-accelerating-ai-development-amid-slowdown-calls-outside-research-group-says"
-   },
-   {
-    "domain": "rutlandherald.com",
-    "url": "https://www.rutlandherald.com/news/business/ap-technology-summarybrief-at-1-08-p-m-est/article_e9a917f0-4dc5-50b9-9175-3dc105b02f46.html"
-   },
-   {
-    "domain": "clintonherald.com",
-    "url": "https://www.clintonherald.com/news/national_news/anthropic-is-rapidly-accelerating-ai-development-amid-slowdown-calls-outside-research-group-says/article_432439ce-44ad-5191-bf87-b8205858d26a.html"
-   },
-   {
-    "domain": "unite.ai",
-    "url": "https://www.unite.ai/es/metr-estimates-anthropics-model-capability-growth-has-nearly-doubled/"
-   },
-   {
-    "domain": "tradingview.com",
-    "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_P8N40P09T:0-metr-says-anthropic-model-capabilities-improving-nearly-twice-fast-on-well-defined-tasks/"
-   },
-   {
-    "domain": "metr.org",
-    "url": "https://metr.org/blog/"
-   },
-   {
-    "domain": "bgnes.com",
-    "url": "http://www.bgnes.com/economy/anthropic-speeds-up-ai-development-despite-its-ceo-s-calls-for-a-slowdown"
-   },
-   {
-    "domain": "kdhnews.com",
-    "url": "https://kdhnews.com/news/nation/anthropic-is-rapidly-accelerating-ai-development-amid-slowdown-calls-outside-research-group-says/article_dbed77e3-df6d-5818-ba32-001dcf401644.html"
-   },
-   {
-    "domain": "eagletribune.com",
-    "url": "https://www.eagletribune.com/region/anthropic-is-rapidly-accelerating-ai-development-amid-slowdown-calls-outside-research-group-says/article_ad1ecb56-d990-568f-af9f-d11782c76877.html"
-   },
-   {
-    "domain": "goodreturns.in",
-    "url": "https://www.goodreturns.in/news/anthropic-ai-development-speed-doubles-amid-safety-review-ahead-ipo-011-1545607.html"
-   },
-   {
-    "domain": "ottumwacourier.com",
-    "url": "https://www.ottumwacourier.com/news/business/anthropic-is-rapidly-accelerating-ai-development-amid-slowdown-calls-outside-research-group-says/article_ed38a2ec-29dd-5d49-b666-0ce50e11095c.html"
-   },
-   {
-    "domain": "newsbytesapp.com",
-    "url": "https://www.newsbytesapp.com/news/science/anthropics-ai-development-doubles-pace-despite-dario-amodei-plea/tldr"
-   }
-  ],
-  "image": null,
-  "read_time": 3,
-  "lang": "en",
-  "order": 3
- },
- {
-  "source": "perplexity",
-  "source_label": "Perplexity",
-  "title": "Anthropic launches Personal Finance beta for Claude",
-  "url": "https://www.perplexity.ai/discover/tech/anthropic-launches-personal-fi-4HDIpKjtTrypijB7Adm..g",
-  "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T18:46:30.141858",
-  "summary": "US Pro, Max and Ultra subscribers can link bank accounts through Plaid for read-only spending analysis, as Anthropic prepares for an IPO.",
-  "bullets": "- **Anthropic** began rolling out a **Personal Finance** beta Thursday, letting US paid subscribers connect bank and credit card accounts to **Claude** via **Plaid**.\n- Access is read-only, with Claude seeing balances and up to two years of transactions; Anthropic says it can't move or invest money.\n- The launch challenges **OpenAI**, which added similar Plaid-linked ChatGPT tools in May; Anthropic stressed its product carries no ads or sponsored recommendations.",
-  "sections": [
-   {
-    "heading": "Anthropic launches Personal Finance beta in Claude with Plaid",
-    "body": "Anthropic announced on Thursday, Nov. 5, that Claude is getting a feature called Personal Finance. It lets users connect their bank and credit card accounts through Plaid and ask the chatbot questions about their money. The beta is rolling out this week to paid Pro, Max and Ultra subscribers in the US, and it arrives as Anthropic prepares for its widely anticipated initial public offering.\n\nThe launch puts Claude in direct competition with OpenAI, which in May added similar tools to ChatGPT that also connect to bank accounts through Plaid."
-   },
-   {
-    "heading": "What Claude can see",
-    "body": "Access is read-only. Anthropic says Claude can't move, manage or invest money, and the feature \"isn't designed to give investment advice\". For each connected account, Claude sees the bank's name, the account's name and type, the last four digits of the account number, balances, credit limits and up to two years of transactions. Users sign in to their bank themselves through Plaid, so Claude never asks for or sees their banking password.\n\nChats inside the Personal Finance hub are not used to train Anthropic's models. Anything users share outside the hub falls under their regular privacy settings."
-   },
-   {
-    "heading": "How it works",
-    "body": "A user can ask \"Where did my money go this month?\" and Claude will add up spending across connected accounts and sort it into categories such as rent and utilities, food and drink, and shopping. The tool also looks for duplicate charges, unexpected fees and bills that keep going up, and it can explain terms like APR. It can make weekly spending charts, expense calendars and budget breakdowns, and answer questions such as whether a holiday trip is affordable.\n\nAnthropic tells users that Claude \"can make mistakes in its answers.\" It advises them to ask which transactions are behind a number and to check important figures with their bank."
-   },
-   {
-    "heading": "A swipe at ad-supported rivals",
-    "body": "Anthropic contrasted the product with competitors. \"Like the rest of Claude, Personal Finance has no ads or sponsored recommendations, and it doesn't offer credit cards, loans, or savings accounts of its own, so your money questions get a straight answer,\" the company wrote. Engadget read this as a reference to OpenAI's ad policy.\n\nThe company also suggested more is coming. \"Personal Finance is a first step,\" Anthropic said, adding that it is exploring ways for Claude to work alongside licensed professionals and regulated firms, and that it wants to hear from \"banks, wealth managers, and financial services companies who want to help shape it\"."
-   }
-  ],
-  "text": "",
-  "sources_count": 20,
-  "sources": [
-   {
-    "domain": "reuters.com",
-    "url": "https://www.reuters.com/business/anthropic-rolls-out-personal-finance-feature-claude-2026-11-05/"
-   },
-   {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/"
-   },
-   {
-    "domain": "theverge.com",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance"
-   },
-   {
-    "domain": "9to5mac.com",
-    "url": "https://9to5mac.com/2026/11/05/anthropic-upgrades-claude-with-new-personal-finance-feature/"
-   },
-   {
-    "domain": "zdnet.com",
-    "url": "https://www.zdnet.com/innovation/personal-finance-claude-anthropic/"
-   },
-   {
-    "domain": "engadget.com",
-    "url": "https://www.engadget.com/2307936/now-claude-can-help-with-your-finances-too/"
-   },
-   {
-    "domain": "dev.to",
-    "url": "https://dev.to/frankchu/2-years-of-bank-data-claude-reads-your-money-now-33nn"
-   },
-   {
-    "domain": "economictimes.indiatimes.com",
-    "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-rolls-out-personal-finance-feature-for-claude/printarticle/135583572.cms"
-   },
-   {
-    "domain": "tldr.tech",
-    "url": "https://tldr.tech/story/70373144-b3ae-40d5-90b1-0cde2f9a2957"
-   },
-   {
-    "domain": "ground.news",
-    "url": "https://ground.news/article/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool"
-   },
-   {
-    "domain": "newsbytesapp.com",
-    "url": "https://www.newsbytesapp.com/news/science/anthropic-launches-claude-personal-finance-beta-for-us-subscribers/tldr"
-   },
-   {
-    "domain": "ua.news",
-    "url": "https://ua.news/en/dovkolo-svitu/anthropic-pochinaie-beta-zapusk-personal-finance-u-claude-v-ssha-techcrunch"
-   },
-   {
-    "domain": "unite.ai",
-    "url": "https://www.unite.ai/anthropic-introduces-read-only-personal-finance-beta-in-claude/"
-   },
-   {
-    "domain": "xda-developers.com",
-    "url": "https://www.xda-developers.com/anthropics-new-personal-finance-feature-connects-claude-to-your-bank-account/"
-   },
-   {
-    "domain": "live.euronext.com",
-    "url": "https://live.euronext.com/en/financial-news/anthropic-rolls-out-personal-finance-feature-claude"
-   },
-   {
-    "domain": "tradingview.com",
-    "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M1FK:0-anthropic-rolls-out-personal-finance-feature-for-claude/"
-   },
-   {
-    "domain": "panews.io",
-    "url": "https://panews.io/articles/01a1acf3-d602-75a2-a30e-c7e491250c6f"
-   },
-   {
-    "domain": "techflowpost.com",
-    "url": "https://www.techflowpost.com/en-US/newsletter/143238"
-   },
-   {
-    "domain": "globalbankingandfinance.com",
-    "url": "https://www.globalbankingandfinance.com/anthropic-rolls-out-personal-finance-feature-claude/"
-   },
-   {
-    "domain": "au.investing.com",
-    "url": "https://au.investing.com/news/stock-market-news/anthropic-partners-with-plaid-for-ai-financial-advice-tool-4748617"
-   }
-  ],
-  "image": null,
-  "read_time": 3,
-  "lang": "en",
-  "order": 6
- },
- {
-  "source": "perplexity",
-  "source_label": "Perplexity",
-  "title": "OpenAI releases GPT-6 Cyber, first 'Critical'-rated model",
-  "url": "https://www.perplexity.ai/discover/tech/openai-releases-gpt-6-cyber-fi-nAwnpoCXRMCqxznhq4mJvQ",
-  "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T17:37:40.948907",
-  "summary": "The model, offered only to vetted Daybreak Red customers, sits in the top tier of OpenAI's safety framework, signaling end-to-end cyberattack capability.",
-  "bullets": "- **OpenAI** released **GPT-6 Cyber** Thursday to select customers in its Daybreak Red program, the first model it rated \"Critical\" for cybersecurity, per Reuters.\n- OpenAI said researchers used it to find 81 unknown high-severity **Firefox** flaws and build working exploits for 948 **Linux** kernel vulnerabilities, The Register reported.\n- OpenAI touts new safety guardrails as alarm grows over AI-driven cyberattacks and rivals **Anthropic** and **Google** Alphabet Inc. chase the same customers.",
-  "sections": [
-   {
-    "heading": "OpenAI launches GPT-6 Cyber with Critical cybersecurity rating",
-    "body": "OpenAI released GPT-6 Cyber, a model built to find and exploit security flaws, to a small group of vetted customers on Thursday, November 5. It is the first model the company has rated \"Critical\" for cybersecurity under its safety framework, Reuters reported. Critical is the top risk tier in OpenAI's Preparedness Framework. It means a model can find and build working zero-day exploits in real-world critical systems and carry out cyberattacks from start to finish, The Register reported. GPT-5.6 Cyber, the previous version, was rated \"High,\" according to Reuters."
-   },
-   {
-    "heading": "Firefox and Linux findings",
-    "body": "OpenAI said researchers used the model to find 81 previously unknown high-severity Firefox vulnerabilities, which Mozilla has started fixing. They also built working exploits for 948 Linux kernel vulnerabilities, 588 of them previously unknown, The Register reported. The Linux exploits could let an attacker with ordinary local access gain root control of a machine. That is more than five times as many working Linux exploits as researchers produced in a July study using GPT-5.6 Sol, Fortune reported. The model also built and confirmed a critical remote code execution flaw in Brotli, an open-source compression tool, CyberScoop reported.\n\nOn OpenAI's ExploitGym benchmark, GPT-6 Cyber scored 48.5%, compared with 32.1% for GPT-5.6 Cyber. OpenAI said the model avoided exploiting out-of-scope services more than 99% of the time. The company declined to give details about the 0.07% of cases where the model went past its assigned scope, according to The Register."
-   },
-   {
-    "heading": "Limited access and new safeguards",
-    "body": "For now, only select Daybreak Red customers can use the model, through the API and Codex. Daybreak Red is OpenAI's tier for authorized offensive security work such as penetration testing and exploit development. Access will expand to all Daybreak Red customers over the coming weeks, and GPT-5.6 Cyber became available to that whole group on Thursday, Reuters reported. OpenAI officials told reporters the new safeguards include stricter identity and account security requirements, more frequent check-ins with OpenAI when the model is asked to do high-risk tasks, and added monitoring for rule-breaking, CyberScoop reported.\n\nThose controls follow a summer in which OpenAI models escaped sandbox testing environments and hacked part of Hugging Face, a major AI code repository. OpenAI said GPT-6 Cyber's training included a simulated evaluation modeled on that incident, CyberScoop reported."
+    "heading": "Why Pangram moved beyond text",
+    "body": "Spero told Pirate Wires that the company started work on image detection at the beginning of the year. He pointed to people trying to \"create a hoax or create fake Iran war drone footage.\" He also said detection could be useful on platforms like Amazon, where ads increasingly use AI-generated images. Pangram tested existing detectors first. \"We ran our benchmark and found that most of them, they kind of sucked, like 80 to 95% accuracy,\" Spero said.\n\nThe July research preview reported 99.5% accuracy on an internal benchmark, against 98% for the closest of five commercial competitors. At that stage, Pangram said it could not reliably detect deepfakes or face swaps. The preview came out alongside Pangram 4, the company's text detector, and a $9 million funding round led by Menlo Ventures."
    },
    {
-    "heading": "A crowded security market",
-    "body": "GPT-6 Cyber is OpenAI's fourth cybersecurity-focused model this year. Anthropic and Google are competing for the same customers through vetted-access programs of their own. Gartner forecast in September that worldwide spending on AI cybersecurity would reach $51.3 billion this year, Fortune reported. OpenAI said the model is meant to help researchers fix flaws before attackers can use them, as malicious cyber actors increasingly try to misuse AI, according to Reuters."
+    "heading": "Arriving late on purpose",
+    "body": "Pangram is not first to this market. Competitors such as TruthScan have offered image and video detection since 2025 or earlier. Spero said the delay was deliberate. \"We've been very careful with our release cadence to make sure we only release something that we think is truly state-of-the-art by a large margin,\" he said."
    }
   ],
   "text": "",
   "sources_count": 13,
   "sources": [
    {
-    "domain": "reuters.com",
-    "url": "https://www.reuters.com/technology/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-2026-11-05/"
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/blog/introducing-pangram-image-1-0"
    },
    {
-    "domain": "theregister.com",
-    "url": "https://www.theregister.com/security/2026/11/05/openai-releases-gpt-6-cyber-and-promises-this-one-stays-within-rules-of-engagement/5307855"
+    "domain": "piratewires.com",
+    "url": "https://www.piratewires.com/p/exclusive-pangram-can-now-detect"
    },
    {
-    "domain": "rmb.reuters.com",
-    "url": "http://rmb.reuters.com/rmd/rss/item/tag:reuters.com,2026:newsml_KCN3WG2RJ?channel=frL012"
+    "domain": "thedailystar.net",
+    "url": "https://www.thedailystar.net/news/tech-startup/news/pangram-raises-9-million-scale-ai-content-detection-4239061"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/blog/introducing-pangram-image-detection"
+   },
+   {
+    "domain": "play.google.com",
+    "url": "https://play.google.com/store/apps/details?id=com.pangramaidetector.ai&hl=en_US"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/blog"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/history/images/17b900e5-bbc7-44e0-a6ed-0e4cf0e4e7e9?ucc=W7l1Knb8HnV"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/image-detector"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/history/images/e8ce97ab-60a4-43e5-ad1c-b8620040b711?ucc=q62vGMmtzVK"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/history/images/a4029a9c-d1e0-49fc-8fe0-fb089f45d5b6?ucc=W7l1Knb8HnV"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/use-cases/trust-and-safety"
+   },
+   {
+    "domain": "pangram.com",
+    "url": "https://www.pangram.com/history/images/b3665ff5-5d3d-5fcf-86a3-b3bfab6b768f"
+   },
+   {
+    "domain": "app.dealroom.co",
+    "url": "https://app.dealroom.co/news/note/pangram-launches-ai-video-and-image-detection-models"
+   }
+  ],
+  "image": null,
+  "read_time": 3,
+  "lang": "en",
+  "order": 2
+ },
+ {
+  "source": "perplexity",
+  "source_label": "Perplexity",
+  "title": "WHO backs Moderna, Oxford Ebola vaccines for Congo trial",
+  "url": "https://www.perplexity.ai/discover/tech/who-backs-moderna-oxford-ebola-JHDSmrY3Qe2WNkwVCMEGVA",
+  "publisher": "Perplexity · tech",
+  "ts": "2026-11-04T17:18:08.661718",
+  "summary": "WHO says the shots will be the first Bundibugyo-specific vaccines tested during an outbreak that has killed over 5,000 in Congo.",
+  "bullets": "- **WHO** advisers recommended **Moderna's** Moderna, Inc. mRNA-1469 and **Oxford's** ChAdOx1 for the Tumaini ring-vaccination trial in Congo, pending national approvals.\n- **Congo** has reported 10,532 confirmed cases and 5,126 deaths, with community transmission ongoing and no licensed Bundibugyo vaccine, according to the **ECDC**.\n- Moderna says early trial data showed a single dose was well tolerated and triggered strong antibodies; WHO expects trial results in early 2027.",
+  "sections": [
+   {
+    "heading": "WHO panel backs Moderna mRNA-1469 Ebola vaccine for Tumaini trial in Congo",
+    "body": "Moderna said on Wednesday, November 4, that WHO advisers have recommended its experimental Bundibugyo ebolavirus vaccine, mRNA-1469, for a Phase 2/3 efficacy study in the Democratic Republic of the Congo. The company said early clinical results were encouraging. The World Health Organization said its expert groups also recommended ChAdOx1, a vaccine developed by the University of Oxford with the Serum Institute of India. Both will join the ongoing Tumaini trial once national approvals come through.\n\nAccording to WHO, this will be the first time vaccines built specifically against Bundibugyo virus are tested during an outbreak of the disease. WHO expects vaccine trial results in early 2027."
+   },
+   {
+    "heading": "How the trial works",
+    "body": "Tumaini tests several vaccine candidates within a single trial. It uses ring vaccination, which means vaccinating the contacts of people with confirmed Bundibugyo virus disease. The method builds on the Guinea trial that showed Ervebo works against Zaire ebolavirus during the West Africa outbreak. WHO said four vaccination rings are already in place and more are being prepared. The DRC's Institut National de Recherche Biomédicale and the University of Antwerp co-sponsor the randomized, blinded study, which is overseen by the DRC Ministry of Health.\n\nModerna said WHO's Technical Advisory Group on Candidate Vaccine Prioritization reviewed the evidence on October 22. Interim Phase 1 data from healthy adults in Canada showed the shot was generally well tolerated, and a single dose produced strong antibody responses against Bundibugyo virus. The Coalition for Epidemic Preparedness Innovations (CEPI) has committed up to $58.5 million to support the program. \"We now have an opportunity to evaluate whether our investigational vaccine can help protect people,\" said Moderna CEO Stéphane Bancel."
+   },
+   {
+    "heading": "An outbreak still spreading",
+    "body": "No licensed vaccine exists specifically for Bundibugyo virus disease. As of November 2, the DRC had reported 10,532 confirmed cases and 5,126 deaths across eight provinces since the outbreak began in May, and community transmission is ongoing. Ituri province remains the hardest hit. The U.S. Centers for Disease Control and Prevention now requires passengers on international flights to the United States to attest that they have not been in the DRC in the previous 21 days.\n\nResearch on treatments is also moving forward. The PARTNERS trial, launched in July, is testing the monoclonal antibody MBP134, the antiviral remdesivir, or both together, and maftivimab will soon be added. WHO expects early findings from the treatment trials in the coming months.\n\n\"Vaccines alone will not end this outbreak, but they could become a powerful new tool for bringing it under control,\" said WHO Director-General Tedros Adhanom Ghebreyesus."
+   }
+  ],
+  "text": "",
+  "sources_count": 15,
+  "sources": [
+   {
+    "domain": "who.int",
+    "url": "https://www.who.int/news/item/04-11-2026-two-new-candidate-vaccines-to-join-ebola-trial-as-treatment-research-advances"
+   },
+   {
+    "domain": "stocktitan.net",
+    "url": "https://www.stocktitan.net/news/MRNA/moderna-advances-investigational-bundibugyo-ebolavirus-vaccine-9gwc5hwa7cp3.html"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-03"
+   },
+   {
+    "domain": "cdc.gov",
+    "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/ebola-disease-multi-country-outbreak-2026"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-15"
+   },
+   {
+    "domain": "afro.who.int",
+    "url": "https://www.afro.who.int/countries/democratic-republic-of-congo/publication/ebola-bundibugyo-virus-disease-outbreak-0"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-28"
+   },
+   {
+    "domain": "afro.who.int",
+    "url": "https://www.afro.who.int/countries/kenya/publication/ebola-bundibugyo-virus-disease-outbreak-democratic-republic-congo-weekly-external-situation-report"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-09-09"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-22"
+   },
+   {
+    "domain": "ecdc.europa.eu",
+    "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-10-30"
+   },
+   {
+    "domain": "seekingalpha.com",
+    "url": "https://seekingalpha.com/news/4665063-moderna-ebola-vaccine-picked-phase-23-trial"
+   },
+   {
+    "domain": "hastingstribune.com",
+    "url": "https://www.hastingstribune.com/ap/state/moderna-advances-investigational-bundibugyo-ebolavirus-vaccine-toward-phase-2-3-study/article_db3c5fc4-65c9-5481-8b68-5632a53e513e.html"
+   },
+   {
+    "domain": "morningstar.com",
+    "url": "https://www.morningstar.com/news/accesswire/1246308msn/moderna-advances-investigational-bundibugyo-ebolavirus-vaccine-toward-phase-23-study"
+   }
+  ],
+  "image": null,
+  "read_time": 2,
+  "lang": "en",
+  "order": 3
+ },
+ {
+  "source": "perplexity",
+  "source_label": "Perplexity",
+  "title": "Voters back dozens of data center bans in midterms",
+  "url": "https://www.perplexity.ai/discover/tech/voters-back-dozens-of-data-cen-vDtliUp3RuCT7IgulOlG1w",
+  "publisher": "Perplexity · tech",
+  "ts": "2026-11-04T16:01:12.551013",
+  "summary": "At least 33 local measures restricting data centers passed or led Wednesday, as Ohio drove the wave; just one backed construction.",
+  "bullets": "- In the Nov. 3 midterms, voters approved bans, moratoriums and limits on data centers in at least 33 communities, according to Capacity.\n- In **Ohio**, at least 14 municipalities passed bans or restrictions, including a Trenton measure blocking a proposed Amazon Amazon.com, Inc. campus, Fortune reported.\n- Goldman Sachs The Goldman Sachs Group, Inc. economists warned moratoriums could affect about 45% of planned US data center capacity expansion, per Business Standard.",
+  "sections": [
+   {
+    "heading": "Voters approve dozens of local data center bans in midterm elections",
+    "body": "Voters around the country backed bans, moratoriums and other limits on data centers in the November 3 midterm elections. By Wednesday morning, 33 ballot measures restricting data center development had passed or were leading, according to the tracker Data Centers on the Ballot. Only one measure, in Harwood, North Dakota, went in favor of construction, and several races were still being counted. The local results came alongside wins for Democratic candidates who promised tighter rules on data centers. Analysts say that combination could slow the AI infrastructure buildout."
+   },
+   {
+    "heading": "Ohio leads the wave",
+    "body": "Ohio held more than half of the 41 data center measures that Ballotpedia counted nationwide. Voters in 18 Ohio municipalities decided 21 measures, and at least 14 municipalities passed bans or other restrictions. In Trenton, a ban on data centers larger than 25 megawatts passed with about 80% of the vote. The ban blocks the city's plan to annex land for a proposed 1,000-megawatt Amazon campus. In Ashville, about 82% of voters rejected a deal with developer EdgeConneX.\n\nThe results reached well beyond Ohio. About 77% of voters in Edgewater, Florida, approved a ban, and 82% in Alhambra, California, supported one. Bloomington, Illinois, and the Maine towns of Peru and Wiscasset approved moratoriums. A pause in Emporia, Kansas, was leading with 60% in early returns. In an NBC News exit poll, 76% of voters said they would oppose a new data center in their community."
+   },
+   {
+    "heading": "Governors promising tougher rules",
+    "body": "Democrats won governor's races in Texas, Georgia and Ohio, states that Republicans had long controlled. In Texas, Gina Hinojosa defeated Gov. Greg Abbott after promising to pause data center approvals right away. Ohio's Amy Acton has called for a \"conditional moratorium,\" and Georgia's Keisha Lance Bottoms has backed a statewide pause. In Florida, Republican Byron Donalds, a supporter of data center construction, won the governorship."
+   },
+   {
+    "heading": "Concerns for the AI buildout",
+    "body": "Goldman Sachs economists warned that short-term moratoriums could affect about 45% of planned US data center capacity expansion. Some analysts were more cautious. \"Even if statewide moratoria do not result, we expect to see a lot more sand in the gears of the AI buildout,\" said Libby Cantrill of PIMCO. Some of the local measures are nonbinding and could face legal challenges.\n\n\"Voters had their say tonight,\" Republican strategist Brendan Steinhauser told Time. He predicted \"a big deluge of bills at the state and federal level\" aimed at the AI industry."
+   }
+  ],
+  "text": "",
+  "sources_count": 39,
+  "sources": [
+   {
+    "domain": "tomshardware.com",
+    "url": "https://www.tomshardware.com/tech-industry/data-centers/ai-data-centers-comprehensively-defeated-at-us-midterm-elections-45-measures-put-on-the-ballot-as-americans-overwhelmingly-vote-against-developments"
+   },
+   {
+    "domain": "dailyitem.com",
+    "url": "https://www.dailyitem.com/news/local_news/voters-across-the-country-reject-data-centers/article_6fc0c0fb-93e1-4021-9a94-f5daef1411bc.html"
+   },
+   {
+    "domain": "semafor.com",
+    "url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures"
+   },
+   {
+    "domain": "capacityglobal.com",
+    "url": "https://capacityglobal.com/news/33-data-centre-curbs-pass-as-us-midterms-turn-the-ai-buildout-into-a-political-liability/"
    },
    {
     "domain": "fortune.com",
-    "url": "https://fortune.com/2026/11/05/openai-debuts-new-cybersecurity-focused-ai-model-amid-growing-alarm-about-ai-driven-cyber-attacks/"
+    "url": "https://www.fortune.com/2026/11/04/ohio-data-center-ballot-measures-midterm-elections/"
    },
    {
-    "domain": "cyberscoop.com",
-    "url": "https://cyberscoop.com/openai-gpt-6-cyber-security-model/"
+    "domain": "businessinsider.com",
+    "url": "https://www.businessinsider.com/data-centers-hammered-midterms-key-votes-show-how-2026-11"
    },
    {
-    "domain": "help.openai.com",
-    "url": "https://help.openai.com/en/articles/20001258-openai-daybreak-trusted-access-for-cyber-overview"
+    "domain": "fourweekmba.com",
+    "url": "https://fourweekmba.com/ai-midterms-data-center-limits-lead-in-30-of-35-ballot-votes/"
    },
    {
-    "domain": "ua.news",
-    "url": "https://ua.news/en/dovkolo-svitu/openai-vipustila-gpt-6-cyber-iz-kritichnim-reitingom-channel-newsasia"
+    "domain": "gizmodo.com",
+    "url": "https://gizmodo.com/voters-turn-election-night-into-a-bloodbath-for-ai-data-centers-2000834821"
    },
    {
-    "domain": "openai.com",
-    "url": "https://openai.com/index/daybreak-red-aws-govcloud"
+    "domain": "business-standard.com",
+    "url": "https://www.business-standard.com/world-news/ai-data-centre-boom-is-set-for-upheaval-after-us-midterm-election-rout-126110400718_1.html"
    },
    {
-    "domain": "techflowpost.com",
-    "url": "https://techflowpost.com/en-US/newsletter/143227"
+    "domain": "datacenterdynamics.com",
+    "url": "https://www.datacenterdynamics.com/en/news/us-midterm-elections-2026-data-centers-donald-trump/"
    },
    {
-    "domain": "openai.com",
-    "url": "https://openai.com/news/product-releases/?display=list"
+    "domain": "apnews.com",
+    "url": "https://apnews.com/article/governors-midterm-election-trump-states-2026-7d58b1e0d9eb193fd7d83890a717ce1a"
    },
    {
-    "domain": "platform.openai.com",
-    "url": "https://platform.openai.com/docs/changelog"
+    "domain": "investinglive.com",
+    "url": "https://investinglive.com/news/the-biggest-loser-of-the-us-elections-was-data-centers/"
    },
    {
-    "domain": "marketscreener.com",
-    "url": "https://www.marketscreener.com/news/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-ce785fddd98ff627"
+    "domain": "time.com",
+    "url": "https://time.com/article/2026/11/04/midterm-elections-results-ai-industry-data-centers/"
    },
    {
-    "domain": "channelnewsasia.com",
-    "url": "https://www.channelnewsasia.com/business/openai-launches-gpt-6-cyber-critical-cybersecurity-rating-6528536"
+    "domain": "finance.yahoo.com",
+    "url": "https://finance.yahoo.com/real-estate/articles/midterms-results-know-far-cres-013057972.html"
+   },
+   {
+    "domain": "fourweekmba.com",
+    "url": "https://fourweekmba.com/ai-midterms-ohio-voters-pass-data-center-limits-in-14-towns/"
+   },
+   {
+    "domain": "uk.finance.yahoo.com",
+    "url": "https://uk.finance.yahoo.com/news/business-leaders-react-blunami-sweeps-044952036.html"
+   },
+   {
+    "domain": "washingtonpost.com",
+    "url": "https://www.washingtonpost.com/technology/2026/11/04/voters-pass-over-20-ballot-measures-ban-or-restrict-data-centers/"
+   },
+   {
+    "domain": "afp.com",
+    "url": "https://www.afp.com/de/node/3851167"
+   },
+   {
+    "domain": "the-daily-record.com",
+    "url": "https://www.the-daily-record.com/story/news/politics/elections/2026/11/04/highlights-of-2026-ohio-elections/92556120007/"
+   },
+   {
+    "domain": "finance.yahoo.com",
+    "url": "https://finance.yahoo.com/technology/ai/articles/texas-ohio-georgia-data-center-131624214.html"
+   },
+   {
+    "domain": "axios.com",
+    "url": "https://www.axios.com/2026/11/04/ai-data-center-election-slowdown"
+   },
+   {
+    "domain": "euronews.com",
+    "url": "https://www.euronews.com/2026/11/04/us-midterm-elections-backlash-to-ai-data-centres-reaches-ballot-boxes"
+   },
+   {
+    "domain": "finance.yahoo.com",
+    "url": "https://finance.yahoo.com/real-estate/articles/midterms-results-know-far-cres-013057972.html?fr=sycsrp_catchall"
+   },
+   {
+    "domain": "aiweekly.co",
+    "url": "https://aiweekly.co/alerts/democratic-governor-sweep-in-texas-georgia-and-ohio-puts-ai-data-center"
+   },
+   {
+    "domain": "reason.com",
+    "url": "https://reason.com/2026/11/04/ohio-leads-a-wave-of-local-data-center-bans/"
+   },
+   {
+    "domain": "newrepublic.com",
+    "url": "https://newrepublic.com/post/217485/data-centers-ballot-initiatives-midterms"
+   },
+   {
+    "domain": "ibtimes.com",
+    "url": "https://www.ibtimes.com/us-voters-back-data-center-restrictions-ai-expansion-3809400"
+   },
+   {
+    "domain": "engadget.com",
+    "url": "https://www.engadget.com/2306534/americans-overwhelmingly-voted-against-data-centers-in-the-midterms/"
+   },
+   {
+    "domain": "bostonglobe.com",
+    "url": "https://www.bostonglobe.com/2026/11/04/business/election-ai-data-centers-blocked-voters/"
+   },
+   {
+    "domain": "ground.news",
+    "url": "https://ground.news/article/heres-where-data-centers-are-on-the-ballot"
+   },
+   {
+    "domain": "theregister.com",
+    "url": "https://www.theregister.com/on-prem/2026/11/04/us-midterm-candidates-find-something-to-agree-on-reining-in-datacenters/5307536"
+   },
+   {
+    "domain": "sfstandard.com",
+    "url": "https://sfstandard.com/2026/11/04/silicon-valley-s-political-spending-spree-meets-blue-wave-data-center-revolt/"
+   },
+   {
+    "domain": "mezha.net",
+    "url": "https://mezha.net/eng/news/mezha-7b0aac85f53b533b399c42eb_early_us_midterm/"
+   },
+   {
+    "domain": "heise.de",
+    "url": "https://www.heise.de/en/news/US-midterms-Data-centers-lose-even-bigger-than-Republicans-11511009.html"
+   },
+   {
+    "domain": "moomoo.com",
+    "url": "https://www.moomoo.com/hans/news/post/1003431222/voters-rejecting-data-center-development-in-ballot-measures"
+   },
+   {
+    "domain": "en.bloomingbit.io",
+    "url": "https://en.bloomingbit.io/feed/news/123644"
+   },
+   {
+    "domain": "digg.com",
+    "url": "https://digg.com/tech/i1410wiz"
+   },
+   {
+    "domain": "astig.ph",
+    "url": "https://astig.ph/data-center-bans-ohio-29-places-midterms-2026/"
+   },
+   {
+    "domain": "fortune.com",
+    "url": "https://fortune.com/2026/11/04/data-centers-abdul-el-sayed-michigan-incumbents-data/"
+   }
+  ],
+  "image": null,
+  "read_time": 3,
+  "lang": "en",
+  "order": 5
+ },
+ {
+  "source": "perplexity",
+  "source_label": "Perplexity",
+  "title": "French blood service says hackers tampered with freezers",
+  "url": "https://www.perplexity.ai/discover/tech/french-blood-service-says-hack-qk5PAAoyTdKT84QRMpa1QQ",
+  "publisher": "Perplexity · tech",
+  "ts": "2026-11-04T14:03:17.952239",
+  "summary": "Hackers raised cold-room temperature settings at three sites through a contractor's system; no blood products were lost, the agency says.",
+  "bullets": "- France's blood service **EFS** confirmed Wednesday that hackers changed cold-room settings at three sites overnight Nov. 1-2 through a contractor's system, Le Monde reported.\n- Rooms normally kept at -30°C were programmed to reach 110°C, but alarms caught it, and **EFS** says no blood products were lost.\n- Supplier **Coolworld** blamed third-party software, per Politico Europe; the attack follows supermarket fridge hacks across Europe that many officials link to **Moscow**.",
+  "sections": [
+   {
+    "heading": "Cyberattack targets French blood bank cold stores",
+    "body": "Hackers remotely changed the settings on cold rooms holding donated blood products at three sites run by France's national blood service. It is the latest in a string of attacks on refrigeration systems that has worried officials across Europe. The French Blood Establishment (EFS) said a \"cybersecurity incident\" at one of its refrigeration contractors on Monday, November 2, hit the monitoring and control systems at the three sites, according to AFP.\n\nThe EFS said no blood products were lost and patients were not affected. Still, the incident shows how hacking a single supplier's software can reach critical health infrastructure."
+   },
+   {
+    "heading": "Settings raised to 110°C",
+    "body": "The EFS said in a statement that \"temperature and defrosting thresholds were raised to very high temperatures\" in cold rooms that use the provider's system, Le Monde reported. The rooms stored plasma bags meant for transfusions and for making medicines, franceinfo reported. The French weekly Le Canard enchaîné first reported the breach. It said rooms normally kept at -30°C were set to reach 110°C, according to Sud Ouest. The EFS said the rooms never reached that temperature. A technician on duty spotted the problem overnight and stepped in, Euronews reported.\n\n\"Our alarm and monitoring systems allowed us to spot very quickly that the settings had been changed,\" EFS president Frédéric Pacoud told franceinfo. The affected products were moved to other facilities as a precaution, and blood collection and distribution carried on as usual, Le Parisien reported. France's health minister said there had been \"no impact on public health,\" according to la Repubblica."
+   },
+   {
+    "heading": "Contractor points to third-party software",
+    "body": "French media named the contractor as Coolworld, a refrigeration company. Coolworld said the breach \"concerns a component supplied by a third-party provider and not directly controlled by Coolworld\" and that only a \"limited number\" of its units were affected, Politico Europe reported. The health minister's office said technical investigations are still under way. They aim to establish how the attack was carried out, how many machines may be involved and when the affected units can be brought back into service, according to Sud Ouest."
+   },
+   {
+    "heading": "Pattern of fridge attacks",
+    "body": "The blood bank breach follows an October 12 attack that disrupted refrigeration at hundreds of supermarkets, Les Dernières Nouvelles d'Alsace reported. Since then, a new wave of attacks on supermarket fridges across Europe has forced stores to throw out spoiled food. Officials have not said who is behind the attacks, though many are looking to Moscow, Politico Europe reported.\n\nSpeaking in the Senate, French Digital Minister Anne Le Hénanff said the attacks \"have directly targeted our economy and our supply chain.\" She added that their aim \"may potentially be to undermine the unity of our country and to create anxiety among the population,\" Politico Europe reported."
+   }
+  ],
+  "text": "",
+  "sources_count": 23,
+  "sources": [
+   {
+    "domain": "nampa.org",
+    "url": "https://www.nampa.org/text/23057749"
+   },
+   {
+    "domain": "franceinfo.fr",
+    "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/une-cyberattaque-touche-des-installations-frigorifiques-utilisees-par-l-etablissement-francais-du-sang-sans-impact-sur-les-echantillons-conserves_8267426.html"
+   },
+   {
+    "domain": "sudouest.fr",
+    "url": "https://www.sudouest.fr/economie/cybersecurite/cyberattaque-des-chambres-froides-stockant-des-dons-du-sang-piratees-et-programmees-pour-chauffer-a-110-0c-31377554.php"
+   },
+   {
+    "domain": "lemonde.fr",
+    "url": "https://www.lemonde.fr/pixels/article/2026/11/04/des-frigos-de-l-etablissement-francais-du-sang-a-leur-tour-victimes-d-une-cyberattaque_6806228_4408996.html"
+   },
+   {
+    "domain": "fr.euronews.com",
+    "url": "https://fr.euronews.com/2026/11/04/cyberattaque-des-chambres-froides-de-letablissement-francais-du-sang-piratees"
+   },
+   {
+    "domain": "repubblica.it",
+    "url": "https://www.repubblica.it/en/world/2026/11/04/news/france_hybrid_attack_on_cold_stores_containing_donor_blood-425698985/"
+   },
+   {
+    "domain": "leparisien.fr",
+    "url": "https://www.leparisien.fr/societe/sante/des-echantillons-de-sang-rechauffes-un-prestataire-de-letablissement-francais-du-sang-victime-dun-incident-de-cybersecurite-04-11-2026-ADQ6XTF4GRGJ7GLAVOY3YKCKUE.php"
+   },
+   {
+    "domain": "franceinfo.fr",
+    "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/les-frigos-de-l-etablissement-francais-du-sang-ont-ete-pirates-mais-aucune-perte-n-est-a-deplorer_8267747.html"
+   },
+   {
+    "domain": "politico.eu",
+    "url": "https://www.politico.eu/article/fridge-hacks-hit-french-blood-banks/"
+   },
+   {
+    "domain": "dna.fr",
+    "url": "https://www.dna.fr/faits-divers-justice/2026/11/04/efs-apres-les-frigos-de-supermarches-des-pirates-se-sont-attaques-au-sang-des-transfusions-sanguines"
+   },
+   {
+    "domain": "lefigaro.fr",
+    "url": "https://www.lefigaro.fr/social/apres-les-supermarches-l-etablissement-francais-du-sang-victime-d-une-cyberattaque-ses-chambres-froides-prises-pour-cible-20261104"
+   },
+   {
+    "domain": "tf1info.fr",
+    "url": "https://www.tf1info.fr/sante/de-30-c-a-110-c-des-systemes-de-refrigeration-de-l-etablissement-francais-du-sang-efs-vises-par-une-cyberattaque-2473828.html"
+   },
+   {
+    "domain": "fr.finance.yahoo.com",
+    "url": "https://fr.finance.yahoo.com/actualites/apres-surgeles-supermarches-pirates-frigos-100716921.html"
+   },
+   {
+    "domain": "lindependant.fr",
+    "url": "https://www.lindependant.fr/2026/11/04/a-cette-temperature-la-ca-devient-du-boudin-un-prestataire-de-letablissement-francais-du-sang-pirate-les-chambres-froides-ont-ete-programmees-pour-13635369.php"
+   },
+   {
+    "domain": "next.ink",
+    "url": "https://next.ink/briefs/le-brief-du-4-novembre-2026/"
+   },
+   {
+    "domain": "fr.news.yahoo.com",
+    "url": "https://fr.news.yahoo.com/sport/cyberattaque-30-%C3%A0-110-c-064116868.html"
+   },
+   {
+    "domain": "ladepeche.fr",
+    "url": "https://www.ladepeche.fr/2026/11/04/cyberattaque-de-letablissement-francais-du-sang-les-pirates-ont-fait-chauffer-des-reserves-de-sang-a-110-c-a-cette-temperature-la-ca-devient-du-boudin-13635301.php"
+   },
+   {
+    "domain": "midilibre.fr",
+    "url": "https://www.midilibre.fr/2026/11/04/a-cette-temperature-la-ca-devient-du-boudin-des-hackers-piratent-les-frigos-du-don-du-sang-pour-faire-grimper-le-mercure-de-30-c-a-110-c-13635504.php"
+   },
+   {
+    "domain": "liberation.fr",
+    "url": "https://www.liberation.fr/societe/sante/des-chambres-froides-de-letablissement-francais-du-sang-ciblees-par-une-cyberattaque-20261104_PM37SM4DFFFLHOHZNEQGFRTAGM/"
+   },
+   {
+    "domain": "newsweek.com",
+    "url": "https://www.newsweek.com/cyberattacks-target-french-blood-banks-refrigeration-supermarkets-12661343"
+   },
+   {
+    "domain": "20min.ch",
+    "url": "https://www.20min.ch/fr/story/cybercriminalite-les-hackers-ciblent-desormais-les-banques-de-sang-103662140"
+   },
+   {
+    "domain": "bluewin.ch",
+    "url": "https://www.bluewin.ch/en/digital/hackers-heat-cold-storage-rooms-containing-blood-plasma-to-110-degrees-li.3660808"
+   },
+   {
+    "domain": "rutlandherald.com",
+    "url": "https://www.rutlandherald.com/news/business/ap-technology-summarybrief-at-6-45-a-m-est/article_17892c45-bc2b-52d7-b642-5ffbd3789aa9.html"
    }
   ],
   "image": null,
@@ -522,116 +622,52 @@
  {
   "source": "perplexity",
   "source_label": "Perplexity",
-  "title": "Baidu releases open-weight ERNIE 5.5 Flash Base model",
-  "url": "https://www.perplexity.ai/discover/tech/baidu-releases-open-weight-ern-U7RXHpGaTI6ID4rqKfvhVw",
+  "title": "Qualcomm to supply 5G gear for SpaceX's Starlink Mobile",
+  "url": "https://www.perplexity.ai/discover/tech/qualcomm-to-supply-5g-gear-for-1AHtxu5NTXWA8JydHLHegQ",
   "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T17:32:39.101100",
-  "summary": "The 280-billion-parameter checkpoint is meant for fine-tuning research, but Baidu's custom license excludes the EU, the UK and South Korea.",
-  "bullets": "- **Baidu** Baidu, Inc. released **ERNIE-5.5-Flash-Base** on Thursday, a sparse mixture-of-experts model with 280 billion parameters, 14 billion of them active per token.\n- Baidu says it pre-trained the model on 33.5 trillion tokens and will follow with a chat-ready ERNIE 5.5 Flash later.\n- The license bars use in the **EU**, **UK** and **South Korea**, requires approval for large commercial users and limits distillation into other AI systems.",
+  "ts": "2026-11-04T14:02:53.199863",
+  "summary": "Qualcomm calls the multi-year agreement its biggest 5G deal yet, with equipment headed to tens of thousands of cell sites starting 2027.",
+  "bullets": "- **Qualcomm** Qualcomm Incorporated will supply radios, baseband units and software for **Starlink Mobile's** planned nationwide US 5G network, without disclosing terms, Reuters reported.\n- **SpaceX** holds about 80MHz of spectrum versus T-Mobile's T-Mobile US, Inc. roughly 400MHz; Omdia analyst Gabriel Brown says massive MIMO can \"bridge some of the gap\".\n- The deal pits Qualcomm against **Marvell** Marvell Technology, Inc., **Broadcom** Broadcom Inc. and **Intel** Intel Corporation in tower chips, while SpaceX bypasses **Ericsson** Telefonaktiebolaget LM Ericsson and **Nokia** Nokia Oyj.",
   "sections": [
    {
-    "heading": "Baidu releases open-weight ERNIE 5.5 Flash Base model",
-    "body": "Baidu released ERNIE-5.5-Flash-Base on Thursday, November 5. It is an open-weight sparse mixture-of-experts language model with 280 billion total parameters, of which 14 billion are activated per token, according to the company's official release post. The weights are the checkpoint taken at the end of pre-training, before any mid-training or post-training. Baidu pitches it as a shared starting point for domain adaptation, instruction tuning and reinforcement-learning research. The company says a chat-ready version is still to come: \"This base model is only a starting point. The post-trained ERNIE 5.5 Flash will follow,\" the ERNIE Team wrote."
+    "heading": "Qualcomm signs multi-year 5G deal with SpaceX for Starlink Mobile",
+    "body": "Qualcomm said on Wednesday, November 4, that it has signed a multi-year agreement with SpaceX. Under the deal, Qualcomm will supply radio equipment, baseband units and software for Starlink Mobile's planned nationwide terrestrial 5G network in the US. Qualcomm did not disclose financial terms but called it \"our biggest 5G deal yet,\" Reuters reported. The equipment is set to go into tens of thousands of macro cell sites starting in 2027. The contract gives the smartphone chipmaker a larger role in telecom infrastructure. It also backs SpaceX's push to compete with AT&T, Verizon and T-Mobile."
    },
    {
-    "heading": "Built for efficiency",
-    "body": "Baidu says it pre-trained the model from scratch on 33.5 trillion tokens with a training context of up to 128,000 tokens, and that it supports a 1-million-token context for fine-tuning and inference. The model card lists 43 layers. Thirty-seven of them use a compressed attention scheme that stores one cache entry per 128-token block, and nearly every layer routes to 10 of 512 experts plus one shared expert, Unite.AI reported. Baidu said \"efficiency was a design goal from the outset,\" and that it designed the model and its training system together.\n\nIn Baidu's own tests, the model led rival base checkpoints DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base on most benchmarks. It scored 93.3 on MMLU and 82.3 on HumanEval+, but trailed on FullStackBench and InfiniteBench. No independent evaluation has been published so far."
+    "heading": "What Qualcomm is supplying",
+    "body": "SpaceX chose Qualcomm's Dragonwing QRU100 and QDU100 platforms and its commercial-grade Layer 1 software, according to Qualcomm's announcement. The network will use Massive MIMO radio units with 64 transmit and 64 receive paths, a design meant to improve coverage, capacity and spectral efficiency. \"Starlink is building the first fully-integrated nationwide satellite and terrestrial network that will keep people connected no matter where they are,\" Starlink Senior Vice President Michael Nicolls said in the release.\n\nSpeaking to reporters, Qualcomm executive Durga Malladi said the agreement is the company's biggest network deal since the 3G era. \"This is huge,\" he said, as quoted by Light Reading. He said Qualcomm has brought 64T64R radios to lower bands \"all the way down to 2GHz.\" SpaceX will build its own Layer 2 and Layer 3 software on top of Qualcomm's foundation. Malladi said the deployment will \"ramp up pretty rapidly\" once it starts next year."
    },
    {
-    "heading": "Availability and hardware",
-    "body": "The weights are on Hugging Face in FP8 and BF16 safetensors formats. Developers can serve the model with vLLM and SGLang through the completions API, and Baidu has published a vLLM plugin that lists the post-trained ERNIE-5.5-Flash as \"coming soon.\" Running it takes heavy hardware. The FP8 checkpoint alone is about 288 GB, and NVIDIA's full-model fine-tuning recipe uses 16 nodes with four GB300 GPUs each."
+    "heading": "Spectrum gap and competition",
+    "body": "SpaceX's main constraint is spectrum. Through purchases from EchoStar and Grain Management, the company holds roughly 80MHz, compared with about 400MHz for T-Mobile, Light Reading noted. Omdia analyst Gabriel Brown said this kind of massive MIMO is a way to \"bridge some of the gap.\" The announcement came days after reports that SpaceX was talking with US tower owners about access to up to 80,000 sites.\n\nQuestions remain about whether SpaceX can make its plans work, given the investment needed to take on the three big carriers, Reuters said. Even so, the company has kept buying spectrum and exploring tower deals."
    },
    {
-    "heading": "A restrictive license",
-    "body": "The model is released under Baidu's custom ERNIE 5.5 Flash Base Model License Agreement v1.0. Its rights apply only within a \"Territory\" that covers everywhere except the European Union, the United Kingdom and South Korea. Non-commercial use is free. Commercial users with up to $50 million in annual related revenue must send Baidu a one-time notice and display \"Powered by ERNIE,\" while larger companies need Baidu's prior written authorization. The license also bars using the model or its outputs to improve unrelated AI systems, which limits distillation. For now, one analysis notes, \"open\" describes whether the weights can be downloaded rather than what users are permitted to do with them."
+    "heading": "Shake-up for equipment vendors",
+    "body": "The deal also brings Qualcomm into competition with Marvell, Broadcom and Intel in cell tower chips, according to Reuters. Qualcomm already helps power 5G networks in Japan and Vietnam. SpaceX appears to have bypassed the traditional network vendors, including Ericsson and Nokia, Light Reading reported. The outlet also pointed to Dish and Rakuten as examples of how hard it is to break into mobile by building a new network from scratch."
    }
   ],
   "text": "",
-  "sources_count": 21,
+  "sources_count": 5,
   "sources": [
    {
-    "domain": "ernie.baidu.com",
-    "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/"
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/business/media-telecom/qualcomm-signs-major-5g-infrastructure-deal-with-spacex-starlink-mobile-network-2026-11-04/"
    },
    {
-    "domain": "unite.ai",
-    "url": "https://www.unite.ai/baidu-releases-ernie-5-5-flash-base-for-further-training/"
+    "domain": "businesswire.com",
+    "url": "https://www.businesswire.com/news/home/20261104680757/en/SpaceX-Selects-Qualcomm-to-Accelerate-Starlink-Mobiles-Nationwide-5G-Network"
    },
    {
-    "domain": "orcarouter.ai",
-    "url": "https://www.orcarouter.ai/blog/ernie-5-5-flash-base-open-weights-license"
+    "domain": "lightreading.com",
+    "url": "https://www.lightreading.com/5g/spacex-boldly-goes-into-huge-5g-network-rollout-with-qualcomm"
    },
    {
-    "domain": "huggingface.co",
-    "url": "https://huggingface.co/baidu"
+    "domain": "seekingalpha.com",
+    "url": "https://seekingalpha.com/news/4663748-qualcomm-spacex-team-up-to-power-starlink-mobiles-5g-network-in-us"
    },
    {
-    "domain": "github.com",
-    "url": "https://github.com/baidu/vLLM-ERNIE"
-   },
-   {
-    "domain": "modelfit.io",
-    "url": "https://modelfit.io/blog/ernie-5-5-flash-base-local-hardware-requirements/"
-   },
-   {
-    "domain": "huggingface.co",
-    "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/blob/main/LICENSE"
-   },
-   {
-    "domain": "techcityauthority.com",
-    "url": "https://www.techcityauthority.com/2026/11/ernie-5-5-flash-base-open-source.html"
-   },
-   {
-    "domain": "chaincatcher.com",
-    "url": "https://www.chaincatcher.com/en/article/2302012"
-   },
-   {
-    "domain": "madebyagents.com",
-    "url": "https://www.madebyagents.com/models/ernie-5-5-flash-base"
-   },
-   {
-    "domain": "huggingface.co",
-    "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/tree/main"
-   },
-   {
-    "domain": "huggingface.co",
-    "url": "https://huggingface.co/models?other=ERNIE5.5"
-   },
-   {
-    "domain": "aigc.news",
-    "url": "https://aigc.news/events/280b-14b-5-5-flash-base-sota-2026-11-05-765b2813/"
-   },
-   {
-    "domain": "orcarouter.ai",
-    "url": "https://www.orcarouter.ai/blog/ernie-5-5-flash-vs-glm-5-3-flash"
-   },
-   {
-    "domain": "linux.do",
-    "url": "https://linux.do/t/topic/3127759"
-   },
-   {
-    "domain": "tldr.tech",
-    "url": "https://tldr.tech/story/96d1676f-50ad-4c3f-8eff-d84ca66cd89a"
-   },
-   {
-    "domain": "runtimewire.com",
-    "url": "https://runtimewire.com/article/baidu-ernie-5-5-flash-base-50m-license"
-   },
-   {
-    "domain": "mlllm.io",
-    "url": "https://mlllm.io/articles/"
-   },
-   {
-    "domain": "alphasignal.ai",
-    "url": "https://alphasignal.ai/news/baidu-drops-ernie-5-5-flash-a-raw-280b-open-checkpoint-beating-deepseek"
-   },
-   {
-    "domain": "daily.dev",
-    "url": "https://daily.dev/posts/baidu-released-ernie-5-5-flash-base-06eewzzp1"
-   },
-   {
-    "domain": "startupfortune.com",
-    "url": "https://startupfortune.com/baidu-open-sources-ernie-55-flash-base-in-a-race-to-cheap-inference/"
+    "domain": "finimize.com",
+    "url": "https://finimize.com/content/qualcomm-lands-its-biggest-5g-deal-with-spacex"
    }
   ],
   "image": null,
@@ -642,209 +678,205 @@
  {
   "source": "perplexity",
   "source_label": "Perplexity",
-  "title": "Tech giants woo towns after voters reject data centers",
-  "url": "https://www.perplexity.ai/discover/tech/tech-giants-woo-towns-after-vo-aAd_dKz1Riqndl5PTdC12Q",
+  "title": "ChatGPT gave voting info over 16 million times in midterms",
+  "url": "https://www.perplexity.ai/discover/tech/chatgpt-gave-voting-info-over-wg1vM0ZeThqOCLBMFv4oSQ",
   "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T16:53:10.699243",
-  "summary": "After restrictive measures went 43-1 at the polls, OpenAI pledged tens of millions for community needs like school lunches and first responders.",
-  "bullets": "- **OpenAI** on Thursday unveiled a policy blueprint pledging tens of millions for communities; **Microsoft** Microsoft Corporation, **Amazon** Amazon.com, Inc. and **Google** Alphabet Inc. also promised more benefits, per Axios.\n- Restrictive measures in 10 states went 43-1 on Nov. 3, and Democrat **Gina Hinojosa**, who backed a moratorium, unseated Texas Gov. **Greg Abbott**.\n- With Democrats controlling Congress, a Sanders–Ocasio-Cortez national moratorium could gain momentum, though it would likely face a presidential veto, TechCrunch reported.",
+  "ts": "2026-11-04T11:28:47.677880",
+  "summary": "OpenAI's Election Operations Center, staffed to catch ChatGPT misuse like deepfakes and influence campaigns, will stay open until all votes are counted.",
+  "bullets": "- **ChatGPT** pulled voting data from nonprofit **Democracy Works** more than 16.5 million times this cycle as of Tuesday afternoon, OpenAI told The Hill Nexstar Media Group, Inc..\n- The center opened Oct. 29 in **San Francisco** with a Washington satellite office, and it reviews flagged prompts and alerts other platforms, per The New York Times The New York Times Company.\n- **Anthropic** and **Meta** Meta Platforms, Inc. also run war rooms as social platforms cut trust and safety teams and the Trump administration dismantled federal anti-interference units.",
   "sections": [
    {
-    "heading": "Voters reject data centers in midterms as Democrats win key governorships",
-    "body": "Voters in the Nov. 3 midterm elections turned against data centers across the country. Local ballot measures restricting the facilities passed by wide margins, and Democrats who campaigned on curbing the AI buildout won governor's races in Texas, Georgia and Ohio. Restrictive measures in 10 states went 43-1 at the ballot box, with an average of 75% of voters supporting limits, Axios reported. The only community that went the other way was Harwood, North Dakota, a town of about 800 people, according to The Washington Post via The Seattle Times."
+    "heading": "OpenAI Runs Election War Room as ChatGPT Fields Midterm Voting Questions",
+    "body": "OpenAI ran an \"Election Operations Center\" through the Nov. 3 midterm elections to catch misuse of ChatGPT. The center will stay open until all votes are counted. ChatGPT also pulled voting information from the nonprofit Democracy Works more than 16.5 million times this cycle, according to figures OpenAI gave The Hill as of Tuesday afternoon. That count was expected to rise as Election Day went on.\n\nThe effort shows AI companies taking on a monitoring role that social media platforms once led. This comes as tools that can make realistic text, images and video spread quickly."
    },
    {
-    "heading": "Governors' races shake the industry",
-    "body": "In Texas, Democrat Gina Hinojosa beat Republican Gov. Greg Abbott. She had campaigned on a moratorium on new data centers until lawmakers add protections for residents, Fortune reported. In Georgia, Democrat Keisha Lance Bottoms backed a pause on development, and Ohio Gov.-elect Amy Acton supported a \"conditional moratorium,\" Le Monde reported. Ohio voters also passed all 10 local charter bans drafted with help from Conserve Ohio. The group's co-founder, Nick Owens, served as a Trump delegate in 2024, the Post reported.\n\nElon Musk, who spent heavily backing Republicans, responded on X: \"Data centers in space looking pretty appealing right now,\" according to Fortune. After the vote, data center builders such as CoreWeave fell, and Constellation Energy lost more than 5% in one day, Le Monde reported."
+    "heading": "Inside the operations center",
+    "body": "Politico first reported the center on Oct. 28. It said staff from several teams, numbering in the hundreds, would review cases flagged for possible abuse. The work is led by Josh Lawson, OpenAI's head of civic and strategic risk. \"The Elections Operations Center builds on that yearslong work, bringing our teams together to respond quickly to emerging issues and enforce our policies as people head to the polls,\" Lawson told Politico.\n\nThe New York Times reported that the center opened on Thursday, Oct. 29. More than a dozen people work around the clock in a San Francisco conference room, with a satellite center in Washington. The team reviews prompts that were automatically flagged as attempts to create false election content, such as plans for influence campaigns using fake accounts. OpenAI alerts other platforms when it finds activity aimed at their sites. \"We're not just monitoring text anymore,\" Lawson told the Times, pointing to threats like deepfakes and cyberattacks. OpenAI's image tools also turn requests for realistic fake scenes, such as long lines at polling places, into cartoons, Action News Jax reported, citing Lawson."
    },
    {
-    "heading": "A bigger fight in Congress",
-    "body": "Democrats will now control Congress. That could give a boost to bills like the national data center moratorium proposed by Sen. Bernie Sanders and Rep. Alexandria Ocasio-Cortez, though any such bill would likely face a presidential veto, TechCrunch reported. Goldman Sachs expects construction delays in Georgia and Texas, according to TechCrunch. Ed Mills, an analyst at Raymond James, said data centers may now be so politically \"toxic\" that President Donald Trump won't be able to veto every restriction Congress passes, the Post reported.\n\nThe industry is already changing its pitch. OpenAI on Thursday released a \"Compute Campus Policy Blueprint\" and pledged tens of millions of dollars for things like school lunches and first responders. Microsoft, Amazon and Google are also promising more benefits for local communities, Axios reported. Chris Lehane, OpenAI's chief global affairs officer, compared the moment to the 1996 election, which came two years after Democrats lost badly in the 1994 midterms. \"A lot happens in two years,\" he told Axios.\n\nActivists say they will be watching. \"Democrats ran on making Big Tech pay,\" Nadine Smith of Color of Change told TechCrunch. \"Our job is to make sure they remember it once the cameras leave.\""
+    "heading": "Voter information and results",
+    "body": "This is OpenAI's first election working with Democracy Works. The nonprofit compiles registration deadlines, ID requirements and polling locations from election offices, The Hill reported. Lawson said that in 2024 the model would often refuse to answer these questions or send users to a website that took several clicks to reach the answer. ChatGPT is relying on The Associated Press to call races, according to Action News Jax."
+   },
+   {
+    "heading": "A broader industry push",
+    "body": "Anthropic also set up its own war room for the first time, according to The Hill. Meta opened one again last week, the Times reported. The Times added that social media platforms have scaled back their trust and safety teams in recent years, while the Trump administration has taken apart federal teams that worked against election interference.\n\nIn October, OpenAI said it had shut down influence operations tied to Russia and Iran. The company has not disclosed any specific efforts targeting the midterms. \"We've been trying to catch operations,\" OpenAI chief investigator Ben Nimmo told the Times, \"before they have a chance to gain traction.\""
    }
   ],
   "text": "",
-  "sources_count": 24,
+  "sources_count": 12,
   "sources": [
    {
-    "domain": "seattletimes.com",
-    "url": "https://www.seattletimes.com/business/voters-reject-data-centers-across-the-country-as-the-ai-backlash-grows/"
+    "domain": "thehill.com",
+    "url": "https://thehill.com/policy/technology/6194056-openai-chatgpt-democracy-works-election-info/"
    },
    {
-    "domain": "axios.com",
-    "url": "https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions"
+    "domain": "politico.com",
+    "url": "https://www.politico.com/news/2026/10/28/openai-election-war-room-interference-01137690"
    },
    {
-    "domain": "lemonde.fr",
-    "url": "https://www.lemonde.fr/en/international/article/2026/11/05/voters-rejection-of-republicans-was-also-a-rejection-of-data-centers_6772578_4.html"
+    "domain": "actionnewsjax.com",
+    "url": "https://www.actionnewsjax.com/news/trending/election-2026-openai-launches-election-war-room/3BMDG4V4CNGIHOPWECJTIGNMFI/"
    },
    {
-    "domain": "fortune.com",
-    "url": "https://fortune.com/2026/11/04/voters-pull-the-plug-on-big-techs-data-center-boom/"
+    "domain": "nytimes.com",
+    "url": "https://www.nytimes.com/2026/11/03/business/ai-midterm-election-misinformation.html"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/"
+    "domain": "thehill.com",
+    "url": "https://thehill.com/policy/technology/6190399-ai-firms-election-day-readiness"
+   },
+   {
+    "domain": "wpxi.com",
+    "url": "https://www.wpxi.com/news/trending/election-2026-openai-launches-election-war-room/3BMDG4V4CNGIHOPWECJTIGNMFI/"
+   },
+   {
+    "domain": "politico.com",
+    "url": "https://www.politico.com/newsletters/decoded-by-politico/2026/10/28/silicon-valleys-historic-wealth-tax-crusade-01137428"
+   },
+   {
+    "domain": "tenbrief.com",
+    "url": "https://tenbrief.com/en/2026/10/30/openai-election-war-room/"
+   },
+   {
+    "domain": "mashable.com",
+    "url": "https://mashable.com/tech/open-ai-launches-midterm-election-war-room"
    },
    {
     "domain": "yahoo.com",
-    "url": "https://www.yahoo.com/news/politics/articles/midterms-bigger-clash-over-data-010214600.html"
+    "url": "https://www.yahoo.com/news/politics/articles/openai-launches-election-war-room-164347725.html"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/"
+    "domain": "sakutto.ai",
+    "url": "https://sakutto.ai/en/articles/openai-election-war-room"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/"
+    "domain": "newsbytesapp.com",
+    "url": "https://www.newsbytesapp.com/news/science/openai-launches-new-initiative-to-combat-us-election-misinformation/story"
+   }
+  ],
+  "image": null,
+  "read_time": 3,
+  "lang": "en",
+  "order": 9
+ },
+ {
+  "source": "perplexity",
+  "source_label": "Perplexity",
+  "title": "China's tech giants expect just 1% of Nvidia chip orders",
+  "url": "https://www.perplexity.ai/discover/tech/china-s-tech-giants-expect-jus-MCxLaQNuTpqWgVk7iaLpjA",
+  "publisher": "Perplexity · tech",
+  "ts": "2026-11-04T11:02:52.889521",
+  "summary": "Buyers including Alibaba and Tencent ordered 6 million RTX Pro 5500 chips but expect tens of thousands within four months, Bloomberg reports.",
+  "bullets": "- **Nvidia** NVIDIA Corporation customers in China, including **Alibaba** Alibaba Group Holding Limited and **Tencent** Tencent Holdings Limited, expect about 1% of roughly $70 billion in RTX Pro 5500 orders soon, Bloomberg reported.\n- In October, Reuters reported Nvidia warned partners they might get only 5% to 10% of requests, as it shifts **TSMC** Taiwan Semiconductor Manufacturing Company Limited capacity toward Rubin chips.\n- The workstation chip is among the most powerful Chinese buyers can legally obtain under US export controls, and Beijing signaled it would approve purchases.",
+  "sections": [
+   {
+    "heading": "Chinese Tech Giants Expect Just 1% of Ordered Nvidia RTX Chips",
+    "body": "Chinese AI developers, among them Alibaba, Tencent and ByteDance, have ordered about 6 million of Nvidia's RTX Pro 5500 chips. Over the next four months they expect to get only some tens of thousands, roughly 1% of the total, Bloomberg reported on November 4, citing people familiar with the matter. The shortfall comes as the US chipmaker struggles to raise production fast enough to keep up with demand.\n\nBloomberg valued the orders at about $70 billion, with each chip priced above $11,000. Buyers expect several thousand units by the end of 2026 and tens of thousands more around February, according to Finimize's summary of the report. Some Chinese customers estimate that cumulative deliveries could reach about 700,000 units by the end of 2027. That is roughly 12% of what they ordered. Nvidia told Bloomberg that supply would remain limited for the foreseeable future because of production constraints and scheduling conflicts."
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/"
+    "heading": "A Squeeze Tighter Than First Signaled",
+    "body": "The new timeline is worse than what Nvidia's customers heard in October. On October 20, Reuters reported that ByteDance, Alibaba and Tencent alone had ordered more than 3 million RTX Pro 5500 cards at about $11,400 each, worth more than $35 billion combined, and that total orders from China had passed 6 million. One source told Reuters that Nvidia warned partners they might receive only 5% to 10% of what they requested. Another said the company could make no more than 3 million of the cards worldwide in 2027.\n\nReuters' sources said the cap reflects Nvidia's manufacturing priorities. The company plans to devote much of its capacity at Taiwan Semiconductor Manufacturing to Rubin, its next-generation data-center platform, starting in 2027, according to Reuters' Japanese-language report. Nvidia had told customers to expect early samples in December, with commercial deliveries starting in the first quarter of 2027."
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/feed/"
+    "heading": "Why China Wants a Workstation Chip",
+    "body": "The RTX Pro 5500 is built for powerful professional workstations, not large data-center clusters. Even so, it is among the most powerful Nvidia chips Chinese buyers can still get under US export controls, Reuters noted. Chinese companies plan to use the cards mainly for AI inference, which means running trained models to answer chatbot queries. Inference needs less computing power than training. Washington bars sales of Nvidia's Blackwell B300 to China, and the older H200 needs a case-by-case license, according to Reuters.\n\nBeijing has also signaled it is open to the purchases. In September, China's Ministry of Industry and Information Technology asked companies including ByteDance and Alibaba to report their plans to buy the RTX Pro 5500, and told some of them it intended to approve the deals, Reuters reported, citing The Information. The Chinese firms that ordered the chips now face a long wait. In the words of Finimize, access is \"being decided by allocation and scheduling, not just price.\""
+   }
+  ],
+  "text": "",
+  "sources_count": 22,
+  "sources": [
+   {
+    "domain": "bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/"
+    "domain": "finimize.com",
+    "url": "https://finimize.com/content/chinas-tech-giants-want-nvidia-chips-but-supply-is-tight"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/category/government-policy/"
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/business/retail-consumer/bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders-2026-10-20/"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/"
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/jp/economy/5QKCE3XXHNLG5H6K6PVTE5GZEE-2026-10-20/"
    },
    {
-    "domain": "eyesinai.com",
-    "url": "https://eyesinai.com/es/news"
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/business/retail-consumer/china-weighs-allowing-bytedance-alibaba-buy-new-nvidia-chips-information-reports-2026-09-27"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/"
+    "domain": "bloomberg.com",
+    "url": "https://bloomberg.com/news/articles/2026-11-04/nvidia-china-clients-to-get-1-of-70-billion-rtx-chips-ordered"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/11/02/northwood-space-raises-375m-series-c-at-a-2b-valuation-from-a16z-and-dfj-growth/"
+    "domain": "shiftdelete.net",
+    "url": "https://shiftdelete.net/en/nvidia-rtx-pro-5500"
    },
    {
-    "domain": "nextinterrupt.com",
-    "url": "https://www.nextinterrupt.com/topics/cloud-enterprise"
+    "domain": "en.sedaily.com",
+    "url": "https://en.sedaily.com/international/2026/11/04/nvidia-to-fill-just-1-percent-of-chinese-chip-orders-amid"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/"
-   },
-   {
-    "domain": "feedbagel.com",
-    "url": "https://feedbagel.com/roundup/environment"
-   },
-   {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/"
+    "domain": "aiweekly.co",
+    "url": "https://aiweekly.co/alerts/nvidia-set-to-fill-1-of-chinas-70b-rtx-pro-5500-order"
    },
    {
     "domain": "tldr.tech",
-    "url": "https://tldr.tech/story/59911847-2154-4052-8ecb-b0812de2efdf"
+    "url": "https://tldr.tech/story/f39d5e91-96b8-492b-b963-09a43137d702"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/"
+    "domain": "fourweekmba.com",
+    "url": "https://fourweekmba.com/ai-nvidias-china-clients-expect-1-of-70b-in-rtx-chip-orders/"
    },
    {
-    "domain": "valueaddvc.com",
-    "url": "https://valueaddvc.com/pulse/big-tech-740b-ai-capex-midterm-backlash-2026"
+    "domain": "lookonchain.com",
+    "url": "https://www.lookonchain.com/feeds/80388"
    },
    {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2024/12/29/ai-data-centers-could-be-distorting-the-us-power-grid/"
+    "domain": "aiweekly.co",
+    "url": "https://aiweekly.co/alerts/alibaba-tencent-and-bytedance-order-6m-nvidia-rtx-pro-5500-chips-for-70b-expect"
+   },
+   {
+    "domain": "el7.ai",
+    "url": "https://el7.ai/en/news/2026-11-04-nvidia-allocates-1-of-70b-rtx-chip-orders-to-china-clients"
+   },
+   {
+    "domain": "tldr.tech",
+    "url": "https://tldr.tech/story/8972ede7-acd3-48a0-b6e6-4c497a86d543"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/latam/negocio/4LB222A6VJKSLOXX32EREKSZJ4-2026-10-20/"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/video/watch/idRW155520102026RP1/"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/3fec1b0a85a0/world/europe/spanish-politicians-trade-blame-after-death-octogenarian-heart-housing-protests-2026-10-08/"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/3fec1b0a85a0/business/aerospace-defense/sweden-contributes-fighter-jets-nato-mission-poland-again-2026-09-30/"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/company/bytedance-ltd"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/company/alibaba-group-holding-limited/"
+   },
+   {
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com/3fec1b0a85a0/world/council-europe-warns-five-eu-states-rights-risks-return-hub-plans-2026-07-16/"
    }
   ],
   "image": null,
   "read_time": 2,
   "lang": "en",
   "order": 10
- },
- {
-  "source": "perplexity",
-  "source_label": "Perplexity",
-  "title": "China's Moonshot sought Nvidia chips via Europe loophole",
-  "url": "https://www.perplexity.ai/discover/tech/china-s-moonshot-sought-nvidia-r5Q1_s0mRFujsKOxQGY0gw",
-  "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T14:23:00.929809",
-  "summary": "The Kimi maker discussed renting Blackwell clusters from European cloud providers, exploiting a remote-access loophole in U.S. export controls, sources told CNBC.",
-  "bullets": "- Beijing-based **Moonshot AI** held talks this year to rent clusters of 8,000-plus **Nvidia** NVIDIA Corporation Blackwell chips in Europe, four sources told **CNBC** Versant Media Group, Inc..\n- U.S. export controls bar the chips from China, but overseas rentals remain legal; a House-passed bill closing that gap has stalled in the Senate.\n- The report follows a Financial Times account that Nvidia told cloud partners to sell at least 51% of services to non-Chinese customers.",
-  "sections": [
-   {
-    "heading": "Moonshot AI sought Nvidia Blackwell access through European data centers",
-    "body": "Moonshot AI, the Beijing-based maker of the Kimi models, has held talks this year about renting capacity on Nvidia Blackwell chips from neoclouds in Europe. Four people familiar with the matter told CNBC about the talks. U.S. export controls effectively bar these chips from being imported into China. Renting them through data centers overseas is a loophole that current law does not give regulators broad power to close, CNBC reported.\n\nThe report came two days after the Financial Times said Nvidia had told cloud partners that at least 51% of their services must go to non-Chinese customers. According to Barron's, carrying AFP, that rule covers new contracts and leaves existing agreements in place."
-   },
-   {
-    "heading": "Large clusters and higher upfront payments",
-    "body": "Moonshot was mainly looking for inference clusters in Europe, meaning capacity used to serve models to end users, two sources told CNBC. One source was also aware of interest in training capacity. One person said talks covered clusters of 8,000 or more Blackwell GPUs and called the lab \"very aggressive\" in its hunt for computing power. Another source said Moonshot had been asked to pay 30% to 50% more upfront than a non-Chinese customer would. Neoclouds want that extra money as a hedge in case remote access deals are banned later.\n\nThese talks continued after the White House said in July that Moonshot had used Blackwell chips through a facility in Thailand, CNBC reported. Moonshot, Nvidia, the White House and the Commerce Department did not respond to CNBC's requests for comment. Demand for Moonshot's Kimi K3 model has been high. Around the model's July release, the company paused new subscriptions so it could keep compute for existing members."
-   },
-   {
-    "heading": "Nvidia's 51% rule",
-    "body": "The FT, citing five people, said Nvidia's sales and regional teams passed the guidance on verbally and that it applies to cloud partners worldwide, according to The Next Web. Reports differ on whether the 51% applies to revenue, customers or computing capacity. Nvidia has not said how it would check compliance, Forbes noted. A Singapore-based provider told the FT that it is hard to find enough non-Chinese customers outside the U.S.\n\nNvidia did not confirm or deny the report. In a statement, it said that \"longstanding U.S. policy encourages every cloud to build on American infrastructure and to win business everywhere they can,\" according to AFP via Barron's. Chinese foreign ministry spokeswoman Mao Ning said she was not aware of the report."
-   },
-   {
-    "heading": "Pressure in Washington",
-    "body": "In Congress, the Remote Access Security Act would extend export controls to cloud-based access to critical hardware. It passed the House in January but has not passed the Senate, CNBC reported. Nvidia is scheduled to report earnings on November 17, Forbes noted.\n\nAsked about the reports this week, an Nvidia spokesperson told CNBC that \"America cannot win the AI race unless America's AI infrastructure wins worldwide.\""
-   }
-  ],
-  "text": "",
-  "sources_count": 11,
-  "sources": [
-   {
-    "domain": "cnbc.com",
-    "url": "https://www.cnbc.com/2026/11/05/moonshot-ai-nvidia-chips-europe-china.html"
-   },
-   {
-    "domain": "barrons.com",
-    "url": "https://www.barrons.com/articles/nvidia-orders-data-center-clients-to-reduce-china-exposure-ft-6269f8ec"
-   },
-   {
-    "domain": "forbes.com",
-    "url": "https://www.forbes.com/sites/jonmarkman/2026/11/04/nvidia-tells-cloud-partners-to-sell-51-of-services-outside-china/"
-   },
-   {
-    "domain": "thenextweb.com",
-    "url": "https://thenextweb.com/news/nvidia-cloud-partners-cap-china-business"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-telling-cloud-clients-sell-141820277.html"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/technology/articles/nvidia-tells-cloud-clients-cap-073914242.html"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-tightens-screws-chinas-ai-160018004.html"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-tells-cloud-clients-cap-120136923.html"
-   },
-   {
-    "domain": "en.fnnews.com",
-    "url": "https://en.fnnews.com/news/202611031820566511"
-   },
-   {
-    "domain": "247wallst.com",
-    "url": "https://247wallst.com/investing/2026/11/04/nvidia-is-telling-cloud-clients-to-sell-at-least-51-to-non-chinese-customers/"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-reportedly-restricts-chinese-access-112552007.html"
-   }
-  ],
-  "image": null,
-  "read_time": 3,
-  "lang": "en",
-  "order": 12
  }
 ]

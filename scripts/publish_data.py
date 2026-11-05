@@ -98,9 +98,13 @@ def gnews_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
     return out
 
 
+def _sorted(items: list[dict]) -> list[dict]:
+    return sorted(items, key=lambda e: e.get("ts") or "", reverse=True)
+
+
 def combine(perplexity: list[dict], gnews: list[dict]) -> list[dict]:
     merged = [*perplexity, *gnews]
-    merged.sort(key=lambda e: e.get("ts") or "", reverse=True)
+    merged = _sorted(merged)
     for index, entry in enumerate(merged, start=1):
         entry["order"] = index
     return merged
@@ -157,8 +161,8 @@ def main(argv: list[str] | None = None) -> int:
     pj = args.perplexity or os.path.join(args.dir, "perplexity_tech.json")
     gj = args.gnews or os.path.join(args.dir, "gnews.json")
 
-    perplexity = perplexity_items(_load(pj))
-    gnews = gnews_items(_load(gj))
+    perplexity = _sorted(perplexity_items(_load(pj)))
+    gnews = _sorted(gnews_items(_load(gj)))
     merged = combine(perplexity, gnews)
 
     os.makedirs(args.out, exist_ok=True)
