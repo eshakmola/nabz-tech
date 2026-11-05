@@ -60,8 +60,8 @@ jobs:
 
       - name: Build hub page (All / Perplexity / G News)
         run: |
-          python build_hub.py --dir output --out docs/index.html || true
-          python build_hub.py --dir output --out site/index.html || true
+          python build_hub.py --dir output --out docs/index.html --no-archive || true
+          python build_hub.py --dir output --out site/index.html --no-archive || true
 
       - name: Publish combined JSON for the API
         run: |

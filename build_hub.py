@@ -36,6 +36,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         description="Build the combined hub page from the two independent scrapers.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
+    parser.add_argument("--no-archive", action="store_true", help="نسخه‌ی آرشیوی نساز")
     parser.add_argument("--out", default="site/index.html", help="hub HTML path")
     parser.add_argument("--dir", default="output", help="output dir used with --refresh")
     parser.add_argument(
@@ -116,7 +117,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # کپی آرشیو تاریخ‌دار + .nojekyll برای GitHub Pages
     site_dir = os.path.dirname(args.out) or "."
-    if os.path.isdir(site_dir):
+    if os.path.isdir(site_dir) and not args.no_archive:
         token = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
         archive_dir = os.path.join(site_dir, "archive")
         os.makedirs(archive_dir, exist_ok=True)
@@ -124,6 +125,7 @@ def main(argv: list[str] | None = None) -> int:
             html = fh.read()
         with open(os.path.join(archive_dir, f"hub-{token}.html"), "w", encoding="utf-8") as fh:
             fh.write(html)
+    if os.path.isdir(site_dir):
         open(os.path.join(site_dir, ".nojekyll"), "a").close()
 
     print(
