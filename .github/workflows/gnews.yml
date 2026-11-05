@@ -75,7 +75,7 @@ jobs:
             git push
           fi
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: gnews-${{ github.run_number }}
           path: output/
