@@ -124,7 +124,7 @@ jobs:
             || echo "Pages already configured (or token lacks admin scope)"
 
       - name: Package Pages artifact
-        if: env.PUBLISH_PAGES == 'true'
+        if: ${{ github.event.inputs.publish_pages != 'false' }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -132,7 +132,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: scrape
-    if: env.PUBLISH_PAGES == 'true'
+    if: ${{ needs.scrape.result == 'success' && github.event.inputs.publish_pages != 'false' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
