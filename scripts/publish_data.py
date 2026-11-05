@@ -58,7 +58,9 @@ def perplexity_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
                     {"domain": s.get("domain") or "", "url": s.get("url") or ""}
                     for s in (it.get("sources") or [])
                 ],
-                "image": None,
+                "image": it.get("image_url") or None,
+                # jsDelivr از همین ریپو سرو می‌کند (بدون نیاز به دامنه‌ی دیگر)
+                "image_cdn": it.get("image_url") or None,
                 "read_time": it.get("read_time_min"),
                 "lang": "en",
             }
@@ -90,7 +92,7 @@ def gnews_items(doc: dict[str, Any]) -> list[dict[str, Any]]:
                     }
                     for link in related[:8]
                 ],
-                "image": None,
+                "image": it.get("image_url") or None,
                 "read_time": None,
                 "lang": "en",
             }

@@ -91,6 +91,35 @@ async function fetchSource(env, source) {
 
 const dayKey = (iso) => (iso ? String(iso).slice(0, 10) : '');
 
+const J_MONTHS = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+const J_DAYS = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+const FA = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+const fa = (n) => String(n).replace(/\d/g, (d) => FA[+d]);
+
+function jalali(d) {
+  const gy = d.getUTCFullYear(), gm = d.getUTCMonth() + 1, gd = d.getUTCDate();
+  const gdm = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+  let jy = gy <= 1600 ? 0 : 979;
+  const gy2 = gy <= 1600 ? gy - 621 : gy - 1600;
+  let days =
+    365 * gy2 + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) +
+    Math.floor((gy2 + 399) / 400) - 80 + gd + gdm[gm - 1] + (gy2 % 4 === 0 && gm > 2 ? 1 : 0);
+  jy += 33 * Math.floor(days / 12053); days %= 12053;
+  jy += 4 * Math.floor(days / 1461); days %= 1461;
+  if (days > 365) { jy += Math.floor((days - 1) / 365); days = (days - 1) % 365; }
+  const jm = days < 186 ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+  const jd = 1 + (days < 186 ? days % 31 : (days - 186) % 30);
+  return { jy, jm, jd };
+}
+
+function dayLabel(iso) {
+  if (!iso) return 'بدون تاریخ';
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return 'بدون تاریخ';
+  const j = jalali(d);
+  return J_DAYS[d.getUTCDay()] + ' ' + fa(j.jd) + ' ' + J_MONTHS[j.jm - 1] + ' ' + fa(j.jy);
+}
+
 function normalize(items, source) {
   return (items || []).map((it) => {
     const ts = it.ts || it.published_iso || it.published || null;
@@ -110,7 +139,7 @@ function normalize(items, source) {
       text: it.text || '',
       sources_count: it.sources_count || 0,
       sources: it.sources || [],
-      image: it.image || it.image_url || null,
+      image: it.image_cdn || it.image || it.image_url || null,
       read_time: it.read_time || null,
       lang: it.lang || 'en',
     };
@@ -202,6 +231,22 @@ code{background:rgba(148,163,184,.16);border-radius:5px;padding:1px 6px}
 `;
 
 const PAGE_JS = `
+const J_MONTHS = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+const J_DAYS = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+function JALALI(ts){
+  if(!ts) return 'بدون تاریخ';
+  var d = new Date(ts); if(isNaN(d.getTime())) return 'بدون تاریخ';
+  var gy=d.getUTCFullYear(), gm=d.getUTCMonth()+1, gd=d.getUTCDate();
+  var gdm=[0,31,59,90,120,151,181,212,243,273,304,334];
+  var jy = gy<=1600?0:979, gy2 = gy<=1600?gy-621:gy-1600;
+  var days = 365*gy2 + Math.floor((gy2+3)/4) - Math.floor((gy2+99)/100) + Math.floor((gy2+399)/400) - 80 + gd + gdm[gm-1] + ((gy2%4===0 && gm>2)?1:0);
+  jy += 33*Math.floor(days/12053); days %= 12053;
+  jy += 4*Math.floor(days/1461); days %= 1461;
+  if(days>365){ jy += Math.floor((days-1)/365); days = (days-1)%365; }
+  var jm = days<186 ? 1+Math.floor(days/31) : 7+Math.floor((days-186)/30);
+  var jd = 1 + (days<186 ? days%31 : (days-186)%30);
+  return J_DAYS[d.getUTCDay()] + ' ' + fa(jd) + ' ' + J_MONTHS[jm-1] + ' ' + fa(jy);
+}
 const DATA = window.__HUB__ || [];
 const grid = document.getElementById('grid');
 function md(s){
@@ -209,7 +254,8 @@ function md(s){
     return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);
   }).replace(/\\*\\*([^*]+)\\*\\*/g, '<strong>$1</strong>');
 }
-function day(ts){ return ts ? new Date(ts).toISOString().slice(0, 10) : 'بدون تاریخ'; }
+function fa(n){ return String(n).replace(/\\d/g, function(d){ return '۰۱۲۳۴۵۶۷۸۹'[+d]; }); }
+function day(ts){ return JALALI(ts); }
 function card(e){
   var img = e.image
     ? '<img loading="lazy" alt="" src="' + e.image + '">'
