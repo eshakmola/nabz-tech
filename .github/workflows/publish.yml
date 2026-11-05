@@ -42,6 +42,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Chromium (browser needed for the Perplexity side)
+        continue-on-error: true
+        run: |
+          python -m playwright install --with-deps chromium || scrapling install
+
       - name: Scrape Perplexity
         continue-on-error: true
         run: |
