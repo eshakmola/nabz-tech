@@ -2,6 +2,45 @@
  {
   "source": "gnews",
   "source_label": "G News",
+  "title": "iOS 27.3 changes the iPhone Duo keyboard, here’s how - 9to5Mac",
+  "url": "https://9to5mac.com/2026/11/05/ios-27-3-changes-the-iphone-duo-keyboard-heres-how/",
+  "publisher": "9to5Mac",
+  "ts": "2026-11-05T19:52:00+00:00",
+  "summary": "The iOS 27.3 beta introduced this week brings a convenient change to the iPhone Duo’s outer display keyboard.",
+  "bullets": "",
+  "sections": [],
+  "text": "If you’re one of the fortunate early adopters who managed to get an iPhone Duo on or near launch day, you may have noticed that changes keep arriving via software updates.\n\niPhone Duo shipped with iOS 27.1, but just a few days later iOS 27.2 arrived and added Apple Pencil support and Edge Light for video calls.\n\nNow just about one week later, the iOS 27.3 beta has introduced even more changes.\n\nReachability lets you slide outer display content to the left or right to make it more reachable. And as highlighted by Beta Profiles on X , the keyboard has gotten an improvement too.\n\niOS 27.3 beta tweaks iPhone Duo's outer display keyboard, with narrower keys and a slightly thinner, smaller font. pic.twitter.com/BDKCBZc52Z\n\nThe keyboard refresh with narrower keys and smaller font makes it easier than before to type on the iPhone Duo’s outer screen, especially one-handed.\n\nIt’s a subtle difference, but one that early testers have found a clear upgrade.\n\nBy combining keyboard changes with Reachability, iOS 27.3 offers a noteworthy improvement to the one-handed iPhone Duo experience.\n\nHave you tried the new iPhone Duo keyboard in iOS 27.3? How is it working for you? Let us know in the comments.\n\nMacBook Pro with PROLED XDR Display review: A lot more than touch Chance Miller Nov 5 2026 iOS 27.3 upgrades Apple Music in two ways, here’s what’s new Ryan Christoffel Nov 4 2026 Report: Apple reduces employees’ AI token allowances as Ternus moves to cut costs Marcus Mendes Nov 4 2026 MacBook ",
+  "sources_count": 5,
+  "sources": [
+   {
+    "domain": "9to5Mac",
+    "url": "https://9to5mac.com/2026/11/05/ios-27-3-changes-the-iphone-duo-keyboard-heres-how/"
+   },
+   {
+    "domain": "Inc.com",
+    "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395"
+   },
+   {
+    "domain": "MacRumors",
+    "url": "https://www.macrumors.com/2026/11/05/ios-27-3-public-beta/"
+   },
+   {
+    "domain": "Apple",
+    "url": "https://www.apple.com/newsroom/2026/11/redesigned-health-app-expands-language-support/"
+   },
+   {
+    "domain": "Engadget",
+    "url": "https://www.engadget.com/2308154/iphone-duo-new-accessibility-feature-ios-27-3-beta-reachability/"
+   }
+  ],
+  "image": null,
+  "read_time": null,
+  "lang": "en",
+  "order": 1
+ },
+ {
+  "source": "gnews",
+  "source_label": "G News",
   "title": "Xbox overhauls its PC, web, and cloud apps with a faster design - The Verge",
   "url": "https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign",
   "publisher": "The Verge",
@@ -36,7 +75,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 1
+  "order": 2
  },
  {
   "source": "gnews",
@@ -56,12 +95,12 @@
     "url": "https://www.bloomberg.com/news/articles/2026-11-05/sony-debuts-retro-60-wired-headphones-in-tribute-to-1979-walkman"
    },
    {
-    "domain": "CNET",
-    "url": "https://www.cnet.com/tech/mobile/sony-mdr-3r-usb-c-walkman-headphones-review/"
+    "domain": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/technology/articles/sony-electronics-introduces-mdr-3r-160000870.html"
    },
    {
-    "domain": "PR Newswire",
-    "url": "https://www.prnewswire.com/news-releases/sony-electronics-introduces-mdr-3r-usb-c-wired-headphones-a-modern-take-on-the-first-walkman-headphones-mdr-3-302930554.html"
+    "domain": "CNET",
+    "url": "https://www.cnet.com/tech/mobile/sony-mdr-3r-usb-c-walkman-headphones-review/"
    },
    {
     "domain": "Gizmodo",
@@ -75,7 +114,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 2
+  "order": 3
  },
  {
   "source": "gnews",
@@ -114,7 +153,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 3
+  "order": 4
  },
  {
   "source": "gnews",
@@ -137,7 +176,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 4
+  "order": 5
  },
  {
   "source": "gnews",
@@ -161,22 +200,22 @@
     "url": "https://www.cnn.com/2026/11/04/tech/nintendo-link-legend-of-zelda-ocarina-gta"
    },
    {
-    "domain": "Kotaku",
-    "url": "https://kotaku.com/ocarina-of-time-makes-one-of-links-strongest-attacks-harder-to-use-but-theres-an-easy-fix-2000754246"
-   },
-   {
-    "domain": "Variety",
-    "url": "https://variety.com/2026/gaming/news/legend-of-zelda-ocarina-of-time-review-score-jon-batiste-1236940357/"
+    "domain": "The Guardian",
+    "url": "https://www.theguardian.com/games/2026/nov/04/the-legend-of-zelda-ocarina-of-time-review-nintendo-switch"
    },
    {
     "domain": "Nintendo",
     "url": "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-24-the-legend-of-zelda-ocarina-of-time-part-1/"
+   },
+   {
+    "domain": "Morning Brew",
+    "url": "https://www.morningbrew.com/stories/nintendo-holiday-plot-zelda-ocarina-of-time-remake"
    }
   ],
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 5
+  "order": 6
  },
  {
   "source": "gnews",
@@ -215,7 +254,7 @@
   "image": null,
   "read_time": null,
   "lang": "en",
-  "order": 6
+  "order": 7
  },
  {
   "source": "gnews",
@@ -249,45 +288,6 @@
    {
     "domain": "mediasat.info",
     "url": "https://mediasat.info/en/2026/11/05/hackers-hijacked-ukraines-plerdy-tracker-to-target-phones/"
-   }
-  ],
-  "image": null,
-  "read_time": null,
-  "lang": "en",
-  "order": 7
- },
- {
-  "source": "gnews",
-  "source_label": "G News",
-  "title": "Apple’s Latest Siri Announcement Could Mean the End of Apps on Your iPhone - Inc.com",
-  "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395",
-  "publisher": "MacRumors",
-  "ts": "2026-11-05T00:57:06+00:00",
-  "summary": "Apple today seeded the first betas of iOS 27.3, iPadOS 27.3, macOS Golden Gate 27.3, tvOS 27.3, and watchOS 27.3. The new software comes two days after Apple released the betas for developers. iOS 27.3 is a major update that adds a Vertical Tabs layout option and Adaptive Dark Mode for Safari. Siri AI can do more in and across Apple's apps, and developers are now able to create actions for Siri to carry out.",
-  "bullets": "",
-  "sections": [],
-  "text": "Apple today seeded the first betas of iOS 27.3, iPadOS 27.3, macOS Golden Gate 27.3, tvOS 27.3, and watchOS 27.3. The new software comes two days after Apple released the betas for developers.\n\niOS 27.3 is a major update that adds a Vertical Tabs layout option and Adaptive Dark Mode for Safari. Siri AI can do more in and across Apple's apps, and developers are now able to create actions for ‌Siri‌ to carry out.\n\nThe redesigned Health app is now available with custom Insights and Longevity information, and the iPhone Duo supports Reachability. There's a new Selfie Sing feature in Apple Music , plus changes to StandBy on non-Duo iPhones. A full list of what's new in the beta can be found in our guide .\n\nOn the Apple Watch Series 12 and Ultra 4, Audio Intelligence features Live Rewind and ‌Siri‌ Recap are available for testing. Live Rewind creates a transcript of the last 15 seconds of speech, and ‌Siri‌ Recap offers a high-level summary of conversations throughout the day.\n\n‌macOS Golden Gate‌ 27.3 has the same Safari features, and it brings Live Activities to Macs without a Dynamic Island .\n\nWe're expecting all of Apple's updates to launch in December.",
-  "sources_count": 5,
-  "sources": [
-   {
-    "domain": "Inc.com",
-    "url": "https://www.inc.com/jason-aten/apples-latest-siri-announcement-could-mean-the-end-of-apps-on-your-iphone/91431395"
-   },
-   {
-    "domain": "MacRumors",
-    "url": "https://www.macrumors.com/2026/11/05/ios-27-3-public-beta/"
-   },
-   {
-    "domain": "Apple",
-    "url": "https://www.apple.com/newsroom/2026/11/redesigned-health-app-expands-language-support/"
-   },
-   {
-    "domain": "Engadget",
-    "url": "https://www.engadget.com/2308154/iphone-duo-new-accessibility-feature-ios-27-3-beta-reachability/"
-   },
-   {
-    "domain": "MacStories",
-    "url": "https://www.macstories.net/stories/siri-ais-evolution-is-both-surprising-and-obvious/"
    }
   ],
   "image": null,
