@@ -2,6 +2,87 @@
  {
   "source": "perplexity",
   "source_label": "Perplexity",
+  "title": "Copernicus says 2026 virtually certain to top 1.5C warming",
+  "url": "https://www.perplexity.ai/discover/tech/copernicus-says-2026-virtually-t9hVRifORteygXTUJXWu.A",
+  "publisher": "Perplexity · tech",
+  "ts": "2026-11-06T11:13:31.824154",
+  "summary": "The EU climate monitor also logged the warmest October on record, days before COP31 opens in Antalya, Turkey, on Monday.",
+  "bullets": "- The **Copernicus Climate Change Service** said Friday that 2026 has over a 99% chance of ending above 1.5C, only the second year after 2024.\n- October averaged 1.75C above preindustrial levels, beating the 2023 record, as an exceptionally strong **El Niño** adds heat, according to Copernicus.\n- The **Royal Meteorological Society** warned El Niño could temporarily push temperatures to 1.6–1.8C, with forecasters eyeing 2027 as a possible record year.",
+  "sections": [
+   {
+    "heading": "Copernicus says 2026 almost certain to exceed 1.5C warming",
+    "body": "The European Union's climate monitor said on Friday, November 6, that 2026 is \"virtually certain\" to end more than 1.5C above preindustrial levels. That would make it only the second calendar year to cross the threshold, after 2024. The world also just had its warmest October on record. The Copernicus Climate Change Service (C3S) put the chance of passing 1.5C at more than 99%. Its statistical model gives a range of 1.56C to 1.61C for the year.\n\nThe bulletin comes days before governments meet for the two-week COP31 climate summit in Antalya, Turkey, which opens Monday, November 9."
+   },
+   {
+    "heading": "A record October",
+    "body": "Global surface air temperatures in October averaged 15.35C. That was 1.75C above the 1850–1900 baseline and the third month in a row above 1.5C. The previous October record was 1.7C, set in 2023. Sea surface temperatures outside the polar regions averaged 20.95C, also a record for the month.\n\n\"October has continued the pattern of remarkable global warmth, with record global and surface ocean temperatures,\" said Samantha Burgess, strategic lead for climate at the European Centre for Medium-Range Weather Forecasts, which runs Copernicus. \"An exceptionally strong El Niño is adding further heat to a climate already warmed by human activities\". Burgess also noted that the four-year average for 2023 to 2026 is expected to exceed 1.5C. She said this shows \"how persistent this period of global warming has become\".\n\nCopernicus expects 2026 to be the second-warmest year on record. It sees a 20% chance that the year ties or beats 2024. Other datasets point higher. A Carbon Brief analysis put the odds of a record year at up to 97% in Berkeley Earth's data and about 67% across six datasets combined. It also noted that one year above 1.5C does not by itself breach the Paris Agreement goal, which is measured over the long term."
+   },
+   {
+    "heading": "El Niño has yet to peak",
+    "body": "The El Niño broke the daily record for the key Niño3.4 region in September. Nearly all models expect it to become the strongest on record, peaking near 4C this winter. Forecasters say it could help make 2027 the hottest year yet.\n\nA media briefing from the Royal Meteorological Society said the event could temporarily push global temperatures to 1.6–1.8C. At current emission rates, that is a level of long-term warming the world would reach within 10 to 15 years. \"Climate change is turbocharging extreme weather, and when we add an off-the-charts El Niño into the mix, we can expect some serious impacts this year and next,\" said Ella Gilbert, who led the briefing."
+   }
+  ],
+  "text": "",
+  "sources_count": 12,
+  "sources": [
+   {
+    "domain": "dw.com",
+    "url": "https://www.dw.com/es/el-mundo-volver%C3%A1-a-superar-con-casi-total-certeza-este-a%C3%B1o-los-15-%C2%BAc-de-calentamiento-global/a-79873972"
+   },
+   {
+    "domain": "france24.com",
+    "url": "https://www.france24.com/en/live-news/20261106-2026-most-likely-to-be-second-hottest-year-on-record-eu-monitor"
+   },
+   {
+    "domain": "climate.copernicus.eu",
+    "url": "https://climate.copernicus.eu/press-releases?ref=dailybrief.net"
+   },
+   {
+    "domain": "mobile.aa.com.tr",
+    "url": "https://mobile.aa.com.tr/en/environment/2026-set-to-become-2nd-warmest-year-on-record-eus-climate-service-warns/4113924"
+   },
+   {
+    "domain": "reneweconomy.com.au",
+    "url": "https://reneweconomy.com.au/chart-of-the-day-world-notches-hottest-october-on-record-as-500-academics-call-for-courage-on-climate/"
+   },
+   {
+    "domain": "wiwo.de",
+    "url": "https://www.wiwo.de/technologie/forschung/klimakrise-copernicus-2026-reisst-fast-sicher-15-grad-marke/100267860.html"
+   },
+   {
+    "domain": "carbonbrief.org",
+    "url": "https://www.carbonbrief.org/state-of-the-climate-2026-likely-to-tie-with-2024-as-the-warmest-year-on-record"
+   },
+   {
+    "domain": "rmets.org",
+    "url": "https://www.rmets.org/news/media-briefing-super-sized-el-nino-occurring-hotter-planet"
+   },
+   {
+    "domain": "thejakartapost.com",
+    "url": "https://www.thejakartapost.com/culture/2026/11/06/2026-most-likely-to-be-second-hottest-year-on-record-eu-monitor"
+   },
+   {
+    "domain": "moneycontrol.com",
+    "url": "https://www.moneycontrol.com/world/2026-most-likely-to-be-second-hottest-year-on-record-article-14073139.html/amp"
+   },
+   {
+    "domain": "bgnes.com",
+    "url": "http://www.bgnes.com/weather/2026-on-track-to-become-second-hottest-year-on-record"
+   },
+   {
+    "domain": "abcnyheter.no",
+    "url": "https://www.abcnyheter.no/nyheter/eus-klimatjeneste-oktober-var-rekordvarm/1724478"
+   }
+  ],
+  "image": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793963012/getty_uploads/2303314124_zc3udb.jpg",
+  "image_cdn": "https://pplx-res.cloudinary.com/image/upload/t_limit/v1793963012/getty_uploads/2303314124_zc3udb.jpg",
+  "read_time": 2,
+  "lang": "en",
+  "order": 1
+ },
+ {
+  "source": "perplexity",
+  "source_label": "Perplexity",
   "title": "Tech leaders admit industry fueled data center backlash",
   "url": "https://www.perplexity.ai/discover/tech/tech-leaders-admit-industry-fu-8L0Tht_VQ0.7N3LwVbfdwg",
   "publisher": "Perplexity · tech",
@@ -86,7 +167,7 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--bv65oVAN--/t_limit/https://image.cnbcfm.com/api/v1/image/108352209-1787240171676-108352209-1787239895330-gettyimages-2287276842-TRUMP_GM_MICHIGAN.jpeg%3Fv%3D1787240189%26w%3D1920%26h%3D1080",
   "read_time": 3,
   "lang": "en",
-  "order": 1
+  "order": 2
  },
  {
   "source": "perplexity",
@@ -175,7 +256,7 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--wzVWd6kP--/t_limit/https://www.niemanlab.org/images/Meta-stock-image.jpg",
   "read_time": 2,
   "lang": "en",
-  "order": 2
+  "order": 3
  },
  {
   "source": "perplexity",
@@ -380,7 +461,7 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--zC5r8NLV--/t_limit/https://substackcdn.com/image/fetch/%24s_%21mZBz%21%2Cf_auto%2Cq_auto:good%2Cfl_progressive:steep/https%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252F02870df4-6524-41d0-b8d1-bb9ff5b18620_1440x960.webp",
   "read_time": 3,
   "lang": "en",
-  "order": 3
+  "order": 4
  },
  {
   "source": "perplexity",
@@ -437,7 +518,7 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--Rhc1sIeH--/t_limit/https://energyandcleanair.org/wp/wp-content/uploads/2026/10/image-121.png",
   "read_time": 3,
   "lang": "en",
-  "order": 5
+  "order": 6
  },
  {
   "source": "perplexity",
@@ -709,294 +790,5 @@
   "read_time": 3,
   "lang": "en",
   "order": 9
- },
- {
-  "source": "perplexity",
-  "source_label": "Perplexity",
-  "title": "Airbnb discloses deal tied to CEO Chesky's AI startup",
-  "url": "https://www.perplexity.ai/discover/tech/airbnb-discloses-deal-tied-to-dqR3HXn6QNqiyrL3F6FVUQ",
-  "publisher": "Perplexity · tech",
-  "ts": "2026-11-05T23:27:55.895727",
-  "summary": "The agreement could let Airbnb invest in and license technology from the lab Chesky personally funds. It was disclosed alongside strong third-quarter results.",
-  "bullets": "- **Airbnb** Airbnb, Inc. disclosed an agreement Thursday that could let it invest in and license technology from CEO **Brian Chesky**'s secretive AI startup, The Information reported.\n- Bloomberg first reported the lab in June; Chesky has funded it himself, and Airbnb CTO **Ahmad Al-Dahle**, formerly of Meta, advises it.\n- The disclosure came as Airbnb reported 19% revenue growth to $4.9 billion and said its AI travel agent will launch in early 2027.",
-  "sections": [
-   {
-    "heading": "Airbnb discloses agreement tied to Chesky's secretive AI startup",
-    "body": "Airbnb has reached an agreement that could let it invest in and license technology from a secretive artificial intelligence startup controlled by co-founder and CEO Brian Chesky, The Information reported on Thursday, November 5, 2026. Chesky has so far paid for the AI lab himself and plans to keep funding it, according to a person with knowledge of his plans. Airbnb Chief Technology Officer Ahmad Al-Dahle has been advising the startup, according to a TLDR summary of the report.\n\nThe deal links a public company to a private venture run by its own CEO. Some of the new details appeared in a securities filing that followed Airbnb's quarterly report, The Information said."
-   },
-   {
-    "heading": "Disclosure lands with strong earnings",
-    "body": "Airbnb released the information alongside its third-quarter results. Revenue rose 19% from a year earlier to $4.9 billion, and the board approved a new buyback of up to $12 billion in Class A shares, the company said. Airbnb filed its shareholder letter with regulators in an 8-K. The stock rose in after-hours trading after results beat analyst estimates and the company raised its full-year outlook, Investing.com reported.\n\nIn the same letter, Airbnb said it would launch its own AI travel agent in the first half of 2027, TechCrunch reported. The company said the agent will build \"an interface\" around each guest's request instead of answering like a typical chatbot. \"What we are doing is developing a custom-designed AI-native experience that responds to what guests are looking for,\" Chesky said."
-   },
-   {
-    "heading": "From rumor to filing",
-    "body": "Bloomberg first reported Chesky's plans on June 4, 2026. It said he was starting a lab to develop AI models and was considering a focus on user interaction and design. At the time, the lab was in the early stages of funding, and Chesky planned to stay on as Airbnb's CEO rather than run the new venture, according to follow-up coverage. The lab's name, team and funding have not been made public.\n\nAl-Dahle joined Airbnb as CTO in January 2026. He previously led generative AI at Meta, where he oversaw AI research and model development, according to Airbnb's investor site. On an earlier earnings call, Chesky credited the hire with turning Airbnb from \"a middle-of-the-pack company for AI to a leader in AI\" among companies that are not frontier labs or hyperscalers, according to a transcript."
-   },
-   {
-    "heading": "The governance question",
-    "body": "The deal shows a tension that has followed the lab since it was first reported. Chesky wants proprietary AI research for Airbnb's products, but he is building it outside the company he leads. Some observers have asked how much attention the side venture will get from a CEO who has stayed in charge of Airbnb, The Next Web noted. The new agreement gives Airbnb a formal path to the lab's technology. It also puts any future investment or licensing deal under the related-party rules that apply when a company does business with an entity its CEO controls."
-   }
-  ],
-  "text": "",
-  "sources_count": 63,
-  "sources": [
-   {
-    "domain": "theinformation.com",
-    "url": "https://www.theinformation.com/articles/airbnb-reveals-new-details-cheskys-secretive-ai-startup"
-   },
-   {
-    "domain": "tldr.tech",
-    "url": "https://tldr.tech/story/f7d08e36-49c9-4507-bd76-b7e56fda23af"
-   },
-   {
-    "domain": "theinformation.com",
-    "url": "https://www.theinformation.com/articles/"
-   },
-   {
-    "domain": "news.airbnb.com",
-    "url": "https://news.airbnb.com/airbnb-q3-2026-financial-results"
-   },
-   {
-    "domain": "sec.gov",
-    "url": "https://www.sec.gov/Archives/edgar/data/0001559720/000119312526449727/d437988d8k.htm"
-   },
-   {
-    "domain": "ca.investing.com",
-    "url": "https://ca.investing.com/news/stock-market-news/why-is-airbnb-stock-surging-today-93CH-4936611"
-   },
-   {
-    "domain": "techcrunch.com",
-    "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/"
-   },
-   {
-    "domain": "thenextweb.com",
-    "url": "https://thenextweb.com/news/chesky-airbnb-ai-lab-openai-altman"
-   },
-   {
-    "domain": "bloomberg.com",
-    "url": "https://www.bloomberg.com/news/articles/2026-06-04/airbnb-ceo-brian-chesky-plans-to-start-a-new-ai-company"
-   },
-   {
-    "domain": "benzinga.com",
-    "url": "https://www.benzinga.com/news/26/10/62315523/full-transcript-airbnb-q2-2026-earnings-call"
-   },
-   {
-    "domain": "investors.airbnb.com",
-    "url": "https://investors.airbnb.com/governance/default.aspx"
-   },
-   {
-    "domain": "data.larridin.com",
-    "url": "https://data.larridin.com/data/ai-tracker/company/airbnb/"
-   },
-   {
-    "domain": "theinformation.com",
-    "url": "https://www.theinformation.com/"
-   },
-   {
-    "domain": "conduit.ai",
-    "url": "https://www.conduit.ai/blog/ai-agents-airbnb-vrbo-hosts"
-   },
-   {
-    "domain": "dailypress.net",
-    "url": "https://www.dailypress.net/news/2026/11/airbnb-pledges-500m-for-its-nonprofit-to-offer-more-free-emergency-stays/"
-   },
-   {
-    "domain": "fortune.com",
-    "url": "https://fortune.com/section/tech/"
-   },
-   {
-    "domain": "investors.airbnb.com",
-    "url": "https://investors.airbnb.com/governance/executive-management/executive-person-details/default.aspx?ItemId=e8b9b3c8-fc48-4dcb-a28c-099df5af7942"
-   },
-   {
-    "domain": "marketbeat.com",
-    "url": "https://www.marketbeat.com/stocks/NASDAQ/ABNB/sec-filings/"
-   },
-   {
-    "domain": "x.com",
-    "url": "https://x.com/Ahmad_Al_Dahle"
-   },
-   {
-    "domain": "sec.gov",
-    "url": "https://www.sec.gov/Archives/edgar/data/1559720/000119312526379115/0001193125-26-379115.txt"
-   },
-   {
-    "domain": "x.com",
-    "url": "https://x.com/bchesky"
-   },
-   {
-    "domain": "tech.yahoo.com",
-    "url": "https://tech.yahoo.com/ai/deals/articles/brian-chesky-blueprint-airbnb-silicon-084502990.html"
-   },
-   {
-    "domain": "intel.velarion.ai",
-    "url": "https://intel.velarion.ai/comp/ABNB"
-   },
-   {
-    "domain": "last10k.com",
-    "url": "https://last10k.com/sec-filings/abnb/0001559720-26-000004.htm"
-   },
-   {
-    "domain": "bullfincher.io",
-    "url": "https://bullfincher.io/companies/airbnb/sec-filings"
-   },
-   {
-    "domain": "bookwithhaven.com",
-    "url": "https://www.bookwithhaven.com/blog/who-owns-the-guest"
-   },
-   {
-    "domain": "investors.airbnb.com",
-    "url": "https://investors.airbnb.com/press-releases/news-details/2026/Airbnb-to-Announce-Third-Quarter-2026-Results/default.aspx"
-   },
-   {
-    "domain": "investors.com",
-    "url": "https://www.investors.com/news/technology/airbnb-stock-q3-2026-earnings-news/"
-   },
-   {
-    "domain": "benzinga.com",
-    "url": "https://www.benzinga.com/markets/earnings/26/11/62957004/airbnb-shares-climb-on-q3-earnings-double-beat-details"
-   },
-   {
-    "domain": "stockanalysis.com",
-    "url": "https://stockanalysis.com/quote/bvl/ABNBUS/"
-   },
-   {
-    "domain": "thedigestlab.com",
-    "url": "https://thedigestlab.com/"
-   },
-   {
-    "domain": "investors.airbnb.com",
-    "url": "https://investors.airbnb.com/press-releases/default.aspx"
-   },
-   {
-    "domain": "stocktitan.net",
-    "url": "https://www.stocktitan.net/news/ABNB/airbnb-to-announce-third-quarter-2026-9o65n2rzs2lz.html"
-   },
-   {
-    "domain": "marketchameleon.com",
-    "url": "https://marketchameleon.com/articles/b/2026/10/2/abnb-november-5-2026-q3-results-webcast"
-   },
-   {
-    "domain": "news.airbnb.com",
-    "url": "https://news.airbnb.com/airbnb-q2-2026-financial-results"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/airbnb-beats-quarterly-views-revenue-215905554.html"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/airbnb-announce-third-quarter-2026-200000257.html?fr=sycsrp_catchall"
-   },
-   {
-    "domain": "247wallst.com",
-    "url": "https://247wallst.com/cards/airbnb-q3-2026-earnings-abnb-01m6preqjfxp9989tfpqgtmzd5"
-   },
-   {
-    "domain": "investorshub.advfn.com",
-    "url": "https://investorshub.advfn.com/market-news/article/33700/airbnb-beats-second-quarter-expectations-and-raises-2026-forecast-as-travel-demand-strengthens"
-   },
-   {
-    "domain": "investorshub.advfn.com",
-    "url": "https://investorshub.advfn.com/stock-market/NASDAQ/airbnb-ABNB/stock-price"
-   },
-   {
-    "domain": "stocktitan.net",
-    "url": "https://www.stocktitan.net/news/ABNB/"
-   },
-   {
-    "domain": "unite.ai",
-    "url": "https://www.unite.ai/airbnb-plans-ai-travel-agent-for-planning-booking-and-support/"
-   },
-   {
-    "domain": "aktiensensor.com",
-    "url": "https://aktiensensor.com/articles/airbnb-q3-2026-earnings-release-on-nov-5-live-2-pm-pt-webcast/"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/dear-airbnb-stock-fans-mark-231509008.html"
-   },
-   {
-    "domain": "hospitalitynet.org",
-    "url": "https://www.hospitalitynet.org/opinion/4132852/the-right-to-not-have-missed-booking-and-airbnb-are-buying-a-seat-in-agentic-travel-and-protecting-the-storefronts-it-erodes"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/sectors/technology/articles/airbnb-brian-chesky-passed-openai-134500337.html"
-   },
-   {
-    "domain": "businessquant.com",
-    "url": "https://businessquant.com/stocks/abnb/sec-filings/"
-   },
-   {
-    "domain": "insiderscreener.com",
-    "url": "https://www.insiderscreener.com/en/company/airbnb-inc"
-   },
-   {
-    "domain": "scrutar.com",
-    "url": "https://scrutar.com/stocks/ABNB/filings"
-   },
-   {
-    "domain": "sec.gov",
-    "url": "https://www.sec.gov/edgar/browse/?CIK=1559720"
-   },
-   {
-    "domain": "investors.airbnb.com",
-    "url": "https://investors.airbnb.com/financials/sec-filings/sec-filings-details/default.aspx?FilingId=19820770"
-   },
-   {
-    "domain": "investors.airbnb.com",
-    "url": "https://investors.airbnb.com/home/default.aspx"
-   },
-   {
-    "domain": "finance.yahoo.com",
-    "url": "https://finance.yahoo.com/small-business/articles/airbnb-ceo-brian-chesky-says-150224656.html"
-   },
-   {
-    "domain": "fortune.com",
-    "url": "https://fortune.com/2026/08/14/airbnb-ceo-brian-chesky-founder-mode-ai-writes-60-percent-of-code/"
-   },
-   {
-    "domain": "secform4.com",
-    "url": "https://www.secform4.com/insider-trading/1559720.htm"
-   },
-   {
-    "domain": "capedge.com",
-    "url": "https://capedge.com/company/1559720/filings"
-   },
-   {
-    "domain": "metaintro.com",
-    "url": "https://www.metaintro.com/blog/airbnb-brian-chesky-ai-lab-new-jobs"
-   },
-   {
-    "domain": "bullfincher.io",
-    "url": "https://bullfincher.io/companies/airbnb/report/2026-4-0001193125-26-447402"
-   },
-   {
-    "domain": "americanbazaaronline.com",
-    "url": "https://americanbazaaronline.com/2026/06/05/airbnb-to-open-ai-lab-as-ceo-chesky-expands-companys-ai-push-482242/"
-   },
-   {
-    "domain": "mercury.bloomberg.com",
-    "url": "https://mercury.bloomberg.com/search/42635edc-5176-4650-999e-af67fed71492"
-   },
-   {
-    "domain": "bloomberg.com",
-    "url": "https://www.bloomberg.com/billionaires/profiles/brian-j-chesky/"
-   },
-   {
-    "domain": "stocktitan.net",
-    "url": "https://www.stocktitan.net/sec-filings/ABNB/"
-   },
-   {
-    "domain": "sec.gov",
-    "url": "https://www.sec.gov/Archives/edgar/data/1559720/0001193125-26-352825.txt"
-   }
-  ],
-  "image": "https://pplx-res.cloudinary.com/image/fetch/s--KAkZs5Tf--/t_limit/https://media.zenfs.com/en/techcrunch_finance_785/7098332c7d453d1cba012bc47529c700",
-  "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--KAkZs5Tf--/t_limit/https://media.zenfs.com/en/techcrunch_finance_785/7098332c7d453d1cba012bc47529c700",
-  "read_time": 3,
-  "lang": "en",
-  "order": 10
  }
 ]
