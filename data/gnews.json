@@ -2,6 +2,46 @@
  {
   "source": "gnews",
   "source_label": "G News",
+  "title": "The 'Grand Theft Auto VI' Custom In-Game Cars Have Come to Life - Hypebeast",
+  "url": "https://hypebeast.com/2026/11/grand-theft-auto-vi-gta6-real-in-game-cars",
+  "publisher": "Kotaku",
+  "ts": "2026-11-06T19:00:33+00:00",
+  "summary": "The wait is almost over",
+  "bullets": "",
+  "sections": [],
+  "text": "If over 30 minutes of gameplay footage and trailers weren’t enough , Rockstar Games has now dumped a load of new Grand Theft Auto 6 screenshots ahead of the game’s November 19 launch . The latest batch teases new locations, characters, and chases.\n\nIntern: Sure did boss, real fuckin’ sexy just like you asked.\n\nIt may already be one of the best-selling games of the year weeks before launch\n\nThe man's family confirmed he died on October 29 following complications from lung transplant surgery",
+  "sources_count": 5,
+  "sources": [
+   {
+    "domain": "Hypebeast",
+    "url": "https://hypebeast.com/2026/11/grand-theft-auto-vi-gta6-real-in-game-cars"
+   },
+   {
+    "domain": "Rockstar Games",
+    "url": "https://www.rockstargames.com/newswire/article/39ak81277255o9/explore-the-grand-theft-auto-vi-launch-gallery"
+   },
+   {
+    "domain": "Kotaku",
+    "url": "https://kotaku.com/rockstar-dumps-nearly-40-spectacular-new-gta-6-screenshots-ahead-of-launch-2000754266"
+   },
+   {
+    "domain": "Complex",
+    "url": "https://www.complex.com/pop-culture/a/backwoodsaltar/kodak-black-gta-vi-character-model-screenshot"
+   },
+   {
+    "domain": "GameSpot",
+    "url": "https://www.gamespot.com/articles/gta-6-is-going-all-out-on-details-you-might-never-even-notice/"
+   }
+  ],
+  "image": "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/39ak81277255o9/72074994d6364ad0de8872aa971fc47653f644ab.jpg",
+  "image_cdn": "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/39ak81277255o9/72074994d6364ad0de8872aa971fc47653f644ab.jpg",
+  "read_time": null,
+  "lang": "en",
+  "order": 3
+ },
+ {
+  "source": "gnews",
+  "source_label": "G News",
   "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent - TechCrunch",
   "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
   "publisher": "TechCrunch",
@@ -37,7 +77,7 @@
   "image_cdn": "https://techcrunch.com/wp-content/uploads/2026/09/muse-ai-meta.jpg?w=1200",
   "read_time": null,
   "lang": "en",
-  "order": 2
+  "order": 4
  },
  {
   "source": "gnews",
@@ -77,7 +117,7 @@
   "image_cdn": "https://www.cnet.com/wp-content/uploads/sites/2/GettyImages-2220974969.jpg",
   "read_time": null,
   "lang": "en",
-  "order": 4
+  "order": 6
  },
  {
   "source": "gnews",
@@ -109,79 +149,15 @@
     "url": "https://gameinformer.com/interview/2026/11/04/zelda-ocarina-remake-producers-talk-changing-and-maintaining-the-game-easter"
    },
    {
-    "domain": "WSYX",
-    "url": "https://abc6onyourside.com/news/local/fans-line-up-overnight-at-best-buy-for-midnight-release-of-zelda-remake-on-switch-2"
+    "domain": "The Verge",
+    "url": "https://www.theverge.com/games/1026380/zelda-ocarina-of-time-interview-eiji-aonuma-hidemaro-fujibayashi"
    }
   ],
   "image": "https://images.nintendolife.com/ec92cd7148c0c/1280x720.jpg",
   "image_cdn": "https://images.nintendolife.com/ec92cd7148c0c/1280x720.jpg",
   "read_time": null,
   "lang": "en",
-  "order": 8
- },
- {
-  "source": "gnews",
-  "source_label": "G News",
-  "title": "GTA 6 Is Going All Out On Details You Might Never Even Notice - GameSpot",
-  "url": "https://www.gamespot.com/articles/gta-6-is-going-all-out-on-details-you-might-never-even-notice/",
-  "publisher": "Kotaku",
-  "ts": "2026-11-06T16:27:45+00:00",
-  "summary": "The wait is almost over",
-  "bullets": "",
-  "sections": [],
-  "text": "If over 30 minutes of gameplay footage and trailers weren’t enough , Rockstar Games has now dumped a load of new Grand Theft Auto 6 screenshots ahead of the game’s November 19 launch . The latest batch teases new locations, characters, and chases.\n\nIntern: Sure did boss, real fuckin’ sexy just like you asked.\n\nIt may already be one of the best-selling games of the year weeks before launch\n\nThe man's family confirmed he died on October 29 following complications from lung transplant surgery",
-  "sources_count": 5,
-  "sources": [
-   {
-    "domain": "GameSpot",
-    "url": "https://www.gamespot.com/articles/gta-6-is-going-all-out-on-details-you-might-never-even-notice/"
-   },
-   {
-    "domain": "Hypebeast",
-    "url": "https://hypebeast.com/2026/11/grand-theft-auto-vi-gta6-real-in-game-cars"
-   },
-   {
-    "domain": "Kotaku",
-    "url": "https://kotaku.com/rockstar-dumps-nearly-40-spectacular-new-gta-6-screenshots-ahead-of-launch-2000754266"
-   },
-   {
-    "domain": "Complex",
-    "url": "https://www.complex.com/pop-culture/a/backwoodsaltar/kodak-black-gta-vi-character-model-screenshot"
-   },
-   {
-    "domain": "NBC 6 South Florida",
-    "url": "https://www.nbcmiami.com/news/local/rapper-kodak-black-to-be-featured-in-gta-6s-vice-city/3884821/"
-   }
-  ],
-  "image": "https://kotaku.com/app/uploads/2026/11/Jason_and_Lucia_17.jpg",
-  "image_cdn": "https://kotaku.com/app/uploads/2026/11/Jason_and_Lucia_17.jpg",
-  "read_time": null,
-  "lang": "en",
   "order": 10
- },
- {
-  "source": "gnews",
-  "source_label": "G News",
-  "title": "Anker Soundcore Space 2 Pro Review: Big Bang For Less Bucks - Engadget",
-  "url": "https://www.engadget.com/2309011/anker-soundcore-space-2-pro-review/",
-  "publisher": "Engadget",
-  "ts": "2026-11-06T15:00:00+00:00",
-  "summary": "The Space 2 Pro is a set of slightly above average headphones with exceptional voice clarity.",
-  "bullets": "",
-  "sections": [],
-  "text": "The company’s latest headphones rival Apple, Bose and Sony at a much lower price.\n\nBilly Steele for Engadget Add Engadget on Google: Preferred Source Google Discover RATING : 8.4 / 10 Pros Premium design Excellent voice clarity Comfortable fit 30-hour battery life (ANC on) Cons Additional audio features don’t improve sound Average ANC performance We may receive a commission on purchases made from links.\n\nIf you don't like the idea of paying $350 to $500 for a set of flagship headphones, Anker's Soundcore line offers a lot of performance at much lower prices. Over the years, the company has refined its formula by balancing sound and features in various packages so as to compete with the likes of Apple, Bose, Sony and Sennheiser. With the Space 2 Pro , Anker put its new Thus audio chip in headphones for the first time , making lofty claims about the upgraded voice clarity as a result. At $200, these aren't just an affordable alternative to the big names in headphones, they're a worthy contender in their own right.\n\nBilly Steele for Engadget The first thing that stood out to me about the Space 2 Pro is the design. These do not look like they cost $200, especially not the grey version that I tested. Anker refined the look of the Space line here for a premium aesthetic and a build that's lightweight, but not overly plastic. The sliders for fit adjustments are metal and both the headband and ear pads are wrapped in soft leather. There are also subtle metallic accents to complete th",
-  "sources_count": 1,
-  "sources": [
-   {
-    "domain": "Engadget",
-    "url": "https://www.engadget.com/2309011/anker-soundcore-space-2-pro-review/"
-   }
-  ],
-  "image": "https://www.engadget.com/img/gallery/anker-soundcore-space-2-pro-review-big-bang-for-less-bucks/l-intro-1793975820.jpg",
-  "image_cdn": "https://www.engadget.com/img/gallery/anker-soundcore-space-2-pro-review-big-bang-for-less-bucks/l-intro-1793975820.jpg",
-  "read_time": null,
-  "lang": "en",
-  "order": 12
  },
  {
   "source": "gnews",
@@ -250,6 +226,46 @@
   "read_time": null,
   "lang": "en",
   "order": 14
+ },
+ {
+  "source": "gnews",
+  "source_label": "G News",
+  "title": "Weekly deals roundup: Pixel 11 Pro, Galaxy S26 Ultra, Galaxy Z Fold 8, and more holiday promos - PhoneArena",
+  "url": "https://www.phonearena.com/news/best-deals-of-the-week-pixel-11-pro-galaxy-s26-ultra-z-fold-more-early-holiday-offers_id184613",
+  "publisher": "WIRED",
+  "ts": "2026-11-06T14:03:48+00:00",
+  "summary": "Upgrade to the smartest Android smartphones. Google’s latest Pixel 11 phones are all on sale at their lowest prices to date, well ahead of Black Friday.",
+  "bullets": "",
+  "sections": [],
+  "text": "Courtesy of Google Save Story Save this story Save Story Save this story New smartphones used to hold their value, and it was typically months before you’d see any real discounts. But with smartphone sales dwindling and budgets squeezed, some manufacturers are offering tasty discounts on their latest and greatest devices sooner than you might think. Google’s Pixel 11 range landed in August, with the slick Pixel 11 , the more powerful Pixel 11 Pro and Pro XL , and the folding Pixel 11 Pro Fold , and all four phones are already majorly discounted for the first time, well before Black Friday .\n\nYou can get $200 off the Pixel 11, $300 off the 11 Pro, $350 off the 11 Pro XL, and $250 off the 11 Pro Fold. These are deep discounts on the best Pixel phones right now, and they cancel out the $100 price bump we saw across the board from phone makers this year (blamed on the memory shortage driven by AI).\n\nPhotograph: Julian Chokkattu Photograph: Julian Chokkattu Photograph: Julian Chokkattu Chevron Chevron Save to wishlist Save to wishlist Google\n\nThe biggest savings are on the worst value, but most powerful, Pixels: the 11 Pro and 11 Pro XL. Featuring classy designs, bright, colorful screens, and powerfully versatile camera systems, these are perhaps the best Android phones you can buy right now. What sets them apart from the rest of the range is the cameras, with faster lowlight performance and powerful telephoto lenses to zoom in from afar. The displays are also brighter, and there’",
+  "sources_count": 5,
+  "sources": [
+   {
+    "domain": "PhoneArena",
+    "url": "https://www.phonearena.com/news/best-deals-of-the-week-pixel-11-pro-galaxy-s26-ultra-z-fold-more-early-holiday-offers_id184613"
+   },
+   {
+    "domain": "WIRED",
+    "url": "https://www.wired.com/story/google-pixel-11-deal-november-2026/"
+   },
+   {
+    "domain": "The Verge",
+    "url": "https://www.theverge.com/gadgets/1025370/google-pixel-11-pro-phone-deal-sale"
+   },
+   {
+    "domain": "9to5Google",
+    "url": "https://9to5google.com/2026/11/05/google-pixel-11-10-deals-ramageddon/"
+   },
+   {
+    "domain": "Mashable",
+    "url": "https://mashable.com/tech/nov-5-google-pixel-10-early-black-friday-deal"
+   }
+  ],
+  "image": "https://media.wired.com/photos/6aeb74f2291739b7e29cddcb/191:100/w_1280,c_limit/Get-Google%E2%80%99s-Great-Pixel-11-Phones-for-Less.jpg",
+  "image_cdn": "https://media.wired.com/photos/6aeb74f2291739b7e29cddcb/191:100/w_1280,c_limit/Get-Google%E2%80%99s-Great-Pixel-11-Phones-for-Less.jpg",
+  "read_time": null,
+  "lang": "en",
+  "order": 15
  },
  {
   "source": "gnews",
