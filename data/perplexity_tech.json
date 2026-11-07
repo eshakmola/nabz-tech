@@ -683,7 +683,7 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--GQWir1PV--/t_limit/https://techcrunch.com/wp-content/uploads/2026/09/meta-muse-app-GettyImages-2293792137.jpg%3Fw%3D1024",
   "read_time": 3,
   "lang": "en",
-  "order": 6
+  "order": 7
  },
  {
   "source": "perplexity",
@@ -772,7 +772,7 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s--gEmQAzAL--/t_limit/https://news.uchicago.edu/sites/default/files/images/2024-12/IBM%2520quantum%2520straight%2520Credit-%2520Christopher%2520Tirrell%2520for%2520IBM-1380px.jpg",
   "read_time": 3,
   "lang": "en",
-  "order": 7
+  "order": 8
  },
  {
   "source": "perplexity",
@@ -889,6 +889,6 @@
   "image_cdn": "https://pplx-res.cloudinary.com/image/fetch/s---_ZA7Wjd--/t_limit/https://fortune.com/img-assets/wp-content/uploads/2025/11/Dario-Amodei-Anthropic-horizontal-for-thumbnail.jpg",
   "read_time": 3,
   "lang": "en",
-  "order": 8
+  "order": 9
  }
 ]
